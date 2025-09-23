@@ -1,0 +1,23 @@
+a:visited
+{
+    background-color: rgb(17, 74, 47);    
+    color: rgba(88, 242, 170, 1);
+    font-size: 130%;    
+    font-style: normal;
+} 
+
+a:hover
+{
+   font-size: 130%;
+   color: rgb(100, 129, 11); 
+   font-style: normal;
+}
+a:active
+{
+    color: rgb(254, 93, 24);
+}
+/*By default, a link will appear like this (in all browsers):
+
+An unvisited link is underlined and blue
+A visited link is underlined and purple
+An active link is underlined and red*/
