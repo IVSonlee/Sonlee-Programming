@@ -151,7 +151,7 @@ integer = int(12332431232)#Int, or integer, is a whole number, positive or negat
 
 print()
 print(integer)
-
+    
 decimal1 = 10e3 #Float can also be scientific numbers with an "e" to indicate the power of 10.
 
 print("I indicate the power of 3 by including a", decimal1)
@@ -364,7 +364,7 @@ errors	                    Optional. A String specifying the error method. Legal
 
 endswith = "This will check if the text will endswith"
 
-print("\n", endswith.endswith("h"),"\n",endswith.endswith("text",23,27),"\n", endswith.endswith(("end","endwith")))#The endswith() method returns True if the string ends with the specified value, otherwise False.
+print("\n", endswith.endswith("h"),"\n",endswith.endswith("text",23,27),"\n", endswith.endswith(("end","endswith")))#The endswith() method returns True if the string ends with the specified value, otherwise False.
 #Syntax:  string.endswith(value, start, end)
 """Parameter	Description
     value	    Required. The value to check if the string ends with. This value parameter can also be a tuple, then the method returns true if the string ends with any of the tuple values.
@@ -400,8 +400,102 @@ month = 4
 
 format_string1 = "\nI am turning {age} this november"
 format_string2 = "\nI am turning {age} this november {month}".format(age = 21, month = 5)
-format_string3 = "\nI really like {} so {}".format("Carrel", "much")
+format_string3 = "\nI really like {} so {}".format("her", "much")
 
 print(format_string1.format(age = 21)+format_string2+format_string3)
 """The format() method formats the specified value(s) and insert them inside the string's placeholder.
 The placeholder is defined using curly brackets: {}.The format() method returns the formatted string."""
+
+find_index = "Find the word rich and trading in this string"
+
+print("\nI use the index method to find the word rich and trading:",find_index.index("rich"),"and",find_index.index("trading",23,30))
+
+"""The index() method finds the first occurrence of the specified value.
+
+The index() method raises an exception if the value is not found.
+
+The index() method is almost the same as the find() method, the only difference is that the find() method returns -1 if the value is not found."""
+
+check_isalnum = "alphanumeric"
+
+print("\ncheck_isalnum using isalnum method",check_isalnum.isalnum())
+
+"""The isalnum() method returns True if all the characters are alphanumeric, meaning alphabet letter (a-z) and numbers (0-9).
+Example of characters that are not alphanumeric: (space)!#%&? etc."""
+
+check_isalpha = "ABCDE12"
+
+print("\nI used isalpha to check is of characters is letters:",check_isalpha.isalpha())
+
+"""The isalpha() method returns True if all the characters are alphabet letters (a-z).
+
+Example of characters that are not alphabet letters: (space)!#%&? etc"""
+
+check_ascii = check_isalpha
+
+print("\nI used isascii method:",check_ascii.isascii())
+
+#The isascii() method returns True if all the characters are ascii characters  (a-z).
+
+check_decimal = "145"
+
+print("\nI used isdecimal to check if the characters is decimal", check_decimal.isdecimal())
+
+"""method returns True if all the characters are decimals (0-9).
+
+This method can also be used on unicode objects."""
+
+check_digit = check_decimal
+
+print("\nI used isdigit if all the characters are digits",check_decimal.isdigit())
+
+identifier1 = "Identifier1nospaces"
+identifier2 = "1Identifierstartswithanumber"
+identifier3 = "Identifier with space"
+
+print("\nThis will check if this is an identifier:",identifier1.isidentifier(),identifier2.isidentifier(),identifier3.isidentifier())
+
+"""The isidentifier() method returns True if the string is a valid identifier, otherwise False.
+
+A string is considered a valid identifier if it only contains alphanumeric letters (a-z) and (0-9), or underscores (_). A valid identifier cannot start with a number, or contain any spaces."""
+
+lower_characters = "this will check if all the characters are in lowercase"
+
+print("\nCheck if all the characters are in lowercase:",lower_characters.islower())
+
+"""The islower() method returns True if all the characters are in lower case, otherwise False.
+
+Numbers, symbols and spaces are not checked, only alphabet characters."""
+
+numeric = "123123"
+numeric2 = "123.45"
+
+print("\nCheck if all characters in the text are numeric:",numeric.isnumeric(),numeric2.isnumeric())
+
+printable1 = "Is it printable"
+
+print("\nCheck if this is printable:",printable1.isprintable())
+
+"""The isprintable() method returns True if all the characters are printable, otherwise False.
+
+Example of none printable character can be carriage return and line feed."""
+
+whitespace1 = "  "
+
+print("\nCheck if all characters are whitespace:",whitespace1.isspace())
+
+title1 = "Title"
+
+print("\nCheck if the first character start with the first character is uppercase:",title1.istitle())
+
+join_method = ("Join1","Join2","Join3")
+
+grouping = "|".join(join_method)
+
+print("\nI am using a join method:",grouping)
+
+ljust_method = "LJust"
+
+x = ljust_method.ljust(30)
+
+print("\n",x, "this is an example of left adjustment")

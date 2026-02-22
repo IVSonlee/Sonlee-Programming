@@ -1,23 +1,11 @@
-a:visited
-{
-    background-color: rgb(17, 74, 47);    
-    color: rgba(88, 242, 170, 1);
-    font-size: 130%;    
-    font-style: normal;
-} 
+/*An external style sheet is used to define the style for many HTML pages.To use an external style sheet, add a link to it in the <head> section of each HTML page:*/
 
-a:hover
+table ,th, td
 {
-   font-size: 130%;
-   color: rgb(100, 129, 11); 
-   font-style: normal;
+    border: 2px solid gray;
+    border-collapse:collapse;
+    height: 50px;
+    text-align: center;
+    width:20%;
 }
-a:active
-{
-    color: rgb(254, 93, 24);
-}
-/*By default, a link will appear like this (in all browsers):
-
-An unvisited link is underlined and blue
-A visited link is underlined and purple
-An active link is underlined and red*/
+/*To avoid having double borders like in the example above, set the CSS border-collapse property to collapse.*/

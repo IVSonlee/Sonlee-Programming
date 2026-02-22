@@ -1,9 +1,45 @@
 {
-  "python-envs.pythonProjects": [
-    {
-      "path": "",
-      "envManager": "ms-python.python:system",
-      "packageManager": "ms-python.python:pip"
-    }
-  ]
+    "python.defaultInterpreterPath": "D:\\Github\\Sonlee-Programming\\.venv\\Scripts\\python.exe",
+    "python.terminal.activateEnvironment": true,
+    "python.venvPath": "D:\\Github\\Sonlee-Programming\\.venv",
+
+    "python.languageServer": "Pylance",
+    "python.analysis.indexing": false,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.useLibraryCodeForTypes": true,
+    "python.analysis.extraPaths": [
+        "D:\\Github\\Sonlee-Programming"
+    ],
+
+    "python.discovery.excludedPaths": [
+        "C:\\ProgramData\\Anaconda3",
+        "C:\\Users\\YourName\\AppData\\Local\\Programs\\Python"
+    ],
+
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.suggestSelection": "first",
+
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.venv": true,
+        "**/env": true,
+        "**/node_modules": true,
+        "**/Image": true,
+        "**/C": true,
+        "**/HTML": true
+    },
+
+    "search.exclude": {
+        "**/__pycache__": true,
+        "**/.venv": true,
+        "**/env": true,
+        "**/node_modules": true,
+        "**/Image": true,
+        "**/C": true,
+        "**/HTML": true
+    },
+
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.wordWrap": "on"
 }

@@ -165,7 +165,7 @@ Operator	Name	                    Example
 <=	        Less than or equal to	    x <= y"""
 
 print("\nI am using a and operator to check if both statements are true", (10 > 9 and 9 <12))
-print("I am using a or operator to check if one of the statements is true", (8 > 9 and 9 < 8))
+print("I am using a or operator to check if one of the statements is true", (8 > 9 or 9 < 8))
 print("I am using a not operator which reverse the result", not(8 > 9 and 9 < 8))
 
 """Logical operators are used to combine conditional statements:
@@ -331,12 +331,58 @@ looping_list = ["This","is","how","to","use","for loop","in","list"]
 for loop in looping_list:
     print(loop)
 
+print("\n")
+    #You can loop through the list items by using a for loop:
+for loop2 in range(len(looping_list)):
+    print(loop2)
 
-    
+    #You can also loop through the list items by referring to their index number.Use the range() and len() functions to create a suitable iterable.
 
+print("\n")
+loop3 = 0
 
+while loop3 < len(looping_list):
+    print(looping_list[loop3])
+    loop3 += 1
 
+"""You can loop through the list items by using a while loop. Use the len() function to determine the length of the list, then start at 0 and loop your 
+way through the list items by referring to their indexes.Remember to increase the index by 1 after each iteration."""
 
+print("\n")
 
+[print(looping_comprehension) for looping_comprehension in looping_list]
 
+#List Comprehension offers the shortest syntax for looping through lists:
+
+looping_list2 = ["Valorant","Chess","Code","ML","Clash Royale"]
+
+list_comprehension2 = [get for get in looping_list2 if "a" in get]
+
+print("\n",list_comprehension2,type(list_comprehension2))
+
+"""List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
+Syntax:
+newlist = [expression for item in iterable if condition == True]"""
+
+list_comprehension3 = [output for output in looping_list2 if output not in "Valorant"]
+
+print("\n",list_comprehension3)
+
+looping_list_comprehension = [loop for loop in looping_list2]
+
+print("\n", looping_list_comprehension)
+
+looping_list_comprehension2 = [loop for loop in range(10) if loop % 2 == 0]
+
+print(looping_list_comprehension2)
+
+looping_list_expression = [loop.upper() for loop in looping_list2]
+
+print("\n", looping_list_expression)
+
+looping_list_expression2 = ["Valorant" for result in looping_list2]
+
+print(looping_list_expression2)
+
+#The iterable can be any iterable object, like a list, tuple, set etc.
 
