@@ -3,7 +3,7 @@
     <head><!--The <head> element contains meta information about the HTML page-->
         <title>Practice Website</title><!--The <title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)-->
         <link rel="stylesheet" href="CSS/Practice.css">
-        <link rel="icon" href="Image/html logo.png">
+        <link rel="icon" href="Image/html logo.png"><!--A favicon image is displayed to the left of the page title in the browser tab-->
             <style>
                 a:link
                 {
@@ -112,7 +112,7 @@ and it preserves both spaces and line breaks:
 
         <address>This is an address</address><!--The HTML <address> tag defines the contact information for the author/owner of a document or an article.-->
 
-        <p><cite></cite></p><!--cite tag defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.)-->
+        <p><cite>Cite</cite></p><!--cite tag defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.)-->
 
         <bdo dir="rtl">This is a Bi-Directional Override</bdo><!--The HTML <bdo> tag is used to override the current text direction:-->
         <hr>
@@ -200,10 +200,16 @@ and it preserves both spaces and line breaks:
         the current view and/or device.Each <source> element has a media attribute that defines when the image is the most suitable.-->
         <hr>
         <table><!--A table in HTML consists of table cells inside rows and columns.-->
+            <caption style="font-size:120%;">This is a caption in a table</caption>
+            <colgroup><col span=" 3" style="background-color: rgb(216, 232, 246); border-style:solid;"></colgroup><!--The <colgroup> element should be 
+            used as a container for the column specifications. Each group is specified with a <col> element.The span attribute specifies how many columns get the style.
+            The <colgroup> tag must be a child of a <table> element and should be placed before any other table elements, like <thead>, <tr>, <td> etc., but after the 
+            <caption> element, if present.-->
             <tr><!--Each table row starts with a <tr> and ends with a </tr> tag.-->
                 <th>Table Header 1</th><!--th stands for table header.-->
                 <th>Table Header 2</th>
                 <th>Table Header 3</th>
+                <th></th>
             </tr>
             <tr>
                 <td>Table Cell 1</td><!--td stands for table data.-->
@@ -211,13 +217,69 @@ and it preserves both spaces and line breaks:
                 <td>Table Cell 3</td>
             </tr>
             <tr>
-                <td>Table Cell 4</td>
+                <td rowspan="2">Table Cell 4</td><!--To make a cell span over multiple rows, use the rowspan attribute:-->
                 <td>Table Cell 5</td>
-                <td>Table Cell 6</td>
+                <td colspan="2">Table Cell 6</td><!--You can have a header that spans over two or more columns. To do this, use the colspan-->
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
             </tr>
         </table>
         <hr>
-        <p style="border: 2px solid gray; width: 300px; text-align: center; padding: 30px; font-size:120%; border-radius: 10px; ">I will be using border radius</p>
+        <p style="border: 3px solid gray; width: 300px; text-align: center; padding: 30px; font-size:120%; border-radius: 10px; border-color: rgb(110, 156, 196);">I will be using border radius and border color</p>
+        <!--With the border-radius property, the borders get rounded corners:-->
+        <hr>
+        <ul style="list-style-type: square;">
+            <li>List 1</li>
+            <ul>
+                <li>List 1.1</li>
+                <li>List 2.2</li>
+                <li>List 3.3</li>
+            </ul>
+            <li>List 2</li>
+            <li>List 3</li>
+        </ul><!--An unordered list starts with the <ul> tag. Each list item starts with the <li> tag.-->
+        <!--The CSS list-style-type property is used to define the style of the list item marker. It can have one of the following values:
+
+        Value	Description
+        disc	Sets the list item marker to a bullet (default)
+        circle	Sets the list item marker to a circle
+        square	Sets the list item marker to a square
+        none	The list items will not be marked-->
+        <ol start="5" type="A"">
+            <li>Ordered List 1</li>
+            <ol type="I">
+                <li>Ordered List 1.1</li>
+                <li>Ordered List 2.2</li>
+                <li>Ordered List 3.3</li>
+            </ol>
+            <li>Ordered List 2</li>
+            <li>Ordered List 3</li>
+        </ol><!--An ordered list starts with the <ol> tag. Each list item starts with the <li> tag.
+        The list items will be marked with numbers by default:
+        
+        The type attribute of the <ol> tag, defines the type of the list item marker:
+
+        Type	Description
+        type="1"	The list items will be numbered with numbers (default)
+        type="A"	The list items will be numbered with uppercase letters
+        type="a"	The list items will be numbered with lowercase letters
+        type="I"	The list items will be numbered with uppercase roman numbers
+        type="i"	The list items will be numbered with lowercase roman numbers
+        
+        By default, an ordered list will start counting from 1. If you want to start counting from a specified number, you can use the start attribute:-->
+        <dl>
+            <dt>HTML</dt>
+            <dd>It serves as a skeleton or framework of the website</dd>
+            <dt>CSS</dt>
+            <dd>It gives color to the website</dd>
+        </dl><!--A description list is a list of terms, with a description of each term.
+        The <dl> tag defines the description list, the <dt> tag defines the term (name), and the <dd> tag describes each term:-->
+
+
+
+        
     </body>
 </html>
 

@@ -2,10 +2,14 @@
 
 table ,th, td
 {
-    border: 2px solid gray;
-    border-collapse:collapse;
-    height: 50px;
+    border: 3px gray;/*To add a border, use the CSS border property on table, th, and td elements*/
+    border-collapse:collapse;/*To avoid having double borders set the CSS border-collapse property to collapse.*/
+    border-style: dotted;/*With the border-style property, you can set the appearance of the border*/
+    height: 50px;/*Use the style attribute with the width or height properties to specify the size of a table, row or column.*/
     text-align: center;
-    width:20%;
+    width:30%;/*Use the style attribute with the width or height properties to specify the size of a table, row or column.*/
 }
-/*To avoid having double borders like in the example above, set the CSS border-collapse property to collapse.*/
+th:nth-child(odd)/*To style every other table row element, use the :nth-child(even) selector like this:*/
+{
+    background-color: rgb(158, 202, 239);
+}

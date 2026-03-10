@@ -433,3 +433,41 @@ print("\n",nested_dictionary2)
 print("\nAccess Items in a Nested Dictionaries",nested_dictionary2["category1"]["first name"],nested_dictionary2["category1"]["last name"])
 
 #To access items from a nested dictionary, you use the name of the dictionaries, starting with the outer dictionary:
+
+for keys,values in nested_dictionary.items():
+    print(keys)
+    for inside in values:
+        print(inside," : ",values[inside])
+    
+keys2 = "Keys"
+values2 = ("same values")
+
+dictionary5 = dict.fromkeys(keys2,values2)
+
+print("\n",dictionary5)
+
+#The fromkeys() method returns a dictionary with the specified keys and the specified value.
+
+"""Syntax
+    dict.fromkeys(keys, value)
+    
+keys	Required. An iterable specifying the keys of the new dictionary
+value	Optional. The value for all keys. Default value is None
+"""
+
+set_default_method = nested_dictionary2.setdefault("category3","locate")
+
+print("\nI am using a set default method:",set_default_method)
+
+"""The setdefault() method returns the value of the item with the specified key.
+
+If the key does not exist, insert the key, with the specified value, see example below
+
+Syntax
+dictionary.setdefault(keyname, value)
+
+keyname	        Required. The keyname of the item you want to return the value from
+value	        Optional.
+                If the key exist, this parameter has no effect.
+                If the key does not exist, this value becomes the key's value
+                Default value None"""
