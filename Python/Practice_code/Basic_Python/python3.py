@@ -455,7 +455,7 @@ keys	Required. An iterable specifying the keys of the new dictionary
 value	Optional. The value for all keys. Default value is None
 """
 
-set_default_method = nested_dictionary2.setdefault("category3","locate")
+set_default_method = nested_dictionary2.setdefault("category3","location")
 
 print("\nI am using a set default method:",set_default_method)
 

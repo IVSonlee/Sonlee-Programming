@@ -341,7 +341,6 @@ The **kwargs parameter allows a function to accept any number of keyword argumen
 Inside the function, kwargs becomes a dictionary containing all the keyword arguments:"""
 
 food = ("Pizza","Burger","Fries")
-details = {"table" : 5, "discount" : True, "customer" : "Alice"}
 
 def function17(*argss,**kwargss):
     customer_order = f"""\nItems Ordered:
