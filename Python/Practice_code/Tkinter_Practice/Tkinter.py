@@ -17,7 +17,7 @@ entry1 = tk_practice.Entry(
     bg="#CEE7F7",
     width=17,
 )
-"""When you need to get a little bit of text from a user, like a name or an email address, use an Entry widget. It’ll display a small 
+"""When you need to get a little bit of text from a user, like a name or an email address, use an Entry widget. Itll display a small 
 text box that the user can type some text into
 
 There are three main operations that you can perform with Entry widgets:
