@@ -1,2 +1,1 @@
-
-window_tk.mainloop()
+https://realpython.com/python-gui-tkinter/

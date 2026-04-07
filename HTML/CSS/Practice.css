@@ -13,3 +13,30 @@ th:nth-child(odd)/*To style every other table row element, use the :nth-child(ev
 {
     background-color: rgb(158, 202, 239);
 }
+
+.class1
+{
+    border-radius: 40px;
+    background-color: rgb(8, 21, 59);
+    font-size: 20px;
+    color: rgb(149, 151, 238);
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    width: 200px;
+}
+.class1:hover
+{
+    background-color: rgb(14, 33, 90);
+    color: white;
+    padding: 15px;
+}
+#id1
+{
+    background-color: rgb(8, 21, 59);
+    color: rgb(98, 144, 243);
+    border: 2px groove rgb(73, 62, 218);
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+}
