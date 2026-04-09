@@ -1,5 +1,4 @@
 ##Link: https://realpython.com/python-gui-tkinter/
-
 import tkinter as tkinter_practice5
 
 window_tk = tkinter_practice5.Tk()
@@ -26,6 +25,7 @@ Index: The index of the grid column or row that you want to configure or a list 
 Weight: A keyword argument called weight that determines how the column or row should respond to window resizing, relative to the other columns and rows
 Minimum Size: A keyword argument called minsize that sets the minimum size of the row height or column width in pixels
 
-weight is set to 0 by default, which means that the column or row doesn’t expand as the window resizes. If every column or row is given a weight of 1, then they all grow at the same rate. If one column has a weight of 1 and another a weight of 2, then the second column expands at twice the rate of the first."""
+weight is set to 0 by default, which means that the column or row doesnt expand as the window resizes. If every column or row is given a weight of 1, then they all grow at the same rate. If one column has a weight of 1 and another a weight of 2, then the second column expands at twice the rate of the first."""
+
 
 window_tk.mainloop()
