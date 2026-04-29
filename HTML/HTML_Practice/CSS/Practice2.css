@@ -1,17 +1,65 @@
 .header
 {
-    border: 1px solid black;
-    font-size: 20px;
+    background-color: rgb(134, 185, 230);
+    border: 1px solid rgb(76, 101, 238);
+    font-size: 30px;
     margin: -7px;
     padding: 20px;
     text-align: center;
 }
 .navigation
 {
+    background-color: bisque;
     border: 2px double black;
+    font-size: 20px;
     margin-top: 10px;
     margin-left: -8px;
     padding: 10px;
     text-align: center;
-    width: 1915px;
+    width: 1880px;
+}
+.aside
+{
+    background-color: rgb(177, 240, 198);
+    border: 2px ridge rgb(130, 236, 162);
+    font-size: 20px;
+    margin-left: -10px;
+    padding: 100px;
+    height: 400px;
+    width: 100px;
+}
+.section
+{
+    background-color: rgb(148, 179, 76);
+    border: 3px groove rgb(34, 133, 95);
+    font-size: 30px;
+    height: 250px;
+    margin-left: 295px;
+    margin-top: -605px;
+    padding: 20px;
+    text-align: center;
+    width: 1555px;
+}
+.article
+{
+    background-color: rgb(245, 195, 121);
+    border: 2px dashed rgb(231, 178, 97);
+    font-size: 30px;
+    height: 105px;
+    margin-left: 295px;
+    padding: 100px;
+    text-align: center;
+    width: 1395px;
+}
+.footer
+{
+    background-color: rgb(231, 209, 112);
+    border: 1px solid rgb(228, 123, 54);
+    font-size: 20px;
+    margin-top: 5px;
+    margin-left: -8px;
+    max-width:100%;
+    padding: 10px;
+    text-align: center;
+    width: 1880px;
 }
