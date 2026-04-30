@@ -63,3 +63,25 @@
     text-align: center;
     width: 1880px;
 }
+.car1
+{
+    display:inline;
+    width:28.4%;
+}
+.car2
+{
+    display: inline;
+    width:30%;
+}
+.car3
+{
+    display: inline;
+    width:40%;
+}
+@media screen and (max-width:700px)
+{
+    .car1,.car2,.car3
+    {
+        width: 100%;
+    }    
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US"><!--You should always include the lang attribute inside the <html> tag, to declare the language of the Web page. This is meant to assist search engines and browsers.-->
+    <head>
+        <link rel="stylesheet" href="CSS/Practice2.css">
+        <link rel="icon" href="Image/html logo.png">
+        <title>Practice2 Website Part 2</title>
+        <meta charset="utf-8"><!--In HTML, it is optional to close empty elements.-->
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta name="author" content="Iverson Richmond Lee">
+        <meta name="keywords" content="HTML, CSS">
+        <meta name="description" content="HTML Practice">
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <header class="header">Header <br><br> Defines a header for a document or a section</header>
+        <nav class="navigation">Navigation Links <br><br> Defines a set of navigation links</nav>
+        <aside class="aside">Aside <br><br> Defines content aside from the content (like a sidebar)</aside>
+        <section class="section">Section <br><br>Defines a section in a document</section>
+        <article class="article">Article <br><br>Defines independent, self-contained content</article>
+        <footer class="footer">Footer <br><br>Defines a footer for a document or a section</footer>
+        <hr>
+        <img src="Image/background_scene.jpg" style="max-width: 100%; width: 1300px; height: auto;" alt="">
+        <!--If the CSS width property is set to 100%, the image will be responsive and scale up and down:
+        If the max-width property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size:-->
+        <hr>
+        <picture>
+            <source srcset="Image/Car3.jpg" media="(max-width: 1400px)">
+            <source srcset="Image/Car2.jpg" media="(max-width: 1600px)">
+            <img src="Image/Car1.jpg" style="max-width: 100%;" width="1800px" height="1200px" alt="">
+            <!--It should be arranged from lowest width or height down to the highest width or height-->
+        </picture>
+        <hr>
+        <p style="font-size: 5vw;">This is a Responsive Text</p><!--The text size can be set with a "vw" unit, which means the "viewport width".That way the text size will 
+        follow the size of the browser window:-->
+        <hr>
+            <img class="car1" src="Image/Car1.jpg" alt="">
+            <img class="car2" src="Image/Car2.jpg" alt="">
+            <img class="car3" src="Image/Car3.jpg" alt="">
+        <!--, it is also common to use media queries in responsive web pages.With media queries you can define completely different styles for different browser sizes.
+        Example: resize the browser window to see that the three div elements below will display horizontally on large screens and stack vertically on small screens:-->
+        <hr>
+        <code>This is a code element</code><!--HTML contains several elements for defining user input and computer code.-->
+        <p>This is a kbd element <kbd>Ctrl + C</kbd></p><!--The HTML <kbd> element is used to define keyboard input. The content inside is displayed in the browser's default monospace font-->
+        <p>I am using a samp element <samp>File not Found</samp>, <samp>Slow Connection</samp></p><!--The HTML <samp> element is used to define sample output from a computer program. 
+        The content inside is displayed in the browser's default monospace font.-->
+        <p>I am using var element <var>a</var>,<var>b</var>,<var>c</var></p>
+        <hr>
+
+        <form action="">
+            <label for="name">Username:</label>
+            <input type="text" id="name" name="your_name">
+            <!--The <label> tag defines a label for many form elements.The <label> element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focuses on 
+            the input element.The <label> element also helps users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the 
+            text within the <label> element, it toggles the radio button/checkbox.The for attribute of the <label> tag should be equal to the id attribute of the <input> element to bind them together.-->
+            <br>
+            <label for="gender">Gender:</label>
+            <input type="radio" id="Male" name="gender_selected" value="Male"><!--The <input type="radio"> defines a radio button.Radio buttons let a user select ONE of a limited number of choices.-->
+            <label for="Male">Male</label>
+            <input type="radio" id="Female" name="gender_selected" value="Female">
+            <label for="Female">Female</label>
+            <br>
+            <label for="programming_languange">Programming Language</label>
+            <input type="checkbox" id="Checkbox1" name="checkbox1" value="HTML">
+            <label for="Checkbox1">HTML</label>
+            <input type="checkbox" id="Checkbox2" name="checkbox2" value="CSS">
+            <label for="checkbox2">CSS</label>
+            <input type="checkbox" id="Checkbox3" name="checkbox3" value="Javascript">
+            <label for="Checkbox3">Javascript</label>
+            <br><br>
+            <input type="submit" value="Submit"><!--The <input type="submit"> defines a button for submitting the form data to a form-handler.The form-handler is typically a file on the server with a script 
+            for processing input data.The form-handler is specified in the form's action attribute.-->
+        </form>
+        <!--The HTML <form> element is used to create an HTML form for user input:
+        The <form> element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.
+        The HTML <input> element is the most used form element.An <input> element can be displayed in many ways, depending on the type attribute.
+        Notice that each input field must have a name attribute to be submitted.If the name attribute is omitted, the value of the input field will not be sent at all.-->
+
+    </body>
+</html>
