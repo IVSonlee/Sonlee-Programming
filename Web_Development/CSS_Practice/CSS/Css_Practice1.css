@@ -1,0 +1,49 @@
+/*A CSS comment is placed inside the HTML <style> element, and starts with /* and ends with */
+
+p.class_selector /*You can also specify that only specific HTML elements should be affected by a class.*/
+{
+    background-color: lightcoral;/*The background-color property specifies the background color of an element.*/
+    color: rgb(85, 23, 13);
+    font-size: 20px;
+    opacity: 0.8;/*The opacity property specifies the opacity/transparency of an element. It can take a value from 0.0 - 1.0. The lower value, the more transparent: 
+    When using the opacity property to add transparency to the background of an element, all of its child elements inherit the same transparency. This can make the text inside a 
+    fully transparent element hard to read.*/
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+* 
+{
+    color: rgb(0, 0, 0);
+}/*The universal selector (*) selects all HTML elements on the page.*/
+
+/*Missing Semicolons
+Forgetting a semicolon at the end of a property declaration can break the style rule.
+
+/*Example
+.bad {
+  color: red
+  background-color: yellow;
+}
+
+Invalid Property Names
+Using a property name that does not exist will simply be ignored by the browser.
+
+Example
+.bad {
+  colr: blue;
+  font-size: 16px;
+}
+  
+If you forget to close a brace }, the entire rule may be ignored.
+
+/.bad {
+  padding: 20px;
+  margin: 10px;
+
+*/
+body
+{
+    background-image: ;
+}
