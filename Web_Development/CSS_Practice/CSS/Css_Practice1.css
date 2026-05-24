@@ -181,3 +181,19 @@ padding-left*/
   text-align: center;
   width: 300px;
 }
+.height_width
+{
+  background: rgb(138, 218, 243);
+  border-radius: 10px;
+  border: 1px solid gray;
+  height: 100px;
+  padding: 2%;
+  text-align: center;
+  width: 50%;
+}/*The height and width properties can have the following values:
+
+auto - This is default. The browser calculates the height and width
+length - Defines the height or width in px, cm, em, etc.
+% - Defines the height or width in percent of the containing block
+initial - Sets the height or width to its default value
+inherit - The height or width will be inherited from its parent value*/
