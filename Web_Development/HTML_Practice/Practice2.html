@@ -169,18 +169,19 @@ The textarea element defines a multi-line input field (a text area):
 
         <hr>
         <form action="" target="_self" method="post">
-            <input type="email" id="email1" name="myemail">
+            <label for="email1">Enter your email:</label>
+            <input type="email" id="email1" name="myemail" readonly>
             <!--The <input type="email"> is used for input fields that should contain an e-mail address.Depending on browser support, the e-mail address can be automatically validated when submitted.
             Some smartphones recognize the email type, and add ".com" to the keyboard to match email input.-->
             <br>
             <label for="password1">Enter your password:</label>
-            <input type="password" id="password1" name="mypassword"><!--<input type="password"> defines a password field:-->
+            <input type="password" id="password1" name="mypassword" required maxlength="25"><!--<input type="password"> defines a password field:-->
             <input type="image" src="Image/html logo.png" height="50px" alt="Submit Button"><!--The <input type="image"> defines an image as a submit button.
             The path to the image is specified in the src attribute.-->
             <input type="reset" value="Clear">
             <br>
             <label for="birthday">Birthdate:</label>
-            <input type="date" id="birthday" name="birthdate"><!--<input type="date"> defines a date control:-->
+            <input type="date" id="birthday" name="birthdate" required><!--<input type="date"> defines a date control:-->
             <br>
             <label for="datetime_local">This is a datetime local:</label>
             <input type="datetime-local" id="datetime_local" name="datetime_local"><!--<input type="datetime-local"> defines a date and time control:-->
@@ -190,7 +191,55 @@ The textarea element defines a multi-line input field (a text area):
             <br>
             <label for="file">Insert a file:</label>
             <input type="file" id="file" name="myfile"><!--<input type="file"> defines a file select field and a "Browse" button for file uploads:-->
-        </form>
+            <input type="hidden" id="pin" name="hidden_pin" value="12345"><!--The <input type="hidden"> defines a hidden input field (not visible to a user).A hidden field lets web developers include data 
+            that cannot be seen or modified by users when a form is submitted.A hidden field often stores what database record that needs to be updated when the form is submitted.Note: While the value is not 
+            displayed to the user in the page's content, it is visible (and can be edited) using any browser's developer tools or "View Source" functionality. Do not use hidden inputs as a form of security!-->
+            <br>
+            <label for="month">Select a month:</label>
+            <input type="month" id="month" name="month"><!--The <input type="month"> allows the user to select a month and year.Depending on browser support, a date picker can show up in the input field.-->
+            <br>
+            <label for="numbers">Choose a number between 1 - 50:</label>
+            <input type="number" id="numbers" name="chosen_number" min="1" max="50" step="5">
+            <!--The <input type="number"> defines a numeric input field.You can also set restrictions on what numbers are accepted.The following example displays a numeric input field, where you can enter a 
+            value from 1 to 5:-->
+            <br>
+            <label for="volume">Volume Range:</label>
+            <input type="range" id="volume" name="volume" min="0" max="100" value="10">
+            <!--The <input type="range"> defines a control for entering a number whose exact value is not important (like a slider control). Default range is 0 to 100. However, you can set restrictions on 
+            what numbers are accepted with the min, max, and step attributes:-->
+            <br>
+            <label for="searching">Search</label>
+            <input type="search" id="searching" name="searching" size="20"><!--The <input type="search"> is used for search fields (a search field behaves like a regular text field).-->
+            <br>
+            <label for="telephone_number">Telephone Number:</label>
+            <input type="tel" id="telephone_number" name="telephone_number" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"><!--The <input type="tel"> is used for input fields that should contain a telephone number.-->
+            <br>
+            <label for="timezone">Select a timezone:</label>
+            <input type="time" id="timezone" name="timezone" value="12:00"><!--The <input type="time"> allows the user to select a time (no time zone).Depending on browser support, a time picker can show up 
+            in the input field.-->
+            <br>
+            <label for="personal_portfolio">Insert a URL of your github portfolio:</label>
+            <input type="url" id="personal_portfolio" name="personal_portfolio"><!--The <input type="url"> is used for input fields that should contain a URL address.Depending on browser support, the url field 
+            can be automatically validated when submitted.Some smartphones recognize the url type, and adds ".com" to the keyboard to match url input.-->
+            <br>
+            <label for="week">Select a week:</label>
+            <input type="week" id="week" name="week"><!--The <input type="week"> allows the user to select a week and year.Depending on browser support, a date picker can show up in the input field.-->
+            
+        </form> 
+        <!--Here is a list of some common input restrictions:
+
+        Attribute	Description
+        checked	    Specifies that an input field should be pre-selected when the page loads (for type="checkbox" or type="radio")
+        disabled	Specifies that an input field should be disabled
+        max	        Specifies the maximum value for an input field
+        maxlength	Specifies the maximum number of character for an input field
+        min	        Specifies the minimum value for an input field
+        pattern	    Specifies a regular expression to check the input value against
+        readonly	Specifies that an input field is read only (cannot be changed)
+        required	Specifies that an input field is required (must be filled out)
+        size	    Specifies the width (in characters) of an input field
+        step	    Specifies the legal number intervals for an input field
+        value	    Specifies the default value for an input field-->
 
     </body>
 </html>
