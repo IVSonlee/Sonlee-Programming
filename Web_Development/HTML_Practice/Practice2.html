@@ -170,12 +170,20 @@ The textarea element defines a multi-line input field (a text area):
         <hr>
         <form action="" target="_self" method="post">
             <label for="email1">Enter your email:</label>
-            <input type="email" id="email1" name="myemail" readonly>
+            <input type="email" id="email1" name="myemail" placeholder="Email" readonly>
             <!--The <input type="email"> is used for input fields that should contain an e-mail address.Depending on browser support, the e-mail address can be automatically validated when submitted.
-            Some smartphones recognize the email type, and add ".com" to the keyboard to match email input.-->
+            Some smartphones recognize the email type, and add ".com" to the keyboard to match email input.
+            
+            The input placeholder attribute specifies a short hint that describes the expected value of an input field (a sample value or a short description of the expected format).
+
+            The short hint is displayed in the input field before the user enters a value.
+
+            The placeholder attribute works with the following input types: text, search, url, number, tel, email, and password.-->
             <br>
             <label for="password1">Enter your password:</label>
-            <input type="password" id="password1" name="mypassword" required maxlength="25"><!--<input type="password"> defines a password field:-->
+            <input type="password" id="password1" name="mypassword" autofocus required maxlength="25"><!--<input type="password"> defines a password field:
+            The input autofocus attribute specifies that an input field should automatically get focus when the page loads.-->
+            
             <input type="image" src="Image/html logo.png" height="50px" alt="Submit Button"><!--The <input type="image"> defines an image as a submit button.
             The path to the image is specified in the src attribute.-->
             <input type="reset" value="Clear">
@@ -239,7 +247,8 @@ The textarea element defines a multi-line input field (a text area):
         required	Specifies that an input field is required (must be filled out)
         size	    Specifies the width (in characters) of an input field
         step	    Specifies the legal number intervals for an input field
-        value	    Specifies the default value for an input field-->
+        value	    Specifies the default value for an input field
+        -->
 
     </body>
 </html>

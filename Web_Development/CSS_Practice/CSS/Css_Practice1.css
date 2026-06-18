@@ -62,7 +62,7 @@ body
   so it covers the entire element.*/
   background-repeat: no-repeat;/*Showing the background image only once is also specified by the background-repeat property.If repeated only horizontally (background-repeat: repeat-x;)*/
   background-position: right top;/*The background-position property is used to set the starting position of the background image.By default, a background-image is placed at the top-left corner of an element.*/
-  background-attachment:fixed;/*The background-attachment property specifies whether the background image should scroll or be fixed (will not scroll with the rest of the page):*/
+  background-attachment:scroll;/*The background-attachment property specifies whether the background image should scroll or be fixed (will not scroll with the rest of the page):*/
 
   /*background: rgb(45, 91, 190) url(/CSS_Practice/Image/Blue_mountain.jpg) no-repeat fixed cover;*/
 }
@@ -197,3 +197,144 @@ length - Defines the height or width in px, cm, em, etc.
 % - Defines the height or width in percent of the containing block
 initial - Sets the height or width to its default value
 inherit - The height or width will be inherited from its parent value*/
+
+.min_max_width
+{
+  background: rgb(255, 255, 255);
+  box-sizing: border-box;
+  margin: 10px 0 0 0;
+  height: 100px;
+  min-height: 50px;
+  max-height: 100px;/*The min-height and max-height properties are used to set the minimum and maximum height of an element.*/
+  min-width: 1000px;
+  max-width: 1200px;/*The min-width and max-width properties are used to set the minimum and maximum width of an element.
+  The max-width property sets the maximum allowed width of an element. This prevents the width of an element to be larger than the max-width property value.
+
+  The max-width property can have the following values:
+
+  length - Defines the maximum width in px, cm, etc.
+  % - Defines the maximum width in percent of the containing block
+  none - This is default. Means that there is no maximum width
+  One problem with the width property can occur when the browser window is smaller than the width of the element. The browser then adds a horizontal scrollbar 
+  to the page. So, using max-width will improve the browser's handling on small windows.
+
+  If you use both the width property and the max-width property on the same element, and the value of the width property is larger than the max-width property; the max-width property value will be used!*/
+}
+
+.outline1
+{
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: black;
+  color: aliceblue; 
+  font-size: 20px;
+  height: 40px;
+  margin: 30px auto;
+  outline-style: ridge;
+  /*The outline-style property specifies the style of the outline, and can have one of the following values:
+
+  dotted - Defines a dotted outline
+  dashed - Defines a dashed outline
+  solid - Defines a solid outline
+  double - Defines a double outline
+  groove - Defines a 3D grooved outline
+  ridge - Defines a 3D ridged outline
+  inset - Defines a 3D inset outline
+  outset - Defines a 3D outset outline
+  none - Defines no outline
+  hidden - Defines a hidden outline*/
+
+  outline-color: gray;
+  /*The outline-color property is used to set the color of the outline.
+
+  The color can be set by:
+
+  name - specify a color name, like "red"
+  HEX - specify a hex value, like "#ff0000"
+  RGB - specify a RGB value, like "rgb(255,0,0)"
+  HSL - specify a HSL value, like "hsl(0, 100%, 50%)"
+  invert - performs a color inversion (which ensures that the outline is visible, regardless of color background)*/
+  outline-width: 5px;
+  
+  /*The outline-width property specifies the width of the outline, and can have one of the following values:
+
+  thin (typically 1px)
+  medium (typically 3px)
+  thick (typically 5px)
+  A specific size (in px, pt, cm, em, etc)*/
+
+  outline-offset: 10px;/*The outline-offset property adds a space between an outline and the edge/border of an element. The space between an element and its outline is transparent.*/
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+}
+/*CSS has the following outline properties:
+
+outline-style - Specifies the style of the outline
+outline-color - Specifies the color of the outline
+outline-width - Specifies the width of the outline
+outline-offset - Adds space between the outline and the edge/border of an element
+outline - A shorthand property
+*/
+
+.outline2
+{
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: rgb(113, 157, 240);
+  font-size: 20px;
+  outline: 5px solid rgb(34, 180, 206);
+  padding: 20px;
+  width: 200px;
+}
+.text1
+{
+  border: 1px ridge white;
+  background: rgb(16, 55, 90);
+  color: rgb(177, 218, 253);
+  direction: rtl;
+  unicode-bidi:bidi-override;
+  /*The direction property specifies the text direction/writing direction within a block-level element.Tip: Use this property together with the unicode-bidi property to set or return whether the 
+  text should be overridden to support multiple languages in the same document.*/
+  padding: 20px;
+  text-align:justify;
+  /*The text-align property is used to set the horizontal alignment of a text.
+
+  This property can have one of the following values:
+
+  left - Aligns the text to the left
+  right - Aligns the text to the right
+  center - Centers the text
+  justify - Stretches the lines so that each line has equal width*/
+  text-align-last:center;
+  /*The text-align-last property specifies how to align the last line of a text.
+
+  This property can have one of the following values:
+
+  auto - Default value. The last line is justified and aligned left
+  left - The last line is aligned to the left
+  right - The last line is aligned to the right
+  center - The last line is center-aligned
+  justify - The last line is justified as the rest of the lines
+  start - The last line is aligned at the start of the line
+  end - The last line is aligned at the end of the line*/
+  width: 400px;
+}
+img .text1
+{
+  vertical-align:super;
+}
+/*The vertical-align property sets the vertical alignment of an element.
+
+This property can have one of the following values:
+
+baseline - Default value. The element is aligned with the baseline of the parent
+length/% - Raises or lower an element by the specified length or percent
+sub - The element is aligned with the subscript baseline of the parent
+super - The element is aligned with the superscript baseline of the parent
+top - The element is aligned with the top of the tallest element on the line
+text-top - The element is aligned with the top of the parent element's font
+middle - The element is placed in the middle of the parent element
+bottom - The element is aligned with the lowest element on the line
+text-bottom - The element is aligned with the bottom of the parent element's font*/

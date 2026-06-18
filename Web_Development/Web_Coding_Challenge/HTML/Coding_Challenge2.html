@@ -69,7 +69,7 @@
                 </div>
                 <div class="middle_section_div">
                     <p id="middle_section_elements">Block & Inline Elements</p>
-                    <hr style="border: 1px solid rgb(53, 53, 73); margin-top: -35px;margin-left: 200px; max-width: 80%; width: 1050px; ">
+                    <hr style="border: 1px solid rgb(53, 53, 73); margin-top: -35px;margin-left: 200px; max-width: 80%; width: 1050px;">
                     <div class="div2">
                         <p>Block Elements:</p>
                         <p class="block_elements">&lt;div&gt;</p>
@@ -78,26 +78,122 @@
                         <p>Inline elements: <span>&lt;span&gt;</span> <span>&lt;a&gt;</span> <span>&lt;strong&gt;</span> <span>&lt;em&gt;</span> <span>&lt;code&gt;</span></p>
                     </div>
                 </div>
-                <div class="">
+                <div class="middle_section_div">
                     <p id="middle_section_elements">CLASSES & IDS</p>
-                    <div>
-                        <p>#card-alpha</p>
-                        <p>.feature-card</p>
-                        <p>Javascript Basics</p>
-                        <p>Variables, functions, loops, and DOM manipulation fundamentals.</p>
+                    <hr style="border: 1px solid rgb(53, 53, 73); margin-top: -35px;margin-left: 120px; max-width: 86%; width: 1180px;">
+                    <div id="middle_section_cards">
+                        <p id="middle_section_cards_p1">#card-alpha</p>
+                        <p class="middle_section_cards_p2">.feature-card</p>
+                        <p id="middle_section_cards_p3">Javascript Basics</p>
+                        <p id="middle_section_cards_p4">Variables, functions, loops, and DOM manipulation fundamentals.</p>
+                    </div>
+                    <div id="middle_section_cards">
+                        <p id="middle_section_cards_p1">#card-beta</p>
+                        <p class="middle_section_cards_p2">.feature-card</p>
+                        <p id="middle_section_cards_p3">CSS Grid Layout</p>
+                        <p id="middle_section_cards_p4">Two-dimensional layout system for responsive page structures.</p>
+                    </div>
+                    <div id="middle_section_cards">
+                        <p id="middle_section_cards_p1">#card-game</p>
+                        <p class="middle_section_cards_p2">.feature-card</p>
+                        <p id="middle_section_cards_p3">HTML Semantics</p>
+                        <p id="middle_section_cards_p4">Meaningful tags that improve accessibility and SEO rankings.</p>
+                    </div>
+                </div>
+                <div class="middle_section_div">
+                    <p id="middle_section_elements">Semantic Layout Tags</p>
+                    <hr style="border: 1px solid rgb(53, 53, 73); margin-top: -35px;margin-left: 180px; max-width: 86%; width: 1080px;">
+                    <div class="layout_container">
+                        <div class="header_layout_container">
+                            <p>&lt;header&gt;</p>
+                            <p>Site Header / Nav</p>
+                        </div>
+                        <div class="middle_layout_container">
+                            <div>
+                                <p class="middle_layout_p1">&lt;nav&gt;</p>
+                                <p class="middle_layout_p2">SideBar Nav</p>
+                            </div>
+                            <div style="border: 1px dashed rgb(118, 219, 135);"> 
+                                <p style="color: rgb(118, 219, 135);">&lt;main&gt;</p>
+                                <p class="middle_layout_p2">Main Content Area</p>
+                            </div>
+                            <div>
+                                <p class="middle_layout_p1">&lt;aside&gt;</p>
+                                <p class="middle_layout_p2">Right Panel</p>
+                            </div>
+                        </div>
+                        <div class="footer_layout_container">
+                            <p class="footer_layout_p1">&lt;footer&gt;</p>
+                            <p class="footer_layout_p2">Site Footer</p>
+                        </div>
                     </div>
                     <div>
-                        <p>#card-beta</p>
-                        <p>.feature-card</p>
-                        <p>CSS Grid Layout</p>
-                        <p>Two-dimensional layout system for responsive page structures.</p>
+                        <p id="middle_section_elements">IFRAME EMBED</p>
+                        <hr style="border: 1px solid rgb(53, 53, 73); margin-top: -35px;margin-left: 120px; max-width: 90%; width: 1135px;">
+                        <div>
+                            <iframe src="/Web_Coding_Challenge/HTML/Coding_Challenge1.html" width="96%" height="900px" style="border-radius: 15px;border: 1px solid rgb(53, 53, 73); margin: 10px 0 0 0;" frameborder="0"></iframe>
+                        </div>
                     </div>
-                    <div>
-                        <p>#card-game</p>
-                        <p>.feature-card</p>
-                        <p>CSS Grid Layout</p>
-                        <p>Two-dimensional layout system for responsive page structures.</p>
-                    </div>
+                </div>
+                <div class="middle_section_div">
+                    <p id="middle_section_elements">Html & Computercode</p>
+                    <hr style="border: 1px solid rgb(53, 53, 73); margin-top: -35px;margin-left: 180px; max-width: 86%; width: 1080px;">
+                    <div class="computercode"><pre><span style="color: rgb(81, 88, 100);">// &lt;script&gt; tag embeds Javascript | &lt;code&gt; &lt;kbd&gt; &lt;samp&gt; for computercode</span>
+<span style="color: rgb(235, 112, 112);">const</span> <span style="color: rgb(191, 167, 247)">greetUser</span> = (<span style="color: rgb(191, 167, 247)">name</span>) => {
+  <span style="color: rgb(235, 112, 112);">const</span> msg = <span style="color: rgb(148, 187, 231);">`Hello,</span> <span style="color: rgb(191, 167, 247)">${name}</span> <span style="color: rgb(148, 187, 231);">! Welcome to TechPulse.`</span>;
+  document.<span style="color: rgb(191, 167, 247)">getElementById</span>(<span style="color: rgb(148, 187, 231);">"output"</span>).textContent = msg;
+  <span style="color: rgb(235, 112, 112);">return </span><span>true</span>;
+};
+<span style="color: rgb(191, 167, 247)">greetUser</span>(<span style="color: rgb(148, 187, 231);">"Dev"</span>); <span style="color: rgb(81, 88, 100);">// press F12 to open DevTools</span>
+                    </pre></div>
+                </div>
+                <div class="middle_section_div">
+                    <p id="middle_section_elements">HTML Forms & Input Types</p>
+                    <hr style="border: 1px solid rgb(53, 53, 73); margin-top: -35px;margin-left: 220px; max-width: 86%; width: 1040px;">
+                    <table class="table1_container">
+                        <tr>
+                            <td>Join the Community — Registration Form</td>
+                        </tr>
+                        <tr>
+                            <td><label for="first_name">First Name</label></td>
+                            <td><label for="last_name">Last Name</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="first_name" name="my_first_name"></td>
+                            <td><input type="text" id="last_name" name="my_last_name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email Address</label></td>
+                            <td><label for="password">Password</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="email" id="email" name="my_email"></td>
+                            <td><input type="password" id="password" name="my_password"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="url_website">Your Website</label></td>
+                            <td><label for="your_age">Age</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="url" id="url_website" name="my_website"></td>
+                            <td><input type="age" id="your_age" name="my_age"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="role_selection">Role</label></td>
+                            <td><label for="search_topic">Search Topic</label></td>
+                        </tr>
+                        <tr>
+                            <td><input list="roles" value="Select your role...">
+                                    <datalist id="roles">
+                                        <option value="Select your role...">
+                                        <option value="Frontend Developer">
+                                        <option value="Backend Developer">
+                                        <option value="Full Stack Developer">
+                                        <option value="UI/UX Designer">
+                                        <option value="DevOps Engineer"></option>
+                                    </datalist></td>
+                        </tr>
+                    </table>
                 </div>
             </section>
             <aside>

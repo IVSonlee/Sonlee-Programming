@@ -69,7 +69,7 @@ body
 {
     border: 1px solid white;
     display: flex;
-    height: 1000px;
+    height: 3500px;
     margin-left: -8px;
     max-height: 100%;
     width: 100.75%;
@@ -132,6 +132,7 @@ body
     border: 1px solid rgb(53, 53, 73);
     width: 70%;
     max-width: 70%;
+    max-height: 100%;
 }
 .middle_section_div
 {
@@ -189,4 +190,124 @@ body
     color: aqua;
     font-size: 15px;
     padding: 5px;
+}
+#middle_section_cards
+{
+    background-color: rgb(25, 25, 34);
+    border:2px ridge rgb(53, 53, 73);
+    border-radius: 10px;
+    display: inline-block;
+    padding: 22px;
+    margin-top: 10px;
+    width: 28%;
+}
+#middle_section_cards_p1
+{
+    color: rgb(231, 81, 106);
+}
+.middle_section_cards_p2
+{
+    color: rgb(163, 141, 214);
+}
+#middle_section_cards_p3
+{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+#middle_section_cards_p4
+{
+    color: rgb(99, 99, 145);
+    font-family: sans-serif;
+    font-size: 14px
+}
+.layout_container
+{
+    display: block;
+    height: 360px;
+    max-height: 100%;
+    margin-top: 30px;
+    max-width: 100%;
+    width: 1260px;
+}
+.header_layout_container
+{
+    border: 1px dashed rgb(122, 224, 255);
+    border-radius: 15px;
+    color: rgb(122, 224, 255);
+    font-family: monospace;
+    font-size: 15px;
+    height: 90px;
+    text-align: center;
+}
+.middle_layout_container
+{
+    border: 1px solid gray;
+    display: grid;
+    grid-template-columns: 27% 45% 27%;
+    height: 140px;
+}
+.middle_layout_container div
+{
+    border: 1px solid rgb(53, 53, 73);
+    border-radius: 15px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: monospace;
+    height: 120px;
+    margin: 10px 0 0 0;
+    text-align: center;
+    padding: 25px 0 0 0;
+}
+.middle_layout_p1
+{
+    color: rgb(122, 224, 255);
+}
+.middle_layout_p2
+{
+    color: rgb(99, 99, 145);
+}
+.footer_layout_container
+{
+    border: 1px dashed rgb(231, 81, 106);
+    border-radius: 15px;
+    height: 90px;
+    text-align: center;
+}
+.footer_layout_container p
+{
+    font-size: 15px;
+    font-family: monospace;
+}
+.footer_layout_p1
+{
+    color: rgb(122, 224, 255);
+}
+.footer_layout_p2
+{
+    color: rgb(231, 81, 106);
+}
+.computercode
+{
+    background: rgb(10, 10, 20);
+    border: 1px solid rgb(53, 53, 73);
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 30px 0 0 0;
+    width: 96%;
+    max-width: 96%;
+}
+.computercode pre
+{
+    padding: 10px 0 10px 25px;
+    font-family: monospace;
+    width: 96%;
+    max-width: 96%;
+}
+.table1_container
+{
+    border: 1px solid rgb(53, 53, 73);
+    border-radius: 10px;
+    height: 800px;
+    width: 1000px;
 }
