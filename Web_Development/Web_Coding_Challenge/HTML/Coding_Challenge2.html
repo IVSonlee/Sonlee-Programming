@@ -150,50 +150,91 @@
                 <div class="middle_section_div">
                     <p id="middle_section_elements">HTML Forms & Input Types</p>
                     <hr style="border: 1px solid rgb(53, 53, 73); margin-top: -35px;margin-left: 220px; max-width: 86%; width: 1040px;">
-                    <table class="table1_container">
-                        <tr>
-                            <td>Join the Community — Registration Form</td>
-                        </tr>
-                        <tr>
-                            <td><label for="first_name">First Name</label></td>
-                            <td><label for="last_name">Last Name</label></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" id="first_name" name="my_first_name"></td>
-                            <td><input type="text" id="last_name" name="my_last_name"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="email">Email Address</label></td>
-                            <td><label for="password">Password</label></td>
-                        </tr>
-                        <tr>
-                            <td><input type="email" id="email" name="my_email"></td>
-                            <td><input type="password" id="password" name="my_password"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="url_website">Your Website</label></td>
-                            <td><label for="your_age">Age</label></td>
-                        </tr>
-                        <tr>
-                            <td><input type="url" id="url_website" name="my_website"></td>
-                            <td><input type="age" id="your_age" name="my_age"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="role_selection">Role</label></td>
-                            <td><label for="search_topic">Search Topic</label></td>
-                        </tr>
-                        <tr>
-                            <td><input list="roles" value="Select your role...">
-                                    <datalist id="roles">
-                                        <option value="Select your role...">
-                                        <option value="Frontend Developer">
-                                        <option value="Backend Developer">
-                                        <option value="Full Stack Developer">
-                                        <option value="UI/UX Designer">
-                                        <option value="DevOps Engineer"></option>
-                                    </datalist></td>
-                        </tr>
-                    </table>
+                    <div id="div_table_container">
+                        <table class="table1_container">
+                            <tr>
+                                <td style="height: 40px; font-family: Bebas; font-size: 25px;">Join the Community — Registration Form</td>
+                            </tr>
+                            <tr>
+                                <td><label for="first_name">First Name</label></td>
+                                <td><label for="last_name">Last Name</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="first_name" name="my_first_name" placeholder="e.g. Iverson Richmond"></td>
+                                <td><input type="text" id="last_name" name="my_last_name" placeholder="e.g. Lee"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="email">Email Address</label></td>
+                                <td><label for="password">Password</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="email" id="email" name="my_email" placeholder="you@example.com"></td>
+                                <td><input type="password" id="password" name="my_password" placeholder="Min 8 characters"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="url_website">Your Website</label></td>
+                                <td><label for="your_age">Age</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="url" id="url_website" name="my_website" placeholder="https://yoursite.com"></td>
+                                <td><input type="age" id="your_age" name="my_age" placeholder="18"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="role_selection">Role</label></td>
+                                <td><label for="search_topic">Search Topic</label></td>
+                            </tr>
+                            <tr>
+                                <td><input list="roles" placeholder="Select your role...">
+                                        <datalist id="roles">
+                                            <option value="Select your role...">
+                                            <option value="Frontend Developer">
+                                            <option value="Backend Developer">
+                                            <option value="Full Stack Developer">
+                                            <option value="UI/UX Designer">
+                                            <option value="DevOps Engineer">
+                                        </datalist></td>
+                                <td><input type="search" id="search_topic" name="searched_topic" placeholder="Search tutorials..."></td>
+                            </tr>
+                            <tr>
+                                <td><label for="textarea1">Short Bio</label></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><textarea placeholder="Tell the community about yourself..." maxlength="50" name="short_bio" id="textarea1"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td style="height: 50px;" colspan="2"><label for="skill_level">Skill Level</label></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input type="range" value="40"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="interests">Interests (Select all that apply)</label></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div style="border: 1px solid white; display: flex; box-sizing: border-box;">
+                                        <input id="interest_input" type="checkbox" id="interest1" name="interest1"><label id="interest_label" for="interest1">HTML</label> 
+                                        <input id="interest_input" type="checkbox" id="interest2" name="interest2"><label id="interest_label" for="interest2">CSS</label> 
+                                        <input id="interest_input" type="checkbox" id="interest3" name="interest3"><label id="interest_label" for="interest3">Javascript</label>
+                                        <input id="interest_input" type="checkbox" id="interest4" name="interest4"><label id="interest_label" for="interest4">React</label>
+                                        <input id="interest_input" type="checkbox" id="interest5" name="interest5"><label id="interest_label" for="interest5">Node.js</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="experience">Experience</label></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div style="border: 1px solid white; display: flex; box-sizing: border-box;">
+                                        <input type="radio" id="experience1" name="my_experience"><label for="experience1">Beginner</label>
+                                        <input type="radio" id="experience2" name="my_experience"><label for="experience2">Intermediate</label>
+                                        <input type="radio" id="experience3" name="my_experience"><label for="experience3">Advanced</label>
+                                    </div>                        
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </section>
             <aside>

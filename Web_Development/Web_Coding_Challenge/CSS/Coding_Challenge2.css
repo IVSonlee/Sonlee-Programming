@@ -304,10 +304,62 @@ body
     width: 96%;
     max-width: 96%;
 }
+#div_table_container
+{
+    border-radius: 15px;
+    box-sizing: border-box;
+    background-color: rgb(25, 25, 34);
+    height: 850px;
+    margin: 40px auto;
+    padding: 2px 2px;
+    width: 950px;
+    max-width: 100%;
+}
 .table1_container
 {
-    border: 1px solid rgb(53, 53, 73);
     border-radius: 10px;
     height: 800px;
-    width: 1000px;
+    margin: 20px;
+    width: 900px;
+    max-width: 100%;
+}
+.table1_container td
+{
+    border: 1px solid gray;
+    height: 40px;
+    width: 350px;
+}
+.table1_container label
+{
+    color: rgb(99, 99, 145);
+    font-family: monospace;
+    font-size: 15px;
+    font-weight: bold;
+}
+.table1_container input
+{
+    border: 1px solid rgb(53, 53, 73);
+    background: rgb(15, 15, 20);
+    border-radius: 7px;
+    color: white;
+    height: 25px;
+    width: 97%;
+    max-width: 97%;
+}
+.table1_container textarea
+{
+    border: 1px solid rgb(53, 53, 73);
+    background: rgb(15, 15, 20);
+    border-radius: 7px;
+    color: white;
+    height: 60px;
+    width: 97%;
+}
+#interest_input
+{
+
+}
+#interest_label
+{
+
 }

@@ -63,7 +63,6 @@ body
   background-repeat: no-repeat;/*Showing the background image only once is also specified by the background-repeat property.If repeated only horizontally (background-repeat: repeat-x;)*/
   background-position: right top;/*The background-position property is used to set the starting position of the background image.By default, a background-image is placed at the top-left corner of an element.*/
   background-attachment:scroll;/*The background-attachment property specifies whether the background image should scroll or be fixed (will not scroll with the rest of the page):*/
-
   /*background: rgb(45, 91, 190) url(/CSS_Practice/Image/Blue_mountain.jpg) no-repeat fixed cover;*/
 }
 /*The background property is a shorthand property for the following properties:
@@ -338,3 +337,56 @@ text-top - The element is aligned with the top of the parent element's font
 middle - The element is placed in the middle of the parent element
 bottom - The element is aligned with the lowest element on the line
 text-bottom - The element is aligned with the bottom of the parent element's font*/
+
+#text2
+{
+  border-radius: 20px;
+  background-color: aliceblue;
+  box-sizing: border-box;
+  font-size: 20px;
+  height:50px;
+  outline: 2px double rgb(156, 147, 241);
+  padding: 20px 20px;
+  text-decoration-line:overline underline line-through;
+  /*The CSS text-decoration-line property sets the type of decoration line added to the text.
+
+  This property can have one or more of the following values:
+
+  none - Default value. Displays no decoration line
+  underline - The decoration line is displayed under the text
+  overline - The decoration line is displayed over the text
+  line-through - The decoration line is displayed through the text*/
+  text-decoration-color: rgb(255, 104, 104);/*The CSS text-decoration-color property is used to set the color of the decoration line.*/
+  text-decoration-style: dashed;
+  /*The CSS text-decoration-style property sets the style of the decoration line.
+
+  This property can have one of the following values:
+
+  solid - Default value. Single line
+  double - Double line
+  dotted - Dotted line
+  dashed - Dashed line
+  wavy - Wavy line*/
+  text-decoration-thickness:  3px;/*The CSS text-decoration-thickness property is used to set the thickness of the decoration line.*/
+  text-align: center;
+  width: 300px;
+}
+/*The CSS text-decoration property is used to control the appearance of decorative lines on text.
+
+It is a shorthand property for the following individual properties:
+
+text-decoration-line
+text-decoration-color
+text-decoration-style
+text-decoration-thickness
+*/
+
+#text3
+{
+  border-radius: 10px;
+  background-color: rgb(29, 31, 58);
+  box-sizing: border-box;
+  color: rgb(188, 224, 255);
+  padding: 20px;
+  width: 300px;
+}
