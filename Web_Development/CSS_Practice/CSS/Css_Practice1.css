@@ -366,7 +366,9 @@ text-bottom - The element is aligned with the bottom of the parent element's fon
   double - Double line
   dotted - Dotted line
   dashed - Dashed line
-  wavy - Wavy line*/
+  wavy - Wavy line
+  
+  The text-decoration: none; is used to remove the underline from links*/
   text-decoration-thickness:  3px;/*The CSS text-decoration-thickness property is used to set the thickness of the decoration line.*/
   text-align: center;
   width: 300px;
@@ -388,5 +390,332 @@ text-decoration-thickness
   box-sizing: border-box;
   color: rgb(188, 224, 255);
   padding: 20px;
+  text-decoration: underline rgb(120, 217, 224) solid 2px;
+  /*The CSS text-decoration property is a shorthand property for:
+
+text-decoration-line (required)
+text-decoration-color (optional)
+text-decoration-style (optional)
+text-decoration-thickness (optional)*/
   width: 300px;
+}
+#text4
+{
+  box-sizing: border-box;
+  background: rgb(6, 20, 32,0.8);
+  border-radius: 10px;
+  color: white;
+  line-height: 30px;
+  /*The CSS line-height property is used to specify the space between lines.*/
+  letter-spacing: 4px;
+  /*The CSS letter-spacing property is used to specify the space between the characters in a text.*/
+  padding: 20px;
+  text-transform: uppercase;/*The CSS text-transform property is used to control the capitalization of text in an element.
+
+  It can be used to transform a text into uppercase or lowercase letters, or capitalize the first letter of each word, without changing the original content in HTML.
+
+  This property can have one of the following values:
+
+  none - No transformation. Text renders as it is
+  capitalize - Transforms the first character of each word to uppercase
+  uppercase - Transforms all characters to uppercase
+  lowercase - Transforms all characters to lowercase*/
+  text-indent: 50px;/*The CSS text-indent property is used to specify the indentation of the first line in a text-block.
+  Tip: Negative values are allowed. The first line will be indented to the left if the value is negative.*/
+  word-spacing: 10px;
+  /*The CSS word-spacing property is used to specify the space between the words in a text.
+  Tip: Negative values are allowed.*/
+  white-space: pre;
+  /*The CSS white-space property specifies how white-space inside an element is handled.
+
+  This property can have one of the following values:
+
+  normal
+  nowrap
+  pre
+  pre-line
+  pre-wrap*/
+}
+.text_shadow1
+{
+  background-color: white;
+  box-sizing: border-box;
+  color: rgb(206, 176, 131);
+  display: inline-block;
+  font-size: 30px;
+  height: 80px;
+  padding: 20px;
+  text-shadow: 2px 2px 5px rgb(175, 131, 49);/*The text-shadow property adds shadow to text.
+  In its simplest use, you only specify the horizontal and the vertical shadow.
+
+  In addition, you can add a shadow color and blur effect
+  Horizontal and vertical shadow, with color and blur effect:*/
+  text-align: center;
+  width: 400px;
+}
+.text_shadow2
+{
+  background-color: white;
+  box-sizing: border-box;
+  color: rgb(206, 176, 131);
+  display: inline-block;
+  font-size: 30px;
+  height: 80px;
+  padding: 20px;
+  text-shadow: 2px 2px 5px rgb(175, 131, 49),1px 1px gray;/*The text-shadow property also accepts multiple shadows for an element. Define each shadow in a comma-separated list.*/
+  text-align: center;
+  width: 400px;
+}
+.font1
+{
+  color: white;
+  font-family: cursive;
+  /*The CSS font-family property specifies the font for an element.
+  Tip: The font-family property should hold several font names as a "fallback" system. If the browser does not support the first font, it tries the next font. The font names should be separated with a comma.*/
+  font-style: italic;
+  /*The CSS font-style property specifies the font style for a text..
+
+  This property can have one of the following values:
+
+  normal - The text is shown normally
+  italic - The text is shown in italics
+  oblique - The text is "leaning" (oblique is very similar to italic)*/
+  font-weight: bold;
+  /*The CSS font-weight property specifies how thick or thin characters in text should be displayed.
+
+  This property can have one of the following values:
+
+  normal - This is default. Defines normal characters
+  bold - Defines thick characters
+  bolder - Defines thicker characters
+  lighter - Defines lighter characters
+  100-900 - Defines from thin to thick characters. 400 is the same as normal, and 700 is the same as bold*/
+  font-variant: small-caps;
+  /*The CSS font-variant property specifies whether or not a text should be displayed in a small-caps font.
+  In a small-caps font, all lowercase letters are converted to uppercase letters. However, the converted uppercase letters appears in a smaller font size than the original uppercase letters in the text.*/
+}
+.font2
+{
+  color: white;
+  font-size: 2vw;
+}
+/*The CSS font-size property is used to specify the size of the text/font.
+
+Being able to manage the text size is very important in web design.
+
+However, you should not use font size adjustments to make paragraphs look like headings, or headings look like paragraphs. Always use the proper HTML tags, like <h1> - <h6> for headings and <p> for paragraphs.
+
+The font-size can be set to an absolute size or to a relative size.
+
+Absolute sizes:
+
+px: Pixels offers fixed and precise control over the font size.
+xx-small, x-small, small, medium, large, x-large, xx-large. These keywords has a predefined set of sizes in browsers.
+Relative sizes:
+
+em: This unit is relative to the font size of the parent element.
+rem: This unit is relative to the font size of the root HTML element.
+%: This unit is relative to the font size of the parent element
+smaller and larger: These units adjust the font size relative to the parent element.
+How to Pick the Right Unit?
+For fixed and precise control, px can be used.
+With px, the web page will not scale well on different screen sizes or with user preferences.
+Absolute size can be useful when the physical size of the output is known.
+For scalable web designs, use em or rem; they allow users to adjust text size in their browser settings.
+Percentage (%) can be useful for adjusting font sizes based on parent elements.
+
+The font size can also be set with the vw unit, which means the "viewport width".
+
+The vw unit is a relative unit that represents a percentage of the width of the viewport.
+
+1vw = 1% of the current width of the browser's viewport. So, if the viewport is 500px wide, 1vw is 5px.
+*/
+
+.font3
+{
+  color: aliceblue;
+  font: normal normal 600 20px/20px monospace;
+}
+/*To shorten the code, it is possible to specify all the individual font properties in one declaration.
+
+The CSS font property is a shorthand property for:
+
+font-style
+font-variant
+font-weight
+font-stretch
+font-size
+line-height
+font-family
+Rules for the CSS Font Shorthand Property
+The font-size and font-family values are required. If one of the other values is missing, their default value are used.
+If defined, font-style, font-variant and font-weight must precede font-size.
+If defined, line-height must immediately follow font-size, preceded by "/", like this: 15px/30px.
+font-family must be the last value specified.*/
+
+.link1:link
+{
+  border: 2px inset rgb(52, 197, 185);
+  box-sizing: border-box;
+  background: rgb(92, 201, 177);
+  height: 20px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.link1:visited
+{
+  border-radius: 10px;
+  background: rgb(108, 143, 240);
+  font: normal small-caps 700 15px serif;
+  color: white;
+}
+
+.link1:hover
+{
+  background: rgb(68, 150, 132);
+  cursor: wait;
+  /*
+  This example demonstrates the different types of cursors (can be useful for links):
+
+<span style="cursor: auto">auto</span><br>
+<span style="cursor: crosshair">crosshair</span><br>
+<span style="cursor: default">default</span><br>
+<span style="cursor: e-resize">e-resize</span><br>
+<span style="cursor: help">help</span><br>
+<span style="cursor: move">move</span><br>
+<span style="cursor: n-resize">n-resize</span><br>
+<span style="cursor: ne-resize">ne-resize</span><br>
+<span style="cursor: nw-resize">nw-resize</span><br>
+<span style="cursor: pointer">pointer</span><br>
+<span style="cursor: progress">progress</span><br>
+<span style="cursor: s-resize">s-resize</span><br>
+<span style="cursor: se-resize">se-resize</span><br>
+<span style="cursor: sw-resize">sw-resize</span><br>
+<span style="cursor: text">text</span><br>
+<span style="cursor: w-resize">w-resize</span><br>
+<span style="cursor: wait">wait</span>
+*/
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgb(255, 255, 255);
+  word-spacing: 3px;
+}
+.link1:active
+{
+  padding: 20px;
+}
+/*In addition, links can be styled differently depending on what state they are in.
+
+The four link states are:
+
+:link - a normal, unvisited link
+:visited - a link the user has visited
+:hover - a link when the user mouses over it
+:active - a link the moment it is clicked
+When setting the style for link states, there are some order rules:
+
+:hover must come after :link and :visited
+:active must come after :hover*/
+
+#list1
+{
+  background-color: rgb(127, 174, 214);
+  box-sizing: border-box;
+  font: normal normal bold 20px sans-serif;
+  letter-spacing: 2px;
+  padding: 10px;
+  width: 400px;
+}
+
+#list1 ul
+{
+  list-style-type:circle;
+  /*list-style-image: url(/CSS_Practice/Image/html\ logo.png);*/
+  list-style-position: inside;
+  letter-spacing: 5px;
+  margin: 0;
+  padding: 0;
+}
+/*CSS has the following properties for styling HTML lists:
+
+list-style-type - Specifies the type of list-item marker
+list-style-image - Specifies an image as the list-item marker
+list-style-position - Specifies the position of the list-item markers
+list-style - A shorthand property for the properties above
+
+The list-style-type:none; property is used to remove the list-item markers.
+
+Note: A list has a default margin and padding. To remove this, add margin:0 and padding:0 to the <ul> or <ol> element:*/
+
+#list1 li
+{
+  border: 1px solid rgb(54, 37, 126);
+}
+#list2
+{
+  background: rgb(122, 145, 248);
+  color: aliceblue;
+  text-align: center;
+  width: 300px;
+}
+#list2 ol
+{
+  border: 1px solid white;
+  list-style: circle inside url();
+  margin: auto;
+  padding: 0;
+  width: 70%;
+}
+/*The list-style property is a shorthand property. It is used to set all the list properties in one declaration.
+
+When using the shorthand property, the order of the property values are:
+
+list-style-type
+list-style-position
+list-style-image
+If one of the property values above is missing, the default value for the missing property will be inserted.*/
+
+.table1
+{
+  background-color: rgb(9, 85, 151);
+  border-collapse: collapse;/*The CSS border-collapse property sets whether table borders should collapse into a single border or be separated as in standard HTML.
+
+This property can have one of the following values:
+
+separate - Default value. Borders are separated; each cell will display its own borders
+collapse - Borders are collapsed into a single border when possible*/
+
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(139, 163, 243);
+  color:white;
+  width:500px;
+}
+/*The CSS border property is used to specify the width, style, and color of table borders.
+
+The border property is a shorthand property for:
+
+border-width - sets the width of the border
+border-style - sets the style of the border (required)
+border-color - sets the color of the border*/
+
+.table2
+{
+  border-collapse:separate;
+  border-spacing: 10px;/*The CSS border-spacing property sets the distance between the borders of adjacent cells.*/
+  border:2px solid rgb(255, 255, 255);
+  height:auto;/*The CSS height property is used to set the height of a table.
+  The height can be set:
+
+  in percent (%)
+  as a fixed length (px)
+  by the auto keyword*/
+  width: 100%;/*To let the browser calculate the width, use width: auto;:*/
+}
+.table2 td
+{
+  border:1px solid rgb(85, 147, 230);
 }
