@@ -102,3 +102,100 @@ body
     top: 40px;
     width: 300px;
 }
+#sticky_position
+{
+    background: rgb(255, 255, 255);
+    border: 3px solid rgb(105, 63, 46);
+    color: rgb(92, 64, 13);
+    font: normal normal 600 20px sans;
+    letter-spacing: 3px;
+    position: sticky;/*An element with position: sticky; toggles between a relative and fixed position, depending on the scroll position.A sticky element is positioned relative until a certain scroll 
+    position is reached - then it "sticks" in that place (like position:fixed).
+
+    You must specify at least one of the top, right, bottom or left properties, for sticky positioning to work.
+    
+    Sticky positioning is commonly used for:
+
+    Sticky headers - Navigation bars that stick to the top when scrolling
+    Sticky sidebars - Side content that stays visible while scrolling main content
+    Sticky table headers - Table headers that remain visible when scrolling long tables*/
+    top: 10px;
+    text-transform: capitalize;
+    width: 300px;
+}
+#div_z-index
+{
+    border: 1px solid red;
+    position: relative;
+    left: 0;
+    width: 700px;
+}
+#div_z-index img
+{
+    border-radius: 20px;
+}
+.div_z-index_car1
+{
+    left: 60px;
+    position: absolute;
+    top: 80px;
+    z-index: 1;
+}
+#div_z-index p
+{
+    color: rgb(160, 238, 202);
+    font: normal normal 700 20px serif;
+    left: 80px;
+    position: absolute;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 5px rgb(0, 16, 22);
+    text-align: center;
+    top: 0;
+    z-index:2;
+}
+/*The z-index property specifies the stack order of positioned elements.The stack order defines which element should be placed in front or behind other elements.
+When elements are positioned, they can overlap other elements.An element can have a positive or negative stack order (z-index):
+
+z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) and flex items (elements that are direct children of display: flex elements).*/
+.div_z-index_car2
+{
+    left: 0px;
+    position: absolute;
+    top: 0;
+}
+#pre_overflow
+{
+    background: rgb(218, 162, 79);
+    border-radius: 10px;
+    height: 100px;
+    margin:450px 0 0 0;
+    outline: 1px solid white;
+    overflow: visible;/*By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's box:*/
+    padding: 10px;
+    width: 400px;
+}
+#pre_overflow2
+{
+    background: rgb(218, 162, 79);
+    border-radius: 10px;
+    float: left;
+    height: 100px;
+    margin:60px 0 0 0;
+    outline: 1px solid white; 
+    overflow: hidden;/*With the hidden value, the overflow is clipped, and the rest of the content is hidden:*/
+    padding: 10px;
+    width: 400px;
+}
+#pre_overflow3
+{
+    background: rgb(218, 162, 79);
+    border-radius: 10px;
+    outline: 1px solid white;
+    height: 100px;
+    margin:60px 0 0 0;
+    overflow: auto;/*With the scroll value, horizontal and vertical scrollbars are always added. User must scroll to see all content:
+    The auto value is similar to scroll, but it adds scrollbars only when necessary:*/
+    padding: 10px;
+    width: 400px;
+}
+
