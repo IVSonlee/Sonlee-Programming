@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <link rel="stylesheet" href="/CSS_Practice/CSS/Css_Practice2.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Iverson Richmond Lee">
+        <meta name="description" content="Practicing commands about Css Part 2">
+        <meta name="keywords" content="CSS,HTML">
+        <title>CSS Practice 2</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <div id="div1">
+            <table>
+                <tr>
+                    <th>Table Header1</th>
+                    <th>Table Header2</th>
+                    <th>Table Header3</th>
+                    <th>Table Header4</th>
+                    <th>Table Header5</th>
+                    <th>Table Header6</th>
+                    <th>Table Header7</th>
+                    <th>Table Header8</th>
+                    <th>Table Header9</th>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <br>
+        <ul id="inline">
+            <li>Inline 1</li>
+            <li>Inline 2</li>
+            <li>Inline 3</li>
+            <li>Inline 4</li>
+            <li>Inline 5</li>
+        </ul>
+
+        <script>
+            function display_none()
+            {
+                document.getElementById("inline").style.display = "none";/*Hiding an element can be done by setting the display property to none. The element will be hidden, 
+                and the page will be displayed as if the element is not there*/
+            }
+            function display_hidden()
+            {
+                document.getElementById("inline").style.visibility = "hidden";/*ou can also use visibility:hidden; to hide an element.
+                However, with this property, the element will be hidden, but it will still take up the same space as if it was visible:*/
+            }
+        </script>
+
+        <button onclick="display_none()">Remove Inline</button>
+        <button onclick="display_hidden()">Hide</button>
+        <hr>
+        <div id="static_position">This Position is static</div>
+        <div id="relative_position">This Position is relative</div>
+        <div id="fixed_position">This is a fixed position</div>
+        <div id="relative_position2">This is a relative position
+            <div id="absolute_position">This is a absolute position inside a relative</div>
+        </div>
+    </body>
+</html>

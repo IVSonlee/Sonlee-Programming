@@ -199,14 +199,14 @@ inherit - The height or width will be inherited from its parent value*/
 
 .min_max_width
 {
-  background: rgb(255, 255, 255);
+  background: rgb(183, 221, 243);
   box-sizing: border-box;
   margin: 10px 0 0 0;
   height: 100px;
   min-height: 50px;
   max-height: 100px;/*The min-height and max-height properties are used to set the minimum and maximum height of an element.*/
   min-width: 1000px;
-  max-width: 1200px;/*The min-width and max-width properties are used to set the minimum and maximum width of an element.
+  max-width: 700px;/*The min-width and max-width properties are used to set the minimum and maximum width of an element.
   The max-width property sets the maximum allowed width of an element. This prevents the width of an element to be larger than the max-width property value.
 
   The max-width property can have the following values:
@@ -296,6 +296,7 @@ outline - A shorthand property
   unicode-bidi:bidi-override;
   /*The direction property specifies the text direction/writing direction within a block-level element.Tip: Use this property together with the unicode-bidi property to set or return whether the 
   text should be overridden to support multiple languages in the same document.*/
+  max-width: 60%;
   padding: 20px;
   text-align:justify;
   /*The text-align property is used to set the horizontal alignment of a text.
@@ -490,7 +491,7 @@ text-decoration-thickness (optional)*/
   bolder - Defines thicker characters
   lighter - Defines lighter characters
   100-900 - Defines from thin to thick characters. 400 is the same as normal, and 700 is the same as bold*/
-  font-variant: small-caps;
+  font-variant:small-caps;
   /*The CSS font-variant property specifies whether or not a text should be displayed in a small-caps font.
   In a small-caps font, all lowercase letters are converted to uppercase letters. However, the converted uppercase letters appears in a smaller font size than the original uppercase letters in the text.*/
 }
@@ -687,11 +688,7 @@ This property can have one of the following values:
 
 separate - Default value. Borders are separated; each cell will display its own borders
 collapse - Borders are collapsed into a single border when possible*/
-
-  border-width: 2px;
-  border-style: solid;
-  border-color: rgb(139, 163, 243);
-  color:white;
+  border: 2px solid rgb(139, 163, 243);
   width:500px;
 }
 /*The CSS border property is used to specify the width, style, and color of table borders.
@@ -718,4 +715,19 @@ border-color - sets the color of the border*/
 .table2 td
 {
   border:1px solid rgb(85, 147, 230);
+  color: white;
+  padding:10px;
+  padding:10px;
+  text-align: center;
+  /*The CSS text-align property is used to set the horizontal alignment of the content in <th> or <td>.
+
+  This property can have one of the following values:
+
+  left - Aligns the text to the left
+  right - Aligns the text to the right
+  center - Centers the text
+  Note: By default, the content of <th> elements are center-aligned and the content of <td> elements are left-aligned!
+
+  */
+  vertical-align:super;/*The CSS vertical-align property sets the vertical alignment (like top, bottom, or middle) of the content in <th> or <td>.*/
 }

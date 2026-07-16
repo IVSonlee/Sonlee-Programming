@@ -1,0 +1,104 @@
+body
+{
+    background: url(/CSS_Practice/Image/wood_background.png) no-repeat center fixed;
+    background-size:cover;
+}
+#div1
+{
+    overflow-x: auto;/*A responsive table will display a horizontal scrollbar if the screen is too small to display the full content*/
+}
+#div1 table
+{
+    border:2px double rgb(0, 0, 0);
+    border-collapse:collapse;
+    width:200%;
+} 
+#inline li
+{
+    border:2px dashed rgb(0, 0, 0);
+    box-sizing:border-box;
+    display: inline;
+    /*The CSS display property has many values. The following table lists the most commonly used:
+
+    Value	        Description
+    inline	        Displays an element as an inline element
+    block	        Displays an element as a block element
+    contents	    Makes the container disappear, making its child elements children of the element the next level up in the DOM
+    flex	        Displays an element as a block-level flex container
+    grid	        Displays an element as a block-level grid container
+    inline-block	Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height, width, padding, and margin values
+    none	        The element is completely hidden from the document flow (does not take up any space).*/
+    height:50px;
+    padding: 10px;
+    text-align:center;
+    width:100px;
+}
+
+#static_position
+{
+    background-color: rgb(252, 203, 180);
+    border: 1px solid rgb(204, 149, 86);
+    font: normal normal 600 20px monospace;
+    float: left;
+    padding: 10px;
+    position: static;/*Static positioned elements are not affected by the top, bottom, left, and right properties.
+    An element with position: static; is always positioned according to the normal flow of the page:*/
+    text-align: center;
+    width: 300px;
+}
+
+#relative_position
+{
+    background: rgb(226, 185, 123);
+    border: 2px outset rgb(204, 149, 86);
+    border-radius: 15px;
+    box-sizing: border-box;
+    font: oblique small-caps 600 20px helvetica;
+    left: 350px;/*Setting the top, right, bottom, and left properties will cause the element to be adjusted away from its normal position. Other content will not be adjusted to 
+    fit into any gap left by the element.*/
+    height: 30px;
+    position: relative;/*An element with position: relative; is positioned relative to its normal position in the document flow.*/
+    padding: 50px 0;
+    text-decoration: overline double 2px rgb(194, 112, 19);
+    width: 300px;
+}
+#fixed_position
+{
+    border: 2px solid rgb(216, 134, 68);
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: rgb(236, 207, 168, 0.5);
+    outline: 3px ridge rgb(167, 146, 118);
+    outline-offset: 5px;
+    font: normal 700 20px Arial;
+    padding: 10px 0;
+    position: fixed;/*An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. 
+    The top, right, bottom, and left properties are used set the final location of the element.*/
+    right: 0;
+    top: 0;
+    text-transform: uppercase;
+    text-align: center;
+    width: 350px;
+}
+#relative_position2
+{
+    background: rgb(128, 82, 51);
+    border: 4px ridge black;
+    color: white;
+    font-size: 20px;
+    height: 400px;
+    left: 700px;
+    position: relative;
+    top: 100px;
+    width: 700px;
+}
+#absolute_position
+{
+    border: 3px double rgb(88, 47, 8);
+    position: absolute;
+    /*An element with position: absolute; is positioned relative to the nearest positioned ancestor (with position other than static).However; if an absolute positioned element has no 
+    positioned ancestors, it uses the document body, and moves along with page scrolling.Note: Absolute positioned elements are removed from the normal document flow, and can overlap other elements.*/
+    right: 50px;
+    top: 40px;
+    width: 300px;
+}
