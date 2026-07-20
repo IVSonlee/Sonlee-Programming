@@ -199,3 +199,160 @@ z-index only works on positioned elements (position: absolute, position: relativ
     width: 400px;
 }
 
+.overflow1
+{
+    background: rgb(255, 212, 163);
+    border: 2px solid rgb(250, 202, 114);
+    height: 100px;
+    border-radius: 2px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /*The overflow-x and overflow-y properties specifies whether to change the overflow of content just horizontally or vertically (or both):
+
+    overflow-x specifies what to do with the left/right edges of the content.
+    overflow-y specifies what to do with the top/bottom edges of the content.
+    
+    These properties are useful when you need different scroll behavior for horizontal and vertical content:
+
+    Horizontal scrolling table - Use overflow-x: auto for wide tables
+    Chat windows - Use overflow-y: scroll for vertical message scrolling
+    Code blocks - Use overflow-x: auto to handle long lines*/
+    padding: 10px 0;
+    width: 300px;
+}
+.float_images
+{
+    background: rgb(255, 249, 244);
+    font: normal normal 700 20px Georgia;
+    height: 350px;
+    outline: 1px groove rgb(219, 200, 89);
+    text-decoration: underline 3px rgb(231, 193, 162);
+    text-align: center;
+}
+.float_images img
+{
+    height: 350px;
+    float: right;
+    /*The float property specifies how an element should float within its container.
+
+    It places an element on the left or right side of its container, allowing text and inline elements to wrap around it.
+
+    The float property can have one of the following values:
+
+    left - The element floats to the left of its container
+    right - The element floats to the right of its container
+    none - Default. The element does not float and is displayed just where it occurs in the text
+    inherit - The element inherits the float value of its parent
+    Tip: The float property is often used to wrap text around images!*/
+}
+.clear_images
+{
+    background: rgb(255, 249, 244);
+    font: normal normal 700 20px Georgia;
+    height: 350px;
+    outline: 1px groove rgb(219, 200, 89);
+    text-decoration: underline 3px rgb(231, 193, 162);
+    text-align: center;
+}
+.clear_images img
+{
+    height: 350px;
+    float: right;
+}
+.clear_image_1
+{
+    clear: right;/*The clear property specifies what should happen with the element that is NEXT to a floating element.
+
+    The clear property prevents elements from wrapping around or beside the floated content.
+
+    This property can have one of the following values:
+
+    none - Default. Allows elements to float on either side
+    left - The element is pushed below floated elements on its left side
+    right - The element is pushed below floated elements, on its right side
+    both - The element is pushed below floated elements, on both its left and right side
+    inherit - The element inherits the clear value from its parent*/
+}
+.clearfix_image
+{
+    background: rgb(0, 0, 0);
+    border: 2px inset rgb(255, 253, 226);
+    color: rgb(230, 148, 72);
+    font: italic normal 700 20px Arial;
+    text-decoration: 2px underline rgb(250, 164, 115);
+    text-align: center;
+    width: 400px;
+}
+.clearfix_image::after /*The clearfix hack involves the ::after pseudo-element, and is used to ensure that the parent container properly encloses its floated child elements:
+.clearfix::after - Targets a pseudo-element that is generated after the content of any element with class="clearfix"*/
+{
+    content: '';/*content: "" - Ensures the pseudo-element is rendered, even if it has no visible content*/
+    clear: both;/*clear: both - This clears both left and right floats, effectively pushing any following content below the floated elements, and forces the parent container to expand to include them*/
+    display: table;/*display: table - This creates a new block formatting context, which helps in containing floats*/
+}
+.clearfix_image img
+{
+    float: right;
+    height: 400px;
+}
+.inline_block_div span
+{
+    background: rgb(136, 145, 146);
+    border: 2px solid white;
+    color: white;
+    display: inline-block;/*The display: inline-block property combines the features of both inline and block elements.
+    A common use for display: inline-block is to display list items horizontally instead of vertically.*/
+    border-radius: 10px;
+    padding: 10px 0;
+    text-align: center;
+    width: 200px;
+}
+.center_align_flex div
+{
+    align-items: center;
+    border: 2px outset rgb(110, 72, 36);
+    display:flex;/*A flex container with both the justify-content and the align-items properties set to center will align the item(s) in the center (in both axis):*/
+    font: 700 15px Arial;
+    height: 150px;
+    justify-content: center;
+    width: 300px;
+}/*There are several ways to horizontally align elements:
+
+margin: auto - Center block elements
+text-align: center - Center text inside elements
+float or position - Left/right alignment
+Vertical Alignment
+Vertical centering can be achieved using modern layout techniques:
+
+Flexbox - Use align-items: center
+Grid - Use place-items: center
+Position + Transform - For elements of unknown dimensions*/
+.center_align_grid 
+{   
+    border: 2px outset rgb(110, 72, 36);
+    display:grid;/*With CSS grid you can center elements, both horizontally and vertically, within a grid container.A grid container with the place-items property set to center, 
+    will align the item(s) in the center (in both axis)*/
+    font: 700 15px Arial;
+    height: 150px;
+    place-items: center;
+    width: 300px;
+}
+.center_align_position_transform
+{
+    border: 5px outset rgb(100, 54, 48);
+    height: 150px;
+    left: 500px;
+    position: relative;
+    text-transform: uppercase;
+    top: 40px;
+    width: 500px;
+}
+.center_align_position_transform p
+{
+    font-size: 15px;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);/*If you deal with elements of unknown or dynamic dimensions, it is a common technique to use position: absolute; combined with transform: translate(); to center an element:*/
+}

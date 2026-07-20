@@ -104,5 +104,52 @@ hidden - The overflow is clipped, and the rest of the content is hidden
 scroll - Scrollbars are added. User must scroll to see all content
 auto - Similar to scroll, but adds scrollbars only when necessary</pre>
 
+        <hr>
+
+        <div class="overflow1">The overflow-x and overflow-y properties allow you to control overflow behavior independently for horizontal and vertical directions.
+            The overflow-x and overflow-y properties specifies whether to change the overflow of content just horizontally or vertically (or both):
+
+            overflow-x specifies what to do with the left/right edges of the content.
+            overflow-y specifies what to do with the top/bottom edges of the content.
+            These properties are useful when you need different scroll behavior for horizontal and vertical content:
+
+            Horizontal scrolling table - Use overflow-x: auto for wide tables
+            Chat windows - Use overflow-y: scroll for vertical message scrolling
+            Code blocks - Use overflow-x: auto to handle long lines
+        </div>
+        <hr>
+        <div class="float_images">
+            <img src="/CSS_Practice/Image/House_exterior7.jpg" alt="">
+            <img src="/CSS_Practice/Image/House_exterior9.jpg" alt="">
+            <img src="/CSS_Practice/Image/House_exterior8.jpg" alt="">
+            I will be using float within these images
+        </div>
+        <div class="clear_images">
+            <img src="/CSS_Practice/Image/House_exterior7.jpg" alt="">
+            <img class="clear_image_1" src="/CSS_Practice/Image/House_exterior9.jpg" alt="">
+            <img  src="/CSS_Practice/Image/House_exterior8.jpg" alt="">
+            I will be using clear and float within these images
+        </div>
+        <div class="clearfix_image">
+            I will be using clearfix for this image
+            <img src="/CSS_Practice/Image/House_interior6.jpg" alt="">
+        </div>
+        <hr>
+        <div class="inline_block_div">
+            <span>Div1</span>
+            <span>Div2</span>
+            <span>Div3</span>
+        </div>
+        <hr>
+        <div class="center_align_flex">
+            <div>Center Align1</div>
+            <div>Center Align2</div>
+            <div>Center Align3</div>
+        </div>
+        <div class="center_align_grid">I will center align with grid</div>
+        <div class="center_align_position_transform">
+            <p>Center align with position and transform</p>
+        </div>
+
     </body>
 </html>
