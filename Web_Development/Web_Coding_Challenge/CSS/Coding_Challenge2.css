@@ -67,9 +67,8 @@ body
 }
 .middle_container
 {
-    border: 1px solid white;
     display: flex;
-    height: 3500px;
+    height: 3700px;
     margin-left: -8px;
     max-height: 100%;
     width: 100.75%;
@@ -309,7 +308,7 @@ body
     border-radius: 15px;
     box-sizing: border-box;
     background-color: rgb(25, 25, 34);
-    height: 900px;
+    height: 880px;
     margin: 40px auto;
     padding: 2px 2px;
     width: 950px;
@@ -325,8 +324,7 @@ body
 }
 .table1_container td
 {
-    border: 1px solid gray;
-    height: 40px;
+    height: 30px;
     width: 350px;
 }
 .table1_container label
@@ -334,6 +332,7 @@ body
     color: rgb(99, 99, 145);
     font-family: monospace;
     font-size: 15px;
+    text-transform: uppercase;
     font-weight: bold;
 }
 .table1_container input
@@ -342,7 +341,7 @@ body
     background: rgb(15, 15, 20);
     border-radius: 7px;
     color: white;
-    height: 25px;
+    height: 35px;
     width: 97%;
     max-width: 97%;
 }
@@ -358,6 +357,7 @@ body
 #interest_input
 {
     height: 15px;
+    width: 40px;
 }
 #interest_label
 {
@@ -377,6 +377,7 @@ body
 .btn_submit:hover
 {
     background-color: rgb(119, 215, 245);
+    cursor: pointer;
 }
 .btn_reset
 {
@@ -389,10 +390,112 @@ body
 .btn_reset:hover
 {
     color:rgb(218, 218, 218);
+    cursor: pointer;
 }
 .btn_preview
 {
     background:rgb(167, 138, 245);
     font-weight:600;
     width:140px;
+}
+.btn_preview:hover
+{
+    background:rgb(137, 112, 204);
+    cursor: pointer;
+}
+.html_buttons
+{
+    display: inline-block;
+    margin: 20px 0 0 0;
+}
+#btn_primary_action
+{
+    border-radius: 0.4vw;
+    border: none;
+    background:rgb(122, 224, 255);
+    cursor: pointer;
+    font: 600 13px arial;
+    height: 40px;
+    letter-spacing: 1px;
+    width: 150px;
+}
+#btn_primary_action:hover
+{
+    background-color: rgb(119, 215, 245);
+}
+#btn_delete
+{
+    border: none;
+    border-radius: 0.4vw;
+    background: rgb(231, 81, 106);
+    cursor: pointer;
+    color: white;
+    font: 600 13px arial;
+    height: 40px;
+    letter-spacing: 1px;
+    left: 5px;
+    position: relative;
+    width: 100px;
+}
+#btn_delete:hover
+{
+    color: rgb(230, 206, 206);
+}
+#btn_upgrade
+{
+    border: none;
+    border-radius: 0.4vw;
+    cursor: pointer;
+    background: rgb(167, 138, 245);
+    font: 600 13px arial;
+    height: 40px;
+    letter-spacing: 1px;
+    left: 8px;
+    position: relative;
+    width: 100px;
+}
+#btn_upgrade:hover
+{
+    background:rgb(137, 112, 204);
+}
+#btn_secondary
+{
+    border: 1px solid rgb(53, 53, 73);
+    border-radius: 0.4vw;
+    color: white;
+    cursor: pointer;
+    background: rgb(15, 15, 20);
+    font: 600 13px arial;
+    height: 40px;
+    letter-spacing: 1px;
+    left: 10px;
+    position: relative;
+    width: 100px;
+}
+#btn_secondary:hover
+{
+    color: rgb(219, 219, 219);
+}
+#btn_disabled
+{
+    border: 1px solid rgb(42, 42, 56);
+    border-radius: 0.4vw;
+    color: rgb(102, 102, 102);
+    cursor: pointer;
+    background: rgb(15, 15, 20);
+    font: 600 13px arial;
+    height: 40px;
+    letter-spacing: 1px;
+    left: 10px;
+    position: relative;
+    width: 100px;
+    cursor:not-allowed;
+}
+.right_navigation_container
+{
+    border: 1px solid white;
+    height: 1300px;
+    max-height: 1300px;
+    max-width: 500px;
+    width: 500px;
 }

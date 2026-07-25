@@ -212,7 +212,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <div style="border: 1px solid white; display: flex; box-sizing: border-box;">
+                                    <div style="display: flex; box-sizing: border-box;">
                                         <input id="interest_input" type="checkbox" id="interest1" name="interest1"><label id="interest_label" for="interest1">HTML</label> 
                                         <input id="interest_input" type="checkbox" id="interest2" name="interest2"><label id="interest_label" for="interest2">CSS</label> 
                                         <input id="interest_input" type="checkbox" id="interest3" name="interest3"><label id="interest_label" for="interest3">Javascript</label>
@@ -226,7 +226,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <div style="border: 1px solid white; display: flex; box-sizing: border-box;">
+                                    <div style="display: flex; box-sizing: border-box;">
                                         <input id="interest_input" type="radio" id="experience1" name="my_experience"><label id="interest_label" for="experience1">Beginner</label>
                                         <input id="interest_input" type="radio" id="experience2" name="my_experience"><label id="interest_label" for="experience2">Intermediate</label>
                                         <input id="interest_input" type="radio" id="experience3" name="my_experience"><label id="interest_label" for="experience3">Advanced</label>
@@ -244,10 +244,23 @@
                             </tr>
                         </table>
                     </div>
+                    <div id="middle_section_div">
+                        <p id="middle_section_elements">HTML Buttons</p>
+                        <hr style="border: 1px solid rgb(53, 53, 73); margin-top: -35px;margin-left: 120px; max-width: 86%; width: 1100px;">
+                        <div class="html_buttons">
+                            <button id="btn_primary_action">Primary Action</button>
+                            <button id="btn_delete">Delete</button>
+                            <button id="btn_upgrade">Upgrade</button>
+                            <button id="btn_secondary">Secondary</button>
+                            <button id="btn_disabled" disabled>Disabled</button>
+                        </div>
+                    </div>
                 </div>
             </section>
-            <aside>
+            <aside class="right_navigation_container">
+                <div id="file_paths">
 
+                </div>
             </aside>
         </div>
     </body>

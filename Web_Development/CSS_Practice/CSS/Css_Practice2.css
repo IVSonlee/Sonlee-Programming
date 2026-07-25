@@ -356,3 +356,109 @@ Position + Transform - For elements of unknown dimensions*/
     top: 50%;
     transform: translate(-50%,-50%);/*If you deal with elements of unknown or dynamic dimensions, it is a common technique to use position: absolute; combined with transform: translate(); to center an element:*/
 }
+.descendant_combinator
+{
+    background: rgb(252, 177, 154,0.5);
+    box-sizing: border-box;
+    border: 3px solid rgb(158, 103, 30);
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    font: 700 20px sans;
+    height: 250px;
+    letter-spacing: 2px;
+    line-height: 20px;
+    left: 20%;
+    text-align: justify;
+    text-indent: 30px;
+    text-shadow: 2px 2px 5px rgb(185, 121, 61);
+    max-height: 10%;
+    max-width: 30%;
+    outline: 5px groove rgb(243, 162, 130);
+    outline-offset: 5px;
+    position: relative;
+    padding: 20px;
+    width: 900px;
+    word-spacing: 5px;
+}
+.descendant_combinator span /*The descendant combinator matches all elements that are descendants (children, grandchildren, etc.) of a specified element.*/
+{
+    border: 2px double rgb(216, 112, 71);
+    display: grid;
+    place-items: center;
+    padding: 5px;
+    width: 400px;
+}
+.descendant_combinator > span /*The child combinator selects all elements that are direct children of a specified element.*/
+{
+    color: rgb(126, 53, 19);
+}
+.descendant_combinator div + span /*The next sibling combinator is used to select an element that is directly after a specific element.Sibling elements must have the same parent element.*/
+{
+    background-color: rgb(0, 0, 0);
+}
+.descendant_combinator ~ span /*The subsequent-sibling combinator selects all elements that are next siblings of a specified element.The following example selects all <p> elements that are next 
+siblings of <div>, and share the same parent: */
+{
+    background: rgb(139, 100, 16,0.5);
+    border: 3px solid rgb(150, 85, 32);
+    border-radius: 15px;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 3px;
+    padding: 20px;
+}
+.form1 > #focus1:focus /*Here is an example of using the :focus pseudo-class to style an input field when it gets focus:*/
+{
+    border: none;
+    background: rgb(250, 192, 170);
+}
+.form1 > div > button
+{
+    background: rgb(51, 30, 6);
+    border: none;
+    border-radius: 10px;
+    color: rgb(245, 122, 41);
+    cursor: pointer;
+    display: none;
+    font: 700 15px cursive;
+    letter-spacing: 2px;
+    height: 30px;
+    width: 150px;
+}
+.form1 > div > button:hover
+{
+    background: rgb(104, 63, 16);
+    color: white;
+}
+.form1 > div
+{
+    color: rgb(80, 39, 20);
+    font: 25px arial;
+    text-decoration: underline 2px rgb(122, 84, 41);
+}
+.form1 > div:hover button
+{
+    display: inline;
+    text-decoration: none;
+}
+.first_child_pseudo_class
+{
+    background: rgb(223, 190, 101);
+    left: 10px;
+    position: relative;
+    width: 400px;
+}
+.first_child_pseudo_class section:first-child /*The :first-child pseudo-class matches a specific element that is the first child of another element.*/
+{
+    background-color: aliceblue;
+    text-align: center;
+}
+/*Other Structural Pseudo-classes
+There are many more structural pseudo-classes available:
+
+:last-child - Matches the last child of a parent
+:nth-child(n) - Matches the nth child of a parent
+:nth-last-child(n) - Matches the nth child from the end
+:only-child - Matches an element that is the only child
+:first-of-type - Matches the first element of its type
+:last-of-type - Matches the last element of its type*/
