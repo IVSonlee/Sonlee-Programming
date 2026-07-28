@@ -497,5 +497,84 @@ body
     height: 1300px;
     max-height: 1300px;
     max-width: 500px;
-    width: 500px;
+    width: 300px;
+}
+#file_paths
+{
+    height: 300px;
+    margin: 15px 0 0 15px;
+    max-width: 330px;
+    position: relative;
+    top: 20px;
+    width: 270px;
+}
+#file_paths > p
+{
+    color: rgb(99, 99, 145);
+    font: 700 17px Bebas;
+    letter-spacing: 2px;
+}
+#file_paths > ul > li
+{
+    background-color: rgb(25, 25, 34);
+    box-sizing: border-box;
+    border-radius: 7px;
+    border: 1px solid rgb(53, 53, 73);
+    color: rgb(99, 99, 145);
+    display:block;
+    font: 400 15px serif;
+    height: 40px;
+    margin: 5px 0 0 0;
+    list-style: none;
+    left: -40px;
+    position: relative;
+    padding: 10px 0 0 0;
+    text-indent: 15px;
+    width: 270px;
+}
+#file_paths > ul > li > span
+{
+    color: rgb(118, 219, 135);
+    font: 600 13px arial;
+}
+#html_head_tags
+{
+    margin: 0 0 0 15px;
+}
+#html_head_tags > p
+{
+    color: rgb(99, 99, 145);
+    font: 700 17px Bebas;
+    letter-spacing: 2px;
+}
+#html_head_tags > pre
+{
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgb(53, 53, 73);
+    background: rgb(10, 10, 15);
+    line-height: 17px;
+    max-width: 340px;
+    padding: 10px;
+    width: 270px;
+}
+.head1
+{
+    color: rgb(235, 112, 112);
+}
+.meta1
+{
+    color: rgb(148, 187, 231);
+}
+.title1
+{
+    color: rgb(191, 167, 247);
+}
+#charsets
+{
+
+}
+#charsets > div > span:first-child
+{
+    
 }
