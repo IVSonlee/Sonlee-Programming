@@ -572,9 +572,27 @@ body
 }
 #charsets
 {
-
+    margin: auto;
+    width: 250px;
+}
+#charsets > p
+{
+    color: rgb(99, 99, 145);
+    font: 700 17px Bebas;
+    letter-spacing: 2px;
+}
+#charsets > div
+{
+    border: 1px solid yellow;
+    height: 50px;
 }
 #charsets > div > span:first-child
 {
-    
+    border: 1px solid red;
+    color: rgb(163, 141, 214);
+}
+#charsets > div > span:last-child
+{
+    border: 1px solid gray;
+    color: rgb(99, 99, 145);
 }

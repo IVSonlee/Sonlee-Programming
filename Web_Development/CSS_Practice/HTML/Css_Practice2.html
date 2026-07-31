@@ -187,7 +187,34 @@ auto - Similar to scroll, but adds scrollbars only when necessary</pre>
             </div>
         </div>
         <hr>
-        
-
+        <div id="first_line">
+            Pseudo-elements for text, allow you to style specific parts of text content, such as the first line or first letter.br
+            The ::first-line pseudo-element is used to add a special style to the first line of a text.Note: The ::first-line pseudo-element can only be applied to block-level elements.
+        </div>
+        <hr>
+        <p class="p_before">I will be using ::before and ::after pseudo-element</p>
+        <ul class="list_marker" style="list-style: decimal-leading-zero;">
+            <li>Marker1</li>
+            <li>Marker2</li>
+            <li>Marker3</li>
+        </ul>
+        <ol class="list_marker" start="4">
+            <li>Marker4</li>
+            <li>Marker5</li>
+            <li>Marker6</li>
+        </ol>
+        <hr>
+        <picture class="picture_opacity">
+            <source id="picture_opacity1" srcset="/CSS_Practice/Image/House_interior4.jpg" media="(max-height:700px)">
+            <source id="picture_opacity2" srcset="/CSS_Practice/Image/House_interior8.jpg" media="(max-height: 800px)">
+            <img id="picture_opacity3" src="/CSS_Practice/Image/House_interior10.jpg" height="900px" alt="">
+        </picture>
+        <hr>
+        <ul id="vertical_navigation_bar">
+            <li><a href="">Dashboard</a></li>
+            <li><a href="">Inventory</a></li>
+            <li><a href="">Analytics</a></li>
+            <li><a href="">About Us</a></li>
+        </ul>
     </body>
 </html>

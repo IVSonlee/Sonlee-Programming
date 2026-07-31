@@ -462,3 +462,96 @@ There are many more structural pseudo-classes available:
 :only-child - Matches an element that is the only child
 :first-of-type - Matches the first element of its type
 :last-of-type - Matches the last element of its type*/
+#first_line
+{
+    border: 2px double rgb(136, 118, 39);
+    font: 20px monospace;
+    width: 500px;
+}
+#first_line::first-line/*The ::first-line pseudo-element is used to add a special style to the first line of a text.
+Note: The ::first-line pseudo-element can only be applied to block-level elements.*/
+{
+    background: rgb(92, 62, 6);
+    color: aliceblue;
+}
+#first_line::first-letter/*The ::first-letter pseudo-element is used to add a special style to the first letter of a text.
+Note: The ::first-letter pseudo-element can only be applied to block-level elements.*/
+{
+    font-size: 25px;
+    color: red;
+}
+.p_before::before /*The ::before pseudo-element is used to insert some content before the content of a specified element.
+Use the content property to specify the content to insert.*/
+{
+    content:url(/CSS_Practice/Image/checklist.png) ; 
+}
+p::after/*The ::after pseudo-element is used to insert some content after the content of a specified element.
+Use the content property to specify the content to insert. */
+{
+    content: url(/CSS_Practice/Image/checklist.png);
+}
+.list_marker li::marker /*The ::marker pseudo-element is used to style the list item markers.*/
+{
+    color: rgb(0, 217, 255);
+    font-size: 20px;
+}
+.list_marker li::selection /*The ::selection pseudo-element is used to style the part of a text that is selected by a user.*/
+{   
+    color: aliceblue;
+    background: rgb(111, 122, 221);
+    text-decoration: underline;
+}
+#picture_opacity3
+{
+    opacity: 0.7;/*The opacity property specifies the opacity/transparency of an element.
+
+The opacity property can take a value from 0.0 - 1.0:
+
+0.0 - The element will be completely transparent
+0.5 - The element will be 50% transparent
+1.0 - Default. The element will be fully opaque*/
+}
+/*The ::backdrop pseudo-element is used to style the viewbox behind a dialog box or popover element.*/
+@media screen and (max-height:900px) 
+{
+    #picture_opacity3
+    {
+        opacity: 1.0;
+    }
+}
+#vertical_navigation_bar /*In a vertical navigation bar, the navigation links are stacked vertically (on top of each other), and is typically aligned along the left or right side of a webpage.*/
+{
+    box-sizing: border-box;
+    background: rgb(161, 127, 95);
+    border: 3px solid rgb(151, 110, 63);
+    list-style: none;
+    font: 600 15px/20px Arial;
+    height: 200px;
+    max-height: 200px;
+    margin: 0;
+    overflow: hidden;
+    position: fixed;
+    padding: 0;
+    right: 20px;
+    top: 55px;
+    width: 300px;
+}/*Set list-style-type: none; - Removes the bullet points from list
+Set margin: 0; - Resets default browser margins
+Set padding: 0; - Resets default browser paddings*/
+#vertical_vertical_navigation_bar li
+{
+    border-bottom: 2px solid rgb(90, 44, 13);
+}
+#vertical_navigation_bar li > a
+{
+    color: rgb(253, 227, 202);
+    display: block;
+    padding: 15px 20px;
+    text-indent: 20px;
+    text-decoration: none;
+}
+#vertical_navigation_bar li > a:hover
+{
+    background: rgb(0, 0, 0);
+    color: rgb(238, 181, 129);
+}
