@@ -555,3 +555,212 @@ Set padding: 0; - Resets default browser paddings*/
     background: rgb(0, 0, 0);
     color: rgb(238, 181, 129);
 }
+#horizontal_navigation_bar/*A more modern way of creating a horizontal navigation bar, is to use CSS flexbox.
+The solution here are display: flex;. This creates a flex context and by default the items are shown from left to right.
+
+And just by adding one line to the ul block: justify-content: center;, you will have a horizontally centered navbar*/
+{
+    box-sizing: border-box;
+    border: 1px solid gray;
+    background: rgb(248, 238, 217,0.7);
+    display: flex;
+    height: 40px;
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 700px;
+}
+#horizontal_navigation_bar li
+{
+    border-right: 1px solid gray;
+    width: 200px;
+}
+#horizontal_navigation_bar li > a
+{
+    color: rgb(153, 134, 26);
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+#horizontal_navigation_bar li > a:hover
+{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.dropdown_container
+{
+    display: flex;
+    outline: 3px double rgb(67, 75, 53);
+    padding: 10px;
+}/*CSS dropdowns are used to display a list of options or content when a user clicks or hover over an element, like a button or a navigation link.
+
+A CSS dropdown consists of a trigger element (like <div>, <button>, <p>, <a>, etc.).
+
+When the trigger element is clicked or hovered over, the dropdown content will be displayed.
+
+The dropdown content is a container element (e.g. <div>) that holds the hidden content (can be text, links, images, etc.). */
+.dropdown_container #dropdown1 /*CSS Dropdown Box with Text*/
+{
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 2px rgba(80, 45, 6, 0.5);/*box-shadow property to make the dropdown content look like a "card".*/
+    background: rgb(189, 152, 111);
+    display: grid;
+    place-items: center;
+    padding: 10px;
+    position: relative;
+    width: 200px;
+}
+#dropdown1
+{
+    max-height: 30px;
+}
+.dropdown_container span
+{
+    background: rgb(230, 179, 137);
+    border-bottom: 2px solid rgb(73, 35, 4);
+    display: none;
+    padding: 10px;
+    text-align: center;
+    width: 180px;
+}
+.dropdown_container #dropdown1:hover span
+{
+    display: block;
+}
+.dropdown_container span:hover
+{
+    background: rgb(241, 197, 147);
+}
+.dropdown2/*CSS Dropdown Menu*/
+{
+    box-sizing: border-box;
+    left: 20px;
+    max-height: 150px;
+    max-width: 200px;
+    position: relative;
+}
+.dropdown2 button 
+{
+    background: rgb(216, 186, 121);
+    border-radius: 20px;
+    border: none;
+    color: rgb(100, 55, 18);
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px;
+    width: 200px;
+}
+.dropdown2 div
+{
+    box-shadow: 2px 2px 10px 2px rgb(146, 97, 41);
+    box-sizing: border-box;
+    border-radius: 0 0 10px 10px;
+    background-color: rgb(163, 124, 64);
+    display: none;
+    height: 100px;
+    left: 10px;
+    max-height: 100px;
+    position: absolute;
+    width: 180px;
+    z-index: -1;
+}
+.dropdown2 div a
+{
+    align-items: center;
+    border-bottom: 2px solid rgb(94, 67, 11);
+    color: white;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    text-decoration: none;
+}
+.dropdown2:hover > div
+{
+    display: block;
+}
+.dropdown2 a:hover
+{
+    background-color: rgb(114, 82, 35);
+}
+.dropdown3 /*CSS Right-aligned Dropdown*/
+{
+    box-sizing: border-box;
+    float: right;
+    max-height: 150px;
+    max-width: 200px;
+    position: relative;
+    right: 0;/*If you want the dropdown menu to go from right to left, instead of left to right, add right: 0;*/
+}
+.dropdown3 button
+{
+    background: rgb(216, 186, 121);
+    border-radius: 20px;
+    border: none;
+    color: rgb(100, 55, 18);
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px;
+    width: 200px;
+}
+.dropdown3 div
+{
+    box-shadow: 2px 2px 10px 2px rgb(146, 97, 41);
+    box-sizing: border-box;
+    border-radius: 0 0 10px 10px;
+    background-color: rgb(163, 124, 64);
+    display: none;
+    height: 100px;
+    left: 10px;
+    max-height: 100px;
+    position: absolute;
+    width: 180px;
+    z-index: -1;
+}
+.dropdown3 div a
+{
+    align-items: center;
+    border-bottom: 2px solid rgb(94, 67, 11);
+    color: white;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    text-decoration: none;
+}
+.dropdown3:hover > div
+{
+    display: block;
+}
+.dropdown3 a:hover
+{
+    background-color: rgb(114, 82, 35);
+}
+.dropdown_image /*CSS Dropdown Image*/
+{
+    border: 1px solid white;
+    position: relative;
+    left: 30px;
+}
+.dropdown_image div
+{
+    display: none;
+}
+.dropdown_image div > div
+{
+    background: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    color: white;
+    font: 600 20px serif;
+    letter-spacing: 2px;
+    left: 50%;
+    top: 50%;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, 260%);
+    width: 200px;
+}
+.dropdown_image:hover div
+{
+    display: block;
+}
