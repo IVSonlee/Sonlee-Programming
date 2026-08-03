@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Javascript Practice 1</title>
+        <link rel="icon" href="/Javascript_Practice/Images/Javascript_logo.png">
+        <link rel="stylesheet" href="/Javascript_Practice/CSS/Javascript_practice1.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+        <meta name="author" content="Iverson Richmond Lee">
+        <meta name="description" content="Javascript Practice 1 ">
+        <meta name="keywords" content="HTML, CSS, Javascript">
+        <title>Javascript Practice 1</title>
+        <style>
+
+        </style>
+        <script>
+            function function1()/*In this example, a JavaScript function is placed in the <head> section of an HTML page.*/
+            {
+                document.getElementById('javascript4').style.background = 'rgb(149, 238, 186)';
+                document.getElementById('javascript4').style.padding = '10px';
+                document.getElementById('javascript4').style.borderRadius = '10px';
+            }
+        </script>
+    </head>
+    <body>
+        <p id="javascript1">Welcome to Javascript</p>
+
+        <button type="button" onclick="document.getElementById('javascript1').innerHTML = 'Have fun learning Javascript'">Javascript1</button>
+        <!--One of many JavaScript HTML methods is getElementById().The example below "finds" an HTML element (with id="id_name"), and changes the element content (innerHTML) to "Have fun learning Javascript"
+        JavaScript accepts both double and single quotes:-->
+        <hr>
+        <p>Change the Images</p>
+        
+        <img id="javascript2" src="/Javascript_Practice/Images/html logo.png" height="200px" alt="">
+
+        <br>
+
+        <button type="button" onclick="document.getElementById('javascript2').src='/Javascript_Practice/Images/css logo.png'">Css Logo</button>
+        <button type="button" onclick="document.getElementById('javascript2').src='/Javascript_Practice/Images/Javascript_logo.png'">Javascript Logo</button>
+        <button type="reset" onclick="document.getElementById('javascript2').src='/Javascript_Practice/Images/html logo.png'">Reset</button>
+        <!--In this example JavaScript changes the value of the src (source) attribute of an <img> tag:-->
+        <button type="button" onclick="document.getElementById('javascript2').style.display='none'">Display none</button><!--Hiding HTML elements can be done by changing the display style:-->
+        <button type="button" onclick="document.getElementById('javascript2').style.display='block'">Display block</button><!--Showing hidden HTML elements can also be done by changing the display style:-->
+
+        <hr>
+
+        <p id="javascript3">I will change it's font size using javascript and also <span id="script1"></span></p>
+        <button type="button" onclick="document.getElementById('javascript3').style.fontSize='20px'">Font Size Increase</button>
+
+        <script>
+            document.getElementById('script1').innerHTML = 'a script tag';
+        </script>
+        <hr>
+        <button id="javascript4" type="button" onclick="function1()">Function1 at the head</button>
+        <button id="javascript5" type="button" onclick="function2()">Function2 at the body</button>
+
+        <script>
+            function function2()
+            {
+                document.getElementById('javascript5').style.color = 'rgb(163, 205, 241)';
+                document.getElementById('javascript5').style.background = 'rgb(48, 94, 134)';
+                document.getElementById('javascript5').style.padding = '10px';
+                document.getElementById('javascript5').style.borderRadius = '10px';
+            }
+        </script>
+
+        <button id="javascript6" type="button" onclick="function3()">External function in a .js file</button>
+
+        <script src="/Javascript_Practice/Javascript/Javascript_Practice1.js"></script>
+    </body>
+</html>
