@@ -66,6 +66,71 @@
 
         <button id="javascript6" type="button" onclick="function3()">External function in a .js file</button>
 
-        <script src="/Javascript_Practice/Javascript/Javascript_Practice1.js"></script>
+        <script src="/Javascript_Practice/Javascript/Javascript_Practice1.js"></script><!--This example uses a file path to link to myScript.js:-->
+        <!--An external script can be referenced in 3 different ways:
+
+        With a full URL (a full web address)
+        With a file path (like /js/)
+        Without any path-->
+        <hr>
+        <h3 id="javascript7">I am using innertext</h3>
+        <script>
+            document.getElementById('javascript7').innerText = '.innerText'; /*To access an HTML element, use the document.getElementById(id) method.
+        Then use the innerText property to change the inner text of the HTML element:*/
+        </script>
+        <p>I will be using document.write: <button id="javascript8" type="button" onclick="document.write(10 + 10)">10 + 10</button></p><!--For testing purposes, it is convenient to use document.write():
+        Using document.write() after an HTML document is loaded, will delete all existing HTML:-->
+        <button type="button" onclick="window.alert('This is an alert I just wanna let you know you are doing well')">window.alert() or alert()</button><!--You can use an alert box to display data:
+        You can skip the window keyword.In JavaScript, the window object is the global scope object. This means that variables, properties, and methods by default belong to the window object. This 
+        also means that specifying the window keyword is optional:-->
+        <button type="button" onclick="window.print()">Print</button>
+        <!--JavaScript does not have any print object or print methods.You cannot access output devices from JavaScript.The only exception is that you can call the window.print() method in the browser 
+        to print the content of the current window.-->
+        <hr>
+
+        <div id="javascript9"></div>
+        
+        <script>
+            let age = 21;/*The most important syntax rules for literals (fixed values) are:Numbers are written with or without decimals:
+*/
+            let date = 'Aug 3,2026'/*Strings are text, written within double or single quotes:*/
+            const myname = 'Iverson Richmond Lee'
+            /*JavaScript keywords are used to defines actions to be performed.The let and const keywords create variables:*/
+
+            document.getElementById('javascript9').innerHTML = 'Hi my name is ' + myname + ' I made this line of code at ' + date + ' with an age of ' + age;
+        </script>
+        <hr>
+        <p id="javascript10">Javascript Assigned variable</p>
+        <p id="javascript11">(a + 10) / 4</p>
+        <p id="javascript12"></p>
+        <p id="javascript13">JS Variables using const and let</p>
+        <p id="javascript14">Here is the difference of concatenating starting a string to a number and number to a string</p>
+        <p id="javascript15">Acess difference between let & conts (block scope) and var in a (global scope)</p>
+        <p id="javascript16">This one is hoisting using var</p>
+        <p id="javascript17">You can change the elements of a constant array: array1 = [1,2,3,4,5] and a constant object: array2 = {six:6, seven:7, eight:8, nine:9, ten:10}</p>
+        <p id="javascript18">Using const inside and outside the block</p>
+        <script>
+            var var1 = 'It will access inside another code block';/*Redeclaring a variable using the var keyword can impose problems.
+            Redeclaring a variable inside a block will also redeclare the variable outside the block:
+            
+            Redeclaring a JavaScript variable with var is allowed anywhere in a program:*/
+
+            let f = 'Using let redeclaring a variable in another block is allowed but you will never access what is inside another block';//With let, redeclaring a variable in the same block is NOT allowed:
+
+            const g = 'Declaring a variable with const is similar to let when it comes to Block Scope.It cannot access what is inside the inner block ';
+
+            {
+                let f = 'Cannot be accessed from outside the block';//Variables declared inside a { } block cannot be accessed from outside the block: Redeclaring a variable with let, in another block, IS allowed:
+                var var1 = 'Can be accessed from outside the block because its a global scope rather than let and const which is a block scope';/*Variables declared with varinside a { } block can be accessed 
+                from outside the block:*/
+                const g = ' It cannot access what is outside the block even they have the same variable name';
+                //Declaring a variable with const is similar to let when it comes to Block Scope.The x declared in the block, in this example, is not the same as the x declared outside the block:
+
+                document.getElementById('javascript18').innerHTML = g;
+            }
+            document.getElementById('javascript15').innerText = var1 + ' and ' + f;
+            document.getElementById('javascript18').innerHTML = g;
+        </script>
+        <button type="button" onclick="function4()">JS Syntax</button>
     </body>
 </html>
