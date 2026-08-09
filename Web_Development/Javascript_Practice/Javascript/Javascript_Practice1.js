@@ -80,3 +80,50 @@ Hyphens:
 first-name, last-name, master-card, inter-city.
 
 Hyphens are not allowed in JavaScript. They are reserved for subtractions.*/
+
+function function5()
+{
+    let string = "String";//Strings are written with quotes. You can use single or double quotes:
+    let number = 21.5;//All JavaScript numbers are stored as decimal numbers (floating point).Numbers can be written with, or without decimals:
+    let exponential_notation1 = 5e5;
+    let exponential_notation2 = 21e-3;//Extra large or extra small numbers can be written with scientific (exponential) notation:
+    let bigint = BigInt(10000000000000);
+    let boolean = false;
+    let boolean2 = false;//JavaScript booleans can only have one of two values: true or falseThe boolean value of an expression is the basis for JavaScript comparisons.
+
+    const object = {firstname:"Iverson Richmond",lastname:"Lee"};
+    const array = [1,2,3,4,5];
+
+    let undefined;//A variable without a value has the datatype undefined.A variable without a value also has the value undefined.
+    let not_undefined = "";//An empty value has nothing to do with undefined.An empty string has both a legal value and a type.
+    let null1;
+
+    let symbol = Symbol();
+
+    /*A JavaScript variable can hold 8 types of data:
+
+    Type	    Description
+    String	    A text of characters enclosed in quotes
+    Number	    A number representing a mathematical value
+    Bigint	    A number representing a large integer
+    Boolean	    A data type representing true or false
+    Object	    A collection of key-value pairs of data
+    Undefined	A primitive variable with no assigned value
+    Null	    A primitive value representing object absence
+    Symbol	    A unique and primitive identifier */
+
+    document.getElementById('javascript19').innerHTML = 'Here is the list of variables of every variable being used ' + typeof string + " " + typeof(number) + " " + typeof(bigint) + " " + 
+    typeof(undefined) + " " + typeof(null1) ;
+    //You can use the JavaScript typeof operator to find the type of a JavaScript variable.The typeof operator returns the type of a variable or an expression:
+    document.getElementById('javascript20').innerHTML = (boolean == boolean2);
+}
+
+function function6()
+{
+    let number, number2;
+
+    number = [1e2,2e3,3e4,4e5];
+
+    document.getElementById('javascript21').innerHTML = "Addition: " + number[0] + " + " + number[1] + " = " + (number[0] + number[1]) + " Multiplication " + number[1] + " * " + number[0] + " = " + 
+    (number[1] * number[0]);//The Addition Operator (+) adds numbers:The Multiplication Operator (*) multiplies numbers:
+}

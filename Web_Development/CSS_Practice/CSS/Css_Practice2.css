@@ -538,7 +538,7 @@ The opacity property can take a value from 0.0 - 1.0:
 }/*Set list-style-type: none; - Removes the bullet points from list
 Set margin: 0; - Resets default browser margins
 Set padding: 0; - Resets default browser paddings*/
-#vertical_vertical_navigation_bar li
+#_vertical_navigation_bar li
 {
     border-bottom: 2px solid rgb(90, 44, 13);
 }
@@ -763,4 +763,90 @@ The dropdown content is a container element (e.g. <div>) that holds the hidden c
 .dropdown_image:hover div
 {
     display: block;
+}
+
+.attribute1 > a[target] /*The [attribute] selector is used to select elements with the specified attribute.*/
+{
+    color: rgb(245, 244, 244);
+    text-decoration: none;
+    font-weight: 800;
+}
+.attribute1 > a[target=_parent]/*The [attribute="value"] selector is used to select elements with a specific attribute with an exact value.*/
+{
+    border: none;
+    border-radius: 10px;
+    background: rgb(110, 204, 191);
+    color: black;
+    letter-spacing: 2px;
+    padding: 5px;
+    text-transform: uppercase;
+}
+[title~="attribute"]/*The [attribute~="value"] selector is used to select elements with an attribute value containing a specific word.*/
+{
+    background: rgb(223, 180, 151);
+    border: 1px solid rgb(245, 194, 135);
+    color: rgb(122, 64, 25);
+    padding: 10px;
+    text-decoration: none;
+}
+[class |= attribute]/*The [attribute|="value"] selector is used to select elements with the specific attribute, whose value can be exactly the specific value, or start with the specific value followed 
+by a hyphen (-).Note: The value has to be a whole word, either alone, like class="top", or followed by a hyphen ( - ), like class="top-text".*/
+{
+    background: black;
+    color: rgb(216, 229, 142);
+}
+/*CSS attribute selectors are used to select and style HTML elements with a specific attribute or attribute value, or both.
+
+Attribute selectors are enclosed in square brackets []. 
+
+CSS has the following attribute selectors:
+
+[attribute] - Select elements with the specified attribute
+[attribute="value"] - Select elements with a specific attribute and an exact value
+[attribute~="value"] - Select elements with an attribute value containing a specific word
+[attribute|="value"] - Select elements with the specific attribute, whose value can be exactly the value, or start with the value followed by a hyphen (-)
+[attribute^="value"] - Select elements whose attribute value starts with a specific value
+[attribute$="value"] - Select elements whose attribute value ends with a specific value
+[attribute*="value"] - Select elements whose attribute value contains a specific value
+Tip: The attribute selectors are case-sensitive by default. To perform a case-insensitive match, add an i before the closing bracket. Example: [attribute="value" i].*/
+
+[class^="advanced"]/*The [attribute^="value"] selector is used to select elements with the specific attribute, whose value starts with a specific value.*/
+{
+    background-color: rgb(136, 189, 231);
+    box-sizing: border-box; 
+    border: 2px dashed rgb(73, 45, 3);
+    font: normal 20px Cochin;
+    text-align: center;
+    width: 400px;
+}
+[class$="attribute2"]/*The [attribute$="value"] selector is used to select elements whose attribute value ends with a specific value.*/
+{
+    background-color: rgb(34, 118, 121,0.6);
+    box-sizing: border-box; 
+    border: 2px dashed rgb(73, 45, 3);
+    color: aliceblue;
+    font: normal 20px Cochin;
+    text-align: center;
+    width: 400px;
+}
+[id*="ttr3"]/*The [attribute*="value"] selector is used to select elements whose attribute value contains a specific value.*/
+{
+    border-radius: 10px;
+    background-color: rgb(168, 184, 197);
+    font-size: 40px;
+    left: 320px;
+    max-height: 100px;
+    max-width: 300px;
+    overflow-x: scroll;
+    overflow-y:hidden;
+    position: relative;
+    top: -80px;
+}
+input[type="button"]
+{
+    box-shadow: 5px 5px 10px 3px rgb(177, 155, 124);
+    border:none;
+    border-radius: 30px;
+    padding: 10px;
+    text-transform: uppercase;
 }
