@@ -199,7 +199,7 @@
                                 <td><label for="textarea1">Short Bio</label></td>
                             </tr>
                             <tr>
-                                <td colspan="2"><textarea placeholder="Tell the community about yourself..." maxlength="50" name="short_bio" id="textarea1"></textarea></td>
+                                <td colspan="2"><textarea style="resize: none;" placeholder="Tell the community about yourself..." maxlength="50" name="short_bio" id="textarea1"></textarea></td>
                             </tr>
                             <tr>
                                 <td style="height: 50px;" colspan="2"><label for="skill_level">Skill Level</label></td>
@@ -280,26 +280,20 @@
                 </div>
                 <div id="charsets">
                     <p>Charsets</p>
+                    <ul>
+                        <li><span>UTF-8</span><span id="universal" style="color: white;">Universal · Recommended</span></li>
+                        <li><span>UTF-16</span><span>Unicode · Wide chars</span></li>
+                        <li><span>ISO-8859-1</span><span>Latin-1 · Legacy</span></li>
+                        <li><span>ASCII</span><span>128 chars · Basic</span></li>
+                    </ul>
+                </div>
+                <div id="url_encoding">
+                    <p>URL Encoding</p>
                     <div>
-                        <span>UTF-8</span>
-                        <span>Universal · Recommended</span>
+                        <pre><code attr="code1-url_encoding">hello world! →</code> <code attr="code2-url_encoding">raw</code>
+<code attr="code3-url_encoding">hello%20world%21 → encoded</code></pre>
                     </div>
-                    <hr>
-                    <div>
-                        <span>UTF-16</span>
-                        <span>Unicode · Wide chars</span>
-                    </div>
-                    <hr>
-                    <div>
-                        <span>ISO-8859-1</span>
-                        <span>Latin-l · Legacy</span>
-                    </div>
-                    <hr>
-                    <div>
-                        <span>ASCII</span>
-                        <span>128 chars · Basic</span>
-                    </div>
-                    <hr>
+                    <span>Spaces = %20 · # = %23 · & = %26</span>
                 </div>
             </aside>
         </div>

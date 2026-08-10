@@ -795,21 +795,6 @@ by a hyphen (-).Note: The value has to be a whole word, either alone, like class
     background: black;
     color: rgb(216, 229, 142);
 }
-/*CSS attribute selectors are used to select and style HTML elements with a specific attribute or attribute value, or both.
-
-Attribute selectors are enclosed in square brackets []. 
-
-CSS has the following attribute selectors:
-
-[attribute] - Select elements with the specified attribute
-[attribute="value"] - Select elements with a specific attribute and an exact value
-[attribute~="value"] - Select elements with an attribute value containing a specific word
-[attribute|="value"] - Select elements with the specific attribute, whose value can be exactly the value, or start with the value followed by a hyphen (-)
-[attribute^="value"] - Select elements whose attribute value starts with a specific value
-[attribute$="value"] - Select elements whose attribute value ends with a specific value
-[attribute*="value"] - Select elements whose attribute value contains a specific value
-Tip: The attribute selectors are case-sensitive by default. To perform a case-insensitive match, add an i before the closing bracket. Example: [attribute="value" i].*/
-
 [class^="advanced"]/*The [attribute^="value"] selector is used to select elements with the specific attribute, whose value starts with a specific value.*/
 {
     background-color: rgb(136, 189, 231);
@@ -842,6 +827,20 @@ Tip: The attribute selectors are case-sensitive by default. To perform a case-in
     position: relative;
     top: -80px;
 }
+/*CSS attribute selectors are used to select and style HTML elements with a specific attribute or attribute value, or both.
+
+Attribute selectors are enclosed in square brackets []. 
+
+CSS has the following attribute selectors:
+
+[attribute] - Select elements with the specified attribute
+[attribute="value"] - Select elements with a specific attribute and an exact value
+[attribute~="value"] - Select elements with an attribute value containing a specific word
+[attribute|="value"] - Select elements with the specific attribute, whose value can be exactly the value, or start with the value followed by a hyphen (-)
+[attribute^="value"] - Select elements whose attribute value starts with a specific value
+[attribute$="value"] - Select elements whose attribute value ends with a specific value
+[attribute*="value"] - Select elements whose attribute value contains a specific value
+Tip: The attribute selectors are case-sensitive by default. To perform a case-insensitive match, add an i before the closing bracket. Example: [attribute="value" i].*/
 input[type="button"]
 {
     box-shadow: 5px 5px 10px 3px rgb(177, 155, 124);
@@ -849,4 +848,35 @@ input[type="button"]
     border-radius: 30px;
     padding: 10px;
     text-transform: uppercase;
+}
+#focus1[type=text]:focus/*By default, some browsers will add a blue outline around the input when it gets focus (clicked on). You can remove this behavior by adding outline: none; to the input.
+Use the :focus selector to do something with the input field when it gets focus:*/
+{
+    background: rgb(241, 215, 191);
+    border-radius: 20px;
+    border-style: solid;
+    font-size: 20px;
+    outline: none;
+    padding: 10px;
+}
+
+#search_icon[type=search]/*If you want an icon inside the input, use the background-image property and position it with the background-position property. */
+{
+    background: rgb(214, 214, 214) url(/CSS_Practice/Image/css\ logo.png) no-repeat;
+    background-position: 5px;
+    background-size: 40px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-radius: 10px;
+    font: normal 20px monospace;
+    height: 50px;
+    outline: none;
+    padding: 0 0 0 50px;
+    transition:width 1.0s ease-in-out;/*In this example we use the CSS transition property to animate the width of the search input when it gets focus*/
+    width: 150px;
+}
+#search_icon[type=search]:focus
+{
+    background-color: white;
+    width: 350px;
 }
