@@ -880,3 +880,163 @@ Use the :focus selector to do something with the input field when it gets focus:
     background-color: white;
     width: 350px;
 }
+[name~="resize"]
+{
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    resize: none;/*By default, a <textarea> can be resized with a "grabber" in the bottom right corner. To remove the grabber, set the resize property to none:*/
+    width: 400px;
+}
+.css-counter
+{
+    counter-reset: counting;/*counter-reset - Creates or resets a counter. To use a CSS counter, it must first be created with the counter-reset property.*/
+}
+.css-counter p::before
+{
+    counter-increment: counting 2;/*counter-increment - Increments or decrements a counter You can increment the counter by any value*/
+    content: "Counting from " counter(counting) ": ";/*content - Inserts generated content*/
+}
+.css-counter > ol
+{
+    list-style: none;
+}
+.css-counter li::before
+{
+    counter-increment: counting -1;/*The counter-increment property has a second parameter. The default value is 1. To decrease the counter value, you can set it to -1.*/
+    content: "Counting from " counter(counting) ": ";
+}
+[attr~=two]
+{
+    background-color: rgb(0, 0, 0);
+    border: 1px solid black;
+    counter-reset: section_span;
+    color: gray;
+    width: 200px;
+}
+[name=sect1]::after
+{
+    color: white;
+    counter-reset: subsection_span;
+    counter-increment: section_span;
+    content: " " counter(section_span);
+}
+[attr~=two] > p:before
+{
+    color: rgb(125, 153, 243);
+    counter-increment: subsection_span;
+    content: counter(section_span)"."counter(subsection_span);/*You can create multiple counters for different levels of numbering*/
+}
+.counterss > ol
+{
+    counter-reset: multiple_counter;
+    list-style: none;
+}
+.counterss li::before
+{
+    counter-increment: multiple_counter;
+    content: counters(multiple_counter,".")" ";
+}/*The counters() function returns the current values of the named and nested counters, as a string.
+Here we use the counters() function to insert a string between different levels of nested counters:*/
+[class|=absolute]
+{
+    border: 1mm solid rgb(0, 0, 0);
+    font-size: 20pt;
+    letter-spacing: 0.3pc;
+    word-spacing: 0.5in;
+}
+/*
+Absolute units are fixed, and the length expressed in any of these will appear exactly that size.
+
+Absolute units do not change when the screen size change, and are not recommended for websites. However, they can be used if the output medium is known, such as for print layout.
+The most used absolute unit is px (pixels).
+
+Unit	Name	Description	
+px	Pixels	The most used absolute unit for screens (1px = 1/96th of 1in)	
+cm	Centimeters	Primarly used in print stylesheet	
+mm	Millimeters	Primarly used in print stylesheet	
+in	Inches	Primarly used in print stylesheet (1in = 96px = 2.54cm)	
+pt	Points	A typographical unit (1pt = 1/72 of 1in)	
+pc	Picas	A print unit (1pc = 12 pt)*/
+
+.relative_units
+{
+    background: rgb(71, 54, 5);
+    border-radius: 0.3vw;
+    box-shadow: 2vmin 1vmax 1vmax;
+    color: rgb(213, 214, 148);
+    font-size: 1.5em;
+    letter-spacing: 0.7vh;
+    padding: 1rem;
+}/*Relative units specify a length relative to another length property (like parent element, root element, or viewport).Relative length units scale better between different screen sizes.
+
+Unit	Description	
+em	    Relative to the font-size of the parent element	
+rem	    Relative to the font-size of the root HTML element	
+vw	    Relative to 1% of the width of the viewport*. 100vw = full width of the viewport	
+vh	    Relative to 1% of the height of the viewport*. 100vh = full height of the viewport	
+vmin	Relative to 1% of viewport's* smaller dimension	
+vmax	Relative to 1% of viewport's* larger dimension	
+%	    Relative to the size of the parent element	
+fr	    A fractional unit. 1fr equals 1 part of the available space	
+ch	    Relative to width of the "0" (zero) character*/
+
+[alt*=tance-container]
+{
+    border: 0.2em solid black;
+    color: rgb(76, 74, 207);
+    font-size: 1vw;
+    text-decoration: underline rgb(57, 107, 216) double 0.2rem;
+    width: 300px;
+}
+[alt*=tance-container] > p
+{
+    border: inherit;/*The inherit keyword is used to explicitly specify inheritance. It works on both inherited and non-inherited properties.*/
+}
+.css_specificity
+{
+    border-radius: 0.3rem;
+    background-color: black;
+    color: green;
+    font-size: 20px;
+    padding: 10px;
+}
+#css_specificity
+{
+    color: blue;
+}
+/*Each type of CSS selector has a position in the specificity hierarchy, and the selector types carry different "weights".
+
+Selector	                                         Example	                    Description     	                                    Weight
+Inline styles	                                     <h1 style="color: pink;">	    Highest priority, will override all other selectors	 
+Id selectors	                                    #navbar	                        Second highest priority	                                1-0-0
+Classes, attribute selectors and pseudo-classes	    .test, [type="text"], :hover	Third highest priority	                                0-1-0
+Elements and pseudo-elements	                     h1, ::before, ::after	        Low priority	                                        0-0-1
+Universal selector and :where()	                     *, where()	                    No priority	                                            0-0-0*/
+
+.css_important
+{
+    background: rgb(90, 111, 179,0.7);
+    height: 150px;
+    outline: 2px ridge rgb(123, 144, 236);
+    width: 300px;
+}
+strong
+{
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid rgb(243, 243, 243);
+    color: rgb(147, 211, 211);
+    display: flex;
+    height: 40px;
+    justify-content: center;
+}
+#strong_specificity
+{
+    color: white;
+}
+.strong_specificity
+{
+    color: blue !important;/*The !important rule is used to give the value of a specific property the highest priority.The !important rule will override ALL previous styling rules for that specific 
+    property on that element!The !important keyword is added to the end of a CSS declaration, before the semicolon.*/
+}

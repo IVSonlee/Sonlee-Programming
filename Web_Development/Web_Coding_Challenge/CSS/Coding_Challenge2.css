@@ -718,4 +718,28 @@ footer
 {
     background: rgb(26, 26, 36);
     color: rgb(99, 99, 145);
+    margin: -110px 0 0 -7px;
+    width: 100.8%;
+}
+footer > div
+{
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    height: 60px;
+}
+footer > div > div
+{
+    display: grid;
+    font: 13px monospace;
+    place-items: center;
+}
+
+[attr|=charset]
+{
+    color: #a78bfa;
+}
+[attr$=html]
+{
+    color: #00e5ff;
+    display: inline;
 }
