@@ -118,7 +118,7 @@ combine_values = "Programming"
 match combine_values:
     case int(combine_values) | float(combine_values):
         print("\nThis is a int or float data type")
-    case str(combine_values) | list(combine_values) if len(combine_values) == 11:
+    case str(combine_values) | list(combine_values) if len(combine_values) ==  11:
         print("\nThis is a string or a list data type with a length of index 11")
     case _:
         pass
@@ -155,7 +155,7 @@ print("\nI am using a continue in a for loop")
 for_loop = "For Loop"
 
 for loop1 in for_loop:
-    if loop1 is "L":
+    if loop1 == "L":
         continue
     print(loop1)
 
@@ -168,7 +168,7 @@ This is less like the for keyword in other programming languages, and works more
 With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc"""
 
 for loop1 in for_loop:
-    if loop1 is "L":
+    if loop1 == "L":
         break
     print(loop1)
 
@@ -229,10 +229,10 @@ By default, a function must be called with the correct number of arguments.
 
 If your function expects 2 arguments, you must call it with exactly 2 arguments."""
 
-def function5(her = "Verzosa"):
+def function5(her = "You"):
     print(her)
 
-function5("Carrel")
+function5("Me")
 function5()
 
 #You can assign default values to parameters. If the function is called without an argument, it uses the default value:
@@ -439,6 +439,87 @@ decorate2(1, 2, 3, 4, multiply=2)
 to the wrapper function, this way the wrapper function can accept any number, and any type of arguments, and pass them to the decorated function"""
 
 
+def decorator_name3(a,b):
+    def inner_decorator3(word1):
+        def inner_decorator4():
+            if a == 1 and b == 0:
+                return word1().upper()
+            else:
+                return word1().lower()
+        return inner_decorator4
+    return inner_decorator3
 
 
+@decorator_name3(1,0)
+def decorate3():
+    return "Decorator with Arguments"
 
+print("\nThis is a", decorate3())
+
+"""Decorators can accept their own arguments by adding another wrapper level."""
+
+def decorator_name4_1(name):
+    def inner5():
+        return name().upper()
+    return inner5
+
+def decorator_name4(name):
+    def inner4():
+        return "\nMy name is " + name()
+    return inner4
+
+@decorator_name4_1
+@decorator_name4
+def decorate4():
+    return "Iverson"
+
+print(decorate4())
+
+"""You can use multiple decorators on one function.
+
+This is done by placing the decorator calls on top of each other.
+
+Decorators are called in the reverse order, starting with the one closest to the function.You can use multiple decorators on one function.
+
+This is done by placing the decorator calls on top of each other.
+
+Decorators are called in the reverse order, starting with the one closest to the function."""
+print()
+
+def function20():
+    print("\nPreserving function Metadata using __name__ attribute")
+
+print(function20.__name__)
+"""Functions in Python has metadata that can be accessed using the __name__ and __doc__ attributes."""
+
+print()
+
+def changecase1(metadata1):
+    def metadata():
+        return len(metadata1())
+    return metadata
+
+@changecase1
+def function21():
+    print("When a function is decorated the metadatda of the original is lost")
+
+print(function21.__name__)
+
+print()
+
+import functools 
+"""Import functools.wraps to preserve the original function name and docstring."""
+
+def changecase2(metadata1):
+    @functools.wraps(metadata1)
+    def metadata():
+        return len(metadata1())
+    return metadata
+
+@changecase2
+def function22():
+    print("I use a build in function called functools.wraps to preserve the original funtion's name and docstring")
+
+print(function22.__name__)
+
+"""To fix this, Python has a built-in function called functools.wraps that can be used to preserve the original function's name and docstring."""

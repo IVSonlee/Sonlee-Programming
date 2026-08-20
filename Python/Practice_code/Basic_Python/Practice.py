@@ -1,3 +1,8 @@
-obj1,obj2 = "Hello","Hello"
+frozen1 = ({"Carrel","Anne",'Verzosa'})
+frozen2 = ({"Carrel","Anne","Verzosa"})
 
-print(obj1 is obj2)
+superset = frozen2.issuperset(frozen1)
+
+print("Check if frozen1 is subset of frozen2:",superset)
+
+

@@ -1,151 +1,145 @@
-#Task 1
+"""2. Show Menu — Print each item with its price, nicely formatted, numbered so customers can select by number."""
 
-from re import sub
+store_hours = ("8:00 AM","6:00 PM") #Fixed store hours between 8:00 AM - 6:00 PM
+menu = {"Latte" : 4.50, "Cappuccino" : 4.00, "Muffin" : 3.00, "Bagel" : 2.75, "Croissant" : 3.25} #Menu as a dictionary mapped with there prices
+menu_allergens = {"dairy","gluten","eggs","dairy"} #I created a set of allergens but it is not yet specified to what menu does it belong
+
+equal_sign = "="
+space = " "
+
+welcome_banner = f"""{equal_sign.center(40, equal_sign)}
+{space.ljust(4,space)}"☕ Welcome to PyBrew Café! ☕"
+{equal_sign.center(40, equal_sign)}
+Open: {store_hours[0]} - {store_hours[1]}"""
+
+print(welcome_banner)
+
+"""Greet the customer and print the store hours. Ask if they're a loyalty member and store the answer as a boolean. Run a loop that shows the menu and lets them keep adding items. 
+Use match to handle their command: order more, checkout, or quit. On checkout, calculate the total, print the receipt, and end the loop."""
 
 
-print("=====================================\nWelcome to the Student Report System\n=====================================")
 
-#Task 2
 
-student_name = "Maria Santos"
-age = 17
-grade_level = 11.0
-is_enrolled = True
 
-ladjust = " "
+"""Sample Output 1
 
-def function1():
-    global SCHOOL_NAME 
-    global casting_grade_level
-    casting_grade_level = int(grade_level)
+==========================================
+   ☕ Welcome to PyBrew Café! ☕
+==========================================
+Open: 8:00 AM - 6:00 PM
 
-    SCHOOL_NAME = f"""\nPythonville Academy"""
+Are you a loyalty member? (y/n): y
 
-    student_profile = """School: {}
-Name  : {}
-Age   : {}
-Grade : {}
-Active: {}""".format(SCHOOL_NAME, student_name, age, casting_grade_level, is_enrolled)
+--- MENU ---
+1. Latte ........... $4.50
+2. Cappuccino ....... $4.00
+3. Muffin ........... $3.00
+4. Bagel ............ $2.75
+5. Croissant ........ $3.25
 
-    print(student_profile)
+Enter item number: 1
+Latte added to cart. 🧾
+Add another item? (y/n): y
 
-function1()
+--- MENU ---
+1. Latte ........... $4.50
+2. Cappuccino ....... $4.00
+3. Muffin ........... $3.00
+4. Bagel ............ $2.75
+5. Croissant ........ $3.25
 
-#Task 3
+Enter item number: 3
+Muffin added to cart. 🧾
+Add another item? (y/n): y
 
-num1,num2,num3,num4,num5 = 88, 92, 75, 60, 84
+--- MENU ---
+1. Latte ........... $4.50
+2. Cappuccino ....... $4.00
+3. Muffin ........... $3.00
+4. Bagel ............ $2.75
+5. Croissant ........ $3.25
 
-total = num1 + num2 + num3 + num4 + num5
+Enter item number: 9
+❌ Invalid item number. Please try again.
+Add another item? (y/n): n
 
-average = str(total)
+Checking out...
 
-average  = int(average) / 5
+==========================================
+            🧾 RECEIPT 🧾
+==========================================
+1x Latte  ........... $4.50
+1x Muffin ........... $3.00
+------------------------------------------
+Subtotal:            $7.50
+Tax (8%):             $0.60
+Loyalty Discount:    -$0.00  (subtotal under $10, no discount applied)
+------------------------------------------
+TOTAL:                $8.10
+------------------------------------------
+⚠️  Contains allergens: dairy, eggs, gluten
 
-int_casting = int(average)
+Thanks for visiting PyBrew Café! ☕ Come again soon!
+==========================================
 
-scores = "\nScores : {} {} {} {} {}\nTotal  : {}\nAverage: {}\nPassed : {}".format(num1,num2,num3,num4,num5,total,int_casting,True if int_casting >= 75 else False)
+Sample Output 2
 
-print(scores)
+==========================================
+   ☕ Welcome to PyBrew Café! ☕
+==========================================
+Open: 8:00 AM - 6:00 PM
 
-#Task 4
+Are you a loyalty member? (y/n): y
 
-original = " maria santos "
+--- MENU ---
+1. Latte ........... $4.50
+2. Cappuccino ....... $4.00
+3. Muffin ........... $3.00
+4. Bagel ............ $2.75
+5. Croissant ........ $3.25
 
-task4 = """\nOriginal : \" {} \"
-Sliced   : First=\"{}\" Last=\"{}\"
-Formatted: \"{} {}\"
-Remark   : \"\"
-Contains \'a\': {} times""".format(original.strip(),original[1:6],original[7:13],original[1:6].capitalize(),original[7:13].upper(),original.count("a"))
+Enter item number: 1
+Latte added to cart. 🧾
+Add another item? (y/n): y
 
-remove_whitespace= original.strip()
+--- MENU ---
+1. Latte ........... $4.50
+2. Cappuccino ....... $4.00
+3. Muffin ........... $3.00
+4. Bagel ............ $2.75
+5. Croissant ........ $3.25
 
-print(task4,"\n\'santos\' found at index:",remove_whitespace.index("santos"))
+Enter item number: 2
+Cappuccino added to cart. 🧾
+Add another item? (y/n): y
 
-#Task 5
+--- MENU ---
+1. Latte ........... $4.50
+2. Cappuccino ....... $4.00
+3. Muffin ........... $3.00
+4. Bagel ............ $2.75
+5. Croissant ........ $3.25
 
-subjects = ["Math","Unknown","Science","Filipino","History"]
+Enter item number: 5
+Croissant added to cart. 🧾
+Add another item? (y/n): n
 
-access = " Access "
+Checking out...
 
-print("\n",access.center(14,"-"),f"\nFirst  : {subjects[0]}\nLast  : {subjects[4]}\nMiddle: {subjects[2]}")
+==========================================
+            🧾 RECEIPT 🧾
+==========================================
+1x Latte      ........... $4.50
+1x Cappuccino ........... $4.00
+1x Croissant  ........... $3.25
+------------------------------------------
+Subtotal:              $11.75
+Tax (8%):               $0.94
+Loyalty Discount:      -$1.18  (10% off, member + subtotal over $10)
+------------------------------------------
+TOTAL:                 $11.51
+------------------------------------------
+⚠️  Contains allergens: dairy, gluten
 
-subjects[1] = "Data Science"
-access = " After change "
-
-print(f"\n{access.center(20,"-")}\n{subjects}")
-
-access = " After add "
-
-subjects.append("PE")
-subjects.insert(2,"Ethics")
-
-print(f"\n{access.center(20,"-")}\n{subjects}")
-
-access = " After remove & pop "
-
-subjects.remove("History")
-subjects.pop()
-subjects_copy2 = subjects
-
-print(f"\n{access.center(26,"-")}\n{subjects}\n")
-
-[print(f"{loop}: {subjects[loop]}") for loop in range(len(subjects))]
-
-seven_above = []
-
-for loop2 in subjects:
-    if len(loop2) > 7:
-        seven_above.append(loop2)
-
-access = " Long name subjects (>7 chars) "
-
-print(f"\n{access.center(37,"-")}\n{seven_above}")
-
-access = " Sorted (A→Z) "
-
-subjects.sort()
-
-print(f"\n{access.center(20,"-")}\n{subjects}")
-
-subjects.reverse()
-
-access = " Reverse sorted (Z→A) "
-
-print(f"\n{access.center(28,"-")}\n{subjects}")
-
-subjects_copy = subjects
-
-access = " Backup copy "
-
-print(f"\n{access.center(20,"-")}\n{subjects_copy}")
-
-subject2 = ["MAPEH","TLE"]
-
-access = " Joined List "
-
-subjects.extend(subject2)
-
-print(f"\n{access.center(20,"-")}\n{subjects}")
-
-access = " Methods "
-
-print(f"\n{access.center(20,"-")}\n\'{subjects[1]}\' appears : {subjects.count("Math")} time\n\'{subjects[2]}\' index: {subjects.index("Filipino")}\n")
-
-average = int(average)
-
-report_card = """╔══════════════════════════════════════╗
-║   PYTHONVILLE ACADEMY — REPORT CARD ║
-╚══════════════════════════════════════╝
-
-Student  : {} {}
-Age      : {}\tGrade Level: {}
-Enrolled : {}
-
-Subjects : {}
-Score : {}  {}  {}  {}  {}
-Average : {}      Status : Passed
-Remark : {} {} showed consistent effort""".format(original[1:6].capitalize(),original[7:13].upper(),age,casting_grade_level,is_enrolled," | ".join(subjects_copy2),num1,num2,num3,num4,num5,average,original[1:6].capitalize(),original[7:13].upper())
-
-print(report_card)
-
- 
+Thanks for visiting PyBrew Café! ☕ Come again soon!
+=========================================="""
