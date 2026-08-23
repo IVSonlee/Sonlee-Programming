@@ -124,6 +124,11 @@ function function6()
 
     number = [1e2,2e3,3e4,4e5];
 
+    subtraction_exponentiation = (number[0] ** 2) - 500
+
     document.getElementById('javascript21').innerHTML = "Addition: " + number[0] + " + " + number[1] + " = " + (number[0] + number[1]) + " Multiplication " + number[1] + " * " + number[0] + " = " + 
     (number[1] * number[0]);//The Addition Operator (+) adds numbers:The Multiplication Operator (*) multiplies numbers:
+    document.getElementById('javascript22').innerText = "Exponentiation and Subtraction: (" + number[0] + " ** 2)  - " + 500 + " = " + subtraction_exponentiation  
+    //The subtraction operator (-) subtracts numbers.
+    //The exponentiation operator (**) raises the first operand to the power of the second operand.
 }
