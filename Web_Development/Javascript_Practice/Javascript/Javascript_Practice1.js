@@ -124,11 +124,79 @@ function function6()
 
     number = [1e2,2e3,3e4,4e5];
 
-    subtraction_exponentiation = (number[0] ** 2) - 500
+    subtraction_exponentiation = (number[0] ** 2) - 500;
 
     document.getElementById('javascript21').innerHTML = "Addition: " + number[0] + " + " + number[1] + " = " + (number[0] + number[1]) + " Multiplication " + number[1] + " * " + number[0] + " = " + 
     (number[1] * number[0]);//The Addition Operator (+) adds numbers:The Multiplication Operator (*) multiplies numbers:
-    document.getElementById('javascript22').innerText = "Exponentiation and Subtraction: (" + number[0] + " ** 2)  - " + 500 + " = " + subtraction_exponentiation  
+    document.getElementById('javascript22').innerText = "Exponentiation and Subtraction: (" + number[0] + " ** 2)  - " + 500 + " = " + subtraction_exponentiation;
     //The subtraction operator (-) subtracts numbers.
     //The exponentiation operator (**) raises the first operand to the power of the second operand.
+
+    /*
+    Operator	Description
+    +	        Addition
+    -	        Subtraction
+    *	        Multiplication
+    **	        Exponentiation
+    /	        Division
+    %	        Modulus (Division Remainder)
+    ++	        Increment
+    --	        Decrement */
+
+    let concatenate = "Concatenated" + " " + "strings"; //The + can also be used to add (concatenate) strings:
+
+    document.getElementById('javascript23').innerText = concatenate += " using + sign" //The += assignment operator can also be used to add (concatenate) strings:
+    
+    number[0] += number[1];
+    number[1] /= number[0];
+
+    document.getElementById('javascript24').innerHTML = "I am using a Assignment Operator for addition and division:" + number[0] + ", " + number[1];
+
+    /*Operator	Example	    Same As
+        =	    x = y	    x = y
+        +=	    x += y	    x = x + y
+        -=	    x -= y	    x = x - y
+        *=	    x *= y	    x = x * y
+        /=	    x /= y	    x = x / y
+        %=	    x %= y	    x = x % y
+        **=	    x **= y	    x = x ** y */
+
+    let a = "Comparison";
+    var b = "Comparison";
+    let value1 = 10;
+    let value2 = 20;
+
+    let comparison1 = (a == b) != (value2 > value1);
+    {
+        var comparison2 = ("Comparison" === b) <= ("A" < "B");
+    }
+
+    document.getElementById('javascript25').innerHTML = "Comparison1: " + comparison1 + " Inner Comparison2: " + comparison2;
+
+    /*Operator	    Description	                        Example
+        ==	        equal to	                        x == 5
+        ===	        equal value and equal type	        x === 5
+        !=	        not equal	                        x != 5
+        !==	        not equal value or not equal type	x !== 5
+        >	        greater than	                    x > 5
+        <	        less than	                        x < 5
+        >=	        greater than or equal to	        x >= 5
+        <=	        less than or equal to	            x <= 5 
+        
+    Note that strings are compared alphabetically.*/
+
+}
+
+function function7()
+{
+    {
+        var arithmetic_arrays = [1,2,3,4,5];
+
+        arithmetic = arithmetic_arrays[0] + arithmetic_arrays[4] - arithmetic_arrays[2] * arithmetic_arrays[1] / arithmetic_arrays[2] ** arithmetic_arrays[1];
+        increment = arithmetic
+
+        increment++
+        decrement
+    }
+    document.getElementById('javascript26').innerHTML = "1 + 5 - 3 * 2 / 3 ** 2 = " + arithmetic + " This one is increment and decrement: " + increment;    
 }
