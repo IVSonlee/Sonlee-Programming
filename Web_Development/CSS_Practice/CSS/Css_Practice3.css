@@ -2,16 +2,135 @@ body
 {
     background: rgb(128, 138, 151);
 }
-.rounded_corner_container
+/*CSS math functions allow mathematical expressions to be used as property values.
+
+In this chapter, we will explain the following math functions:
+
+calc()
+max()
+min()
+clamp()*/
+
+.calc
 {
-    border: 1px solid red;
-    height: 100px;
-    width: 1000px;
+    border: calc(0.5rem - 0.3em + 2px) solid rgb(174, 197, 212);/*The calc() function performs a mathematical calculation that will be used as the property value.
+    The calc() function supports addition (+), subtraction (-), multiplication (*), and division (/), and can combine different units, like pixels and percentages.
+    
+    Value	Description
+expression	Required. A mathematical expression. The result will be used as the value*/
+
+    float: left;
+    font-size: clamp(1em,1vw,4rem);
+    /*The clamp() function is used to set a value that will adjust responsively between a minimum value, a preffered value, and a maximum value depending on the size of the viewport.
+
+    The clamp() function has three parameters: a minimum value, a preferred value, and a maximum value:
+
+    If the preferred value is between the min and max value, the preferred value is used
+    If the preferred value is smaller than the min value, the min value is used
+    If the preferred value is larger than the max value, the max value is used
+
+    CSS Syntax
+    clamp(min, preferred, max)
+
+    Value	        Description
+    min	            Optional. The smallest allowed value
+    preferred	    Required. The preferred value
+    max	            Optional. The largest allowed value*/
+
+    height: max(2vw,6vw,7vw,3vw);/*The max() function takes a comma-separated list of values, and uses the largest value from the list as the property value.
+    max(value1, value2, ...)
+    
+    Value	                Description
+    value1, value2, ...	    Required. A list of comma-separated values*/
+    width: min(15rem,20vmax,10vw);/*The min() function takes a comma-separated list of values, and uses the smallest value from the list as the property value.
+
+    min(value1, value2, ...)
+    Value	            Description
+    value1, value2, ...	Required. A list of comma-separated values*/
 }
-.rounded_corner_container p
+
+[alt~="rounded"]
 {
-    border: 1px solid white;
-    display: inline-block;
-    height: 100px;
-    margin: 0;
+    background: rgb(197, 230, 241,0.6);
+    border-radius: 1em;
+    /*The border-radius property defines the radius of an element's corners.This property can be applied to all elements with a background-color, a border, or a background-image.*/
+    border: calc(0.05rem + 0.4vh) solid rgb(171, 195, 201);
+    display: grid;
+    float: left;
+    height: 2em;
+    place-items: center;
+    width: 10em;
 }
+div[title |= specify]
+{
+    background: url(/CSS_Practice/Image/pool.png)scroll no-repeat ;
+    background-size: cover;
+    border: 0.2em double white;
+    border-radius: 0 1.5rem 1.5rem 0;/*The border-radius property is actually a shorthand property for the border-top-left-radius, border-top-right-radius, border-bottom-right-radius 
+    and border-bottom-left-radius properties.*/
+    color: white;
+    clear: left;
+    float: left;
+    font-size: 2rem;
+    height: 5rem;
+    text-align: center;
+    width: 20rem;
+    word-spacing: 1rem;
+}
+
+.border_image1
+{
+    border: 1rem solid transparent;
+    border-image: url(/CSS_Practice/Image/css\ logo.png) 80 round;
+    /*The border-image property allows you to define an image to be used as the border around an element, instead of the normal border.
+
+    This property takes an image and slices it into nine sections, like a tic-tac-toe board. It then places the corners at the corners, and the middle sections are repeated or stretched as you specify.
+    
+    round value specifies that the middle section of the image is tiled (repeated) to fill the area (and rescaled to fit, if needed):*/
+    float: left;
+    height: 5em;
+    width: 20em;
+}
+.border_image2
+{
+    background: url(/CSS_Practice/Image/Blue_mountain.jpg) no-repeat ;
+    background-size: cover;
+    border: 0.2rem solid transparent;
+    border-image: url(/CSS_Practice/Image/Blue_mountain.jpg) 20% stretch;/*Here, the stretch value specifies that the middle section of the image is stretched to fill the area:
+    Different slice values completely changes the look of the border image:*/
+    float: left;
+    height: 5rem;
+    padding: 2em;
+}
+.multiple_background
+{
+    background-image:url(/CSS_Practice/Image/checklist.png),url(/CSS_Practice/Image/Car1.jpg);/*CSS allows you to add multiple background images for an element, through the background-image property.
+    The different background images are separated by commas, and the images are stacked on top of each other, where the first image is closest to the viewer.*/
+    background-position: top right,center;
+    background-repeat: no-repeat,no-repeat;
+    background-size:7em,cover;
+    border: 0.2em ridge rgb(49, 63, 109);
+    color: rgb(188, 220, 248);
+    clear: left;
+    font: 800 1vw Verdana;
+    height: 15em;
+    width: 30em;
+}
+
+.multiple_background2
+{
+    background:url(/CSS_Practice/Image/checklist.png) top right no-repeat,url(/CSS_Practice/Image/Car1.jpg) center no-repeat;/*Multiple background images can be specified using either the individual 
+    background properties (as above) or with the background shorthand property.*/
+    background-size:7em,cover;
+    border: 0.2em ridge rgb(49, 63, 109);
+    color: rgb(188, 220, 248);
+    font: 800 1vw Verdana;
+    height: 15em;
+    width: 30em;
+}
+/*Property	        Description
+background	        A shorthand property for setting all the background properties in one declaration
+background-clip	    Specifies the painting area of the background
+background-image	Specifies one or more background images for an element
+background-origin	Specifies where the background image(s) is/are positioned
+background-size	    Specifies the size of the background image(s)*/
