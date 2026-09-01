@@ -134,3 +134,89 @@ background-clip	    Specifies the painting area of the background
 background-image	Specifies one or more background images for an element
 background-origin	Specifies where the background image(s) is/are positioned
 background-size	    Specifies the size of the background image(s)*/
+
+[class ~= size]
+{
+    box-shadow: 0.5em 0.5em 3em 0.4em rgb(143, 172, 226);
+    box-sizing: border-box;
+    background: url(/CSS_Practice/Image/css\ logo.png) no-repeat,url(/CSS_Practice/Image/Car3.jpg) no-repeat;
+    background-position:right,initial;
+    background-size: 4em,contain;
+    /*background-size - auto, contain and cover
+    The keyword values for background-size are auto, contain and cover.
+
+    The auto value is the default value, and displays the background image in its original size.
+
+    The contain value scales the image up or down, to fit inside the content area.
+
+    The cover value scales the image to be as large as possible so that the content area is completely covered by the background image (its width and height will be equal to, or larger than the content area).
+    
+    The background-size property also accepts multiple values (using a comma-separated list), when working with multiple backgrounds.*/
+    border: 0.3em double rgb(190, 190, 223);
+    color: aliceblue;
+    font: 700 1.5rem monospace;
+    height: 11em;
+    letter-spacing: 0.3em;
+    text-indent: 4em;
+    text-shadow: 0.1em 0.2em 0.4em rgb(58, 72, 104);
+    width: clamp(4em,27em,30em);
+}
+div[class $= origin]
+{
+    background: rgb(48, 59, 83) url(/CSS_Practice/Image/House_exterior6.jpg) no-repeat;
+    background-size: 15em;
+    border: 0.3em solid rgb(250, 250, 250);
+    color: rgb(0, 0, 0);
+    padding: 2.6em;
+    width: 25em;
+}
+[alt|=padding]
+{
+    background-origin: padding-box;
+}
+[alt|=border]
+{
+    background-origin: border-box;
+}
+[alt|=content]
+{
+    background-origin: content-box;
+}
+/*The CSS background-origin property specifies where the background image is positioned.
+
+This property can have one of the following values:
+
+padding-box - The background image starts from the top-left corner of the padding edge. This is default
+border-box - The background image starts from the top-left corner of the border edge
+content-box - The background image starts from the top-left corner of the content edge
+Note: This property has no effect if the background-attachment property is set to "fixed".*/
+
+.background_clip
+{
+    background: url(/CSS_Practice/Image/wood_background.png) no-repeat;
+    border: 0.3rem dotted rgb(90, 90, 212);
+    display: inline-block;
+    height: 10rem;
+    padding: 3em;
+    width: 30em;
+}
+
+.background_clip[alt=clip1]
+{
+    background-clip: border-box;
+}
+.background_clip[alt=clip2]
+{
+    background-clip: padding-box;
+}
+.background_clip[alt=clip3]
+{
+    background-clip: content-box;
+}
+/*The CSS background-clip property defines how far the background (color, image, or gradient) should extend within an element.
+
+This property can have one of the following values:
+
+border-box - The background extends behind the border. This is default
+padding-box - The background extends to the inside edge of the border
+content-box - The background extends to the edge of the content box*/
