@@ -184,19 +184,21 @@ function function6()
         <=	        less than or equal to	            x <= 5 
         
     Note that strings are compared alphabetically.*/
-
 }
-
 function function7()
 {
     {
         var arithmetic_arrays = [1,2,3,4,5];
 
-        arithmetic = arithmetic_arrays[0] + arithmetic_arrays[4] - arithmetic_arrays[2] * arithmetic_arrays[1] / arithmetic_arrays[2] ** arithmetic_arrays[1];
+        arithmetic = arithmetic_arrays[0] + arithmetic_arrays[4] - arithmetic_arrays[2] * arithmetic_arrays[1] / arithmetic_arrays[2] ** arithmetic_arrays[1];/*The numbers (in an arithmetic operation) are 
+        called operands.The operation (to be performed between the two operands) is defined by an operator. */
         increment = arithmetic
 
-        increment++
-        decrement
+        increment++;/*The increment operator (++) increments numbers. */
+
+        decrement = increment;
+        decrement--;/*The decrement operator (--) decrements numbers. */
     }
-    document.getElementById('javascript26').innerHTML = "1 + 5 - 3 * 2 / 3 ** 2 = " + arithmetic + " This one is increment and decrement: " + increment;    
+    document.getElementById('javascript26').innerHTML = "1 + 5 - 3 * 2 / 3 ** 2 = " + arithmetic + " This one is increment and decrement: " + increment + " and " + decrement;    
 }
+/*  */

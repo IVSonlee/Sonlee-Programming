@@ -220,3 +220,15 @@ This property can have one of the following values:
 border-box - The background extends behind the border. This is default
 padding-box - The background extends to the inside edge of the border
 content-box - The background extends to the edge of the content box*/
+
+[alt $= colors] > p
+{
+    border: 0.2em dotted rgb(172, 215, 228);
+    background-color: aliceblue;
+    background-clip: content-box;
+    background: transparent;/*The transparent keyword is used to make a color transparent. This is often used to make a transparent background color for an element.*/
+    outline: 0.5em double rgb(0, 0, 0);
+    outline-offset: 1em;
+    padding: 3em;
+    width: 200px;
+}
