@@ -189,6 +189,7 @@ function function7()
 {
     {
         var arithmetic_arrays = [1,2,3,4,5];
+        var words = ["Front End Developer", "Backend Developer", "Fullstack Web Developer", "Senior Fullstack Web Developer",null,undefined, 0];
 
         arithmetic = arithmetic_arrays[0] + arithmetic_arrays[4] - arithmetic_arrays[2] * arithmetic_arrays[1] / arithmetic_arrays[2] ** arithmetic_arrays[1];/*The numbers (in an arithmetic operation) are 
         called operands.The operation (to be performed between the two operands) is defined by an operator. */
@@ -199,6 +200,67 @@ function function7()
         decrement = increment;
         decrement--;/*The decrement operator (--) decrements numbers. */
     }
-    document.getElementById('javascript26').innerHTML = "1 + 5 - 3 * 2 / 3 ** 2 = " + arithmetic + " This one is increment and decrement: " + increment + " and " + decrement;    
+    document.getElementById('javascript26').innerHTML = "1 + 5 - 3 * 2 / 3 ** 2 = " + arithmetic + " This one is increment and decrement: " + increment + " and " + decrement;
+    document.getElementById('javascript27').innerHTML = "Lastly I am using Math.pow(x,y): " + Math.pow(arithmetic_arrays[2], arithmetic_arrays[1]);  //x ** y produces the same result as Math.pow(x,y):  
+
+    arithmetic_arrays[4] **= arithmetic_arrays[4];
+    arithmetic_arrays[3] /= arithmetic_arrays[1];
+
+    words[0] += " is my first goal";//The Addition Assignment Operator Can also be used to add strings.
+
+    document.getElementById('javascript28').innerHTML = "I am using Exponentiation Assignment Operator: " + arithmetic_arrays[4] + " Division Assignment Operator: " + arithmetic_arrays[3] +
+    "Lastly using addition assignment operator for text: " + words[0];
+    
+    let logical_and1 = words[4] &&= "This will not display unless the first value is True";
+    let logical_and2 = words[0] &&= "This is true because its just only an empty string";
+    //The Logical AND assignment operator is used between two values.If the first value is true, the second value is assigned.
+
+    let logical_or1 = arithmetic_arrays[0] ||= words[0];
+    let logical_or2 = words[6] ||= words[4];
+    //The Logical OR assignment operator is used between two values.If the first value is false, the second value is assigned.
+
+    let nullish1 = words[5] ??= "It will display the second value";
+    let nullish2 = words[6] ??= "It will display the first value";
+    
+    let spread_sample1 = "76234";
+    /*Operator	Example	        Result
+        &&=	    true &&= 10	    x = 10
+        ||=	    false ||= 10	x = 10
+        ??=	    null ??= 10	    x = 10 
+        
+    The 8 FALSY Values
+        false	        The boolean keyword itself
+         0	            The number zero
+        -0	            Negative zero
+        0n	            BigInt zero
+        "", '', ``	    Any empty string
+        null	        The absence of any value
+         undefined	    A variable that has not been assigned a value
+        NaN	            "Not-a-Number," usually the result of an invalid math operation
+    
+        These are TRUTHY
+
+    "0"	    A string containing a zero is truthy because it is not empty
+    "false"	The string "false" is truthy
+    [ ]	    An empty array is truthy
+    { }	    An empty object is truthy*/
+
+    
+
+    let max = Math.max(...spread_sample1);//The ... operator splits iterables into individual elements.
+
+    let comparison1 = "10" < "5";//All the comparison operators above can also be used on strings: Note that strings are compared alphabetically:
+    let comparison2 = true === 0;
+
+    /*Comparing Different Types
+    Comparing data of different types may give unexpected results.
+
+    When comparing a string with a number, JavaScript will convert the string to a number when doing the comparison. An empty string converts to 0. A non-numeric string converts to NaN which is always false. */
+
+    document.getElementById('javascript29').innerHTML = "I am using Logical AND operator: " + logical_and1 + " and " + logical_and2;
+    document.getElementById('javascript30').innerHTML = "I am using Logical OR operator: " + logical_or1 + " and " + logical_or2;
+    document.getElementById('javascript31').innerText = "I am using Nullish coalescing operator: " + nullish1 + " and " + nullish2;
+    document.getElementById('javascript32').innerHTML = "I am using spread operator: " + max; 
+    document.getElementById('javascript33').innerHTML = "I am using Comparison operator: " + comparison1 + " and " + comparison2;
+    
 }
-/*  */
