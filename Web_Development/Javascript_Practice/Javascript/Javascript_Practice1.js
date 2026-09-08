@@ -219,7 +219,7 @@ function function7()
     let logical_or2 = words[6] ||= words[4];
     //The Logical OR assignment operator is used between two values.If the first value is false, the second value is assigned.
 
-    let nullish1 = words[5] ??= "It will display the second value";
+    let nullish1 = words[5] ??= "It will display the second value";//If the first value is undefined or null, the second value is assigned.
     let nullish2 = words[6] ??= "It will display the first value";
     
     let spread_sample1 = "76234";
@@ -262,5 +262,131 @@ function function7()
     document.getElementById('javascript31').innerText = "I am using Nullish coalescing operator: " + nullish1 + " and " + nullish2;
     document.getElementById('javascript32').innerHTML = "I am using spread operator: " + max; 
     document.getElementById('javascript33').innerHTML = "I am using Comparison operator: " + comparison1 + " and " + comparison2;
+}
+
+function function8()
+{
+    condition_values = [true,false,null,undefined,"nested if",21]
+
+    if (true !== "Not Equal value and type")
+    {
+        document.getElementById('javascript34').innerHTML = "I am using an if condition";//Use the JavaScript if statement to execute a block of code when a condition is true.
+    }
+
+    let nested_if = condition_values[1] ||= condition_values[4];
+
+    if(condition_values[1] ||= condition_values[4] == "nested if")
+    {
+        if(typeof(condition_values[4] == typeof("is this a string")))
+        document.getElementById('javascript35').innerHTML = "This is a " + nested_if;
+    }//You can use an if statement inside another if statement:Nested if statements can make your code more complex.A better solution is to use the logical AND operator:
+
+    if(null === undefined)
+    {
+        if_else_output = "This will be not executed";
+    }
+    else
+    {
+        if_else_output = "I am using a if else statement";
+    }//Use the else statement to specify a block of code to be executed if a condition is false.
+
+    document.getElementById('javascript36').innerText = if_else_output;
+
+    let else_if;
+
+    if(condition_values[4] > "not executed")
+    {
+        else_if = "This will be not executed it will based on the first letter if the same then it will base on the next letter";
+    }
+    else if(condition_values[4] <= "successful")//Use the else if statement to specify a new condition if the first is false.
+    {
+        else_if = "This will be executed using else if statement";
+    }
+    else
+    {
+        else_if = "This will be not executed";
+    }
+
+    document.getElementById('javascript37').innerHTML = else_if;
+
+    var ternary1 = condition_values[0] &&= true ? "I am using ternary operator and it is True" : "Using ternary but its false";
+    var ternary2 = false ? "This will not be executed because it is True" : "This will be executed since it False using ternary operator";
+    //The conditional operator is a shorthand for writing conditional if...else statements.It is called a ternary operator because it takes three operands.
+
+    /*Parameter	            Description
+    condition	            Required.
+                            The condition to be tested.
+                            An expression that evaluates to true or false.
+        ?	                Required.
+                            The operator separating the condition from the expressions.
+    expression1	            Required.
+                            The value to return if the condition is true.
+        :	                Required.
+                            The operator separating the expressions.
+    expression2	            Required.
+                            The value to return if the condition is false.*/
+
+    document.getElementById('javascript38').innerHTML = ternary1;
+    document.getElementById('javascript39').innerHTML = ternary2;
+
     
+    let day;
+    const get_day = new Date().getDay();//The getDay() method returns the weekday as a number between 0 and 6.(Sunday=0, Monday=1, Tuesday=2 ..)
+
+    switch(get_day)
+    {
+        case 0:
+            day = "Sunday";
+            break;//When JavaScript reaches a break keyword, it breaks out of the switch block.This will stop the execution inside the switch block.No more statements in the switch block will be executed.
+            //It is not necessary to break the last case. The switch ends (breaks) there anyway.
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = "Tuesday";
+            break;
+        case 3:
+            day = "Wedndesday";
+            break;
+        case 4:
+            day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case 6:
+            day = "Saturday";
+            break;
+        default://The default keyword specifies a block of code to run if there is no case match.The default keyword is optional.The default can act as a fallback:
+            day = "None of the numbers have a specific day";
+    }
+    /*Based on a condition, switch selects one or more code blocks to be executed.switch executes the code blocks that matches an expression.
+    switch is often used as a more readable alternative to many if...else if...else statements, especially when dealing with multiple possible values. 
+    
+    The switch expression is evaluated once.
+    The value of the expression is compared with the values of each case.
+    If there is a match, the associated block of code is executed.
+    If there is no match, no code is executed.*/
+
+    document.getElementById('javascript40').innerHTML = "Currently I am using switch statement that determines the day: " + day;
+
+    let val1 = 0;
+    let val1_output;
+    val1 += 30;
+
+    
+    switch(val1)
+    {
+        case val1 > 30:
+        case typeof(val1) === typeof(30):
+            val1_output = "This will be not executed";
+            break
+        case val1 % 6 == 0:
+        case val1 &&= "Execute" == false:
+            val1_output = "This will be executed using common code blocks of cases";
+            break
+        default:
+            val1_output = "None of the cases match";
+    }
+    document.getElementById('javascript41').innerHTML = val1;
 }
