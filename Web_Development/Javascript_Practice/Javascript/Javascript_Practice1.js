@@ -371,22 +371,68 @@ function function8()
     document.getElementById('javascript40').innerHTML = "Currently I am using switch statement that determines the day: " + day;
 
     let val1 = 0;
-    let val1_output;
     val1 += 30;
+    let val1_output;
 
-    
-    switch(val1)
+    switch(true)
     {
-        case val1 > 30:
-        case typeof(val1) === typeof(30):
-            val1_output = "This will be not executed";
-            break
+        case condition_values[2] ||= false == val1 > 31:
         case val1 % 6 == 0:
-        case val1 &&= "Execute" == false:
-            val1_output = "This will be executed using common code blocks of cases";
-            break
+            val1_output = "This will be executed because two cases are true";
+            break;
+        case false:
+        case true:
+            val1_output = "This will be not executed because one is false and the other one is true";
+            break;
         default:
-            val1_output = "None of the cases match";
+            val1_output = "Nothing has matched";
     }
-    document.getElementById('javascript41').innerHTML = val1;
+
+    document.getElementById('javascript41').innerHTML = val1_output;
+
+    let start = 0;
+    let count = "";
+
+    while(start <= 10)
+    {
+        count += start;
+        start++;
+
+        if(start == 6)//You can use the Boolean() function to find out if an expression (or a variable) is true:
+        {
+            break;
+        }
+    }
+
+    /*Booleans are extensively used in loops to determine conditions for looping.
+
+    Description	    Example
+    For loop	    for (i = 0; i < 5; i++)
+    While loop	    while (i < 10)
+    For in loop	    for (x in person)
+    For of loop	    for (x of cars) */
+    document.getElementById('javascript42').innerHTML = count;
+
+    let js_logical = ["JS Logical AND", "JS Logical OR", "JS Logical NOT"];
+
+    let js_logical_and, js_logical_or_not;
+
+    if("b" > "a" && 10 === 10)//The && operator returns true if both expressions are true, otherwise false:
+    {   
+        js_logical_and = "I am using " + js_logical[0];
+    }
+    document.getElementById('javascript43').innerHTML = js_logical_and;
+
+    var bool2 = false;
+
+    if(bool2 ||= 1 || !(false))//The || operator returns true if one or both expressions are true, otherwise false: The NOT operator (!) returns true for false expressions and false for true expressions.
+    {
+        js_logical_or_not = "I am using " + js_logical[1] + " and " + js_logical[2];
+    }
+
+    document.getElementById('javascript44').innerHTML = js_logical_or_not;
+
+    let nullish_coalescing = undefined ?? "I am using nullish coalescing operator";
+
+    document.getElementById('javascript45').innerHTML = nullish_coalescing;
 }
