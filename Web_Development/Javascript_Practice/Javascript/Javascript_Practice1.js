@@ -436,3 +436,121 @@ function function8()
 
     document.getElementById('javascript45').innerHTML = nullish_coalescing;
 }
+
+function function9()
+{
+    {
+       let loop_sample1 = [1,2,3,4,5,6,7,8,9,10]; 
+       let sample1_output = "";
+       
+       for(var a = 0; a < loop_sample1.length; a++)//The for statement creates a loop with 3 optional expressions:
+       //exp1 is executed one time before the execution of the code block.exp2 defines the condition for executing the code block.exp3 is executed every time the code block has been executed.
+       {   
+           sample1_output += loop_sample1[a] + "<br>";
+       }
+       document.getElementById('javascript46').innerHTML = sample1_output; 
+    }
+    {
+        let loop_sample2 = [2,4,6,10,16,26,42,68,110,178]; 
+
+        let while_start = 0;
+        var while_value = "";
+
+        while(while_start < 10)
+        {
+            while_value += loop_sample2[while_start] + " ";
+            while_start++;
+        }/*The while loop loops through a block of code as long as a specified condition is true.
+
+        Syntax
+        while (condition) {
+        // code block to be executed
+        } */
+        document.getElementById('javascript47').innerHTML = while_value;
+    }
+    {
+        var do_while_values = ["I","am","using","do","while","loop"];
+        var start = 2;
+        var result = "";
+        do//The do while runs at least once, even if the condition is false from the start.This is because the code block is executed before the condition is tested:
+        {
+            result += do_while_values[start] + " ";
+            start++;//Do not forget to increase the variable used in the condition, otherwise the loop will never end!
+        }while(start < do_while_values.length);
+        document.getElementById('javascript48').innerHTML = result;
+    }
+    {
+        let start = 0;
+        let word = "Another way of for loop";
+        let result = "";
+
+        for(;start < word.length;)
+        {
+            result += word[start];
+            start++
+        }
+        document.getElementById('javascript49').innerHTML = result;
+    }
+    {
+        var break_loop = "I'll be using break in loops";
+        var output = "";
+
+        for(var start = 0; start < break_loop.length;)
+        {
+            if(break_loop[start] == "i" && start > 10)
+            {
+                break;//When break is encountered in a loop, the loop terminates immediately.The program control is transfered to the statements following the loop.No more loop iterations are executed.
+            }
+            output += break_loop[start];
+            start++;
+        }
+        document.getElementById('javascript50').innerHTML = output;
+    }
+    {
+        let row = 0;
+        let asterisk = "";
+
+        label1: while(row < 10)//A label provides a name for a statement, or a block of statements, allowing statements to be referenced to, for program flow control, particularly in loops.
+        {
+            let columns = 0;
+            label2: while(columns < row)
+            {
+                if(columns == 7)
+                {
+                    break label1;//The break statement exits a loop or block and transfers the control to the labeled statement.
+                    //The break statement is particularly useful for breaking out of inner or outer loops from nested loops.
+                }
+                asterisk += "*";
+                columns++;
+            }
+            asterisk += "<br>";
+            row++;
+        }
+        document.getElementById('javascript51').innerHTML = asterisk;   
+
+        /*A label is an identifier followed by a colon (:).
+
+        labelname: statement;
+        A label precedes a statement or a block of code.
+
+        labelname: {
+        statements
+        } */
+    }
+    {
+        let start = 2;
+        let output = "";
+
+        for(;start < 10;)
+        {
+            if(start == 6)
+            {
+                start++;
+                continue;//The continue statement skips the current iteration in a loop.The remaining code in the iteration is skipped and processing moves to the next iteration.
+            }
+            output += start * 10 + "<br>";
+            start++;
+        }
+        document.getElementById('javascript52').innerHTML = output;
+    }
+}
