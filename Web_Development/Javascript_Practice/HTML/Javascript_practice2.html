@@ -21,6 +21,31 @@
     <p id="javascript2">JS Strings as Objects</p>
     <p id="javascript3">JS String Templates</p>
     <p id="javascript4">JS HTML Templates</p>
+    <p id="javascript5">JS String Methods</p>
+    <p id="javascript6">JS codePointAt() and at()</p>
+    <p id="javascript7">JS at() and Property access</p>
+    <p id="javascript8">JS Sloppy Mode</p>
+
+    <script>
+        "use strict"; // Example with a strict mode if you want sloppy mode just remove use strict in this line
+        let sample_string3 = "try and catch";
+
+        try
+        {
+            sample_string3[9] = "e";
+        }
+        catch(err)
+        {
+            sample_string3 = err.message
+        }
+
+        document.getElementById('javascript8').innerHTML = sample_string3;
+    </script>
+
+    <p id="javascript9">JS concat(), slice(), substring()</p>
+    <p id="javascript10">JS substr(), toUpperCase()</p>
+    <p id="javascript11">JS toWellFormed(), trim(), trimStart(), trimEnd()</p>
+    <p id="javascript12">JS padStart()</p>
     <button type="button" onclick="function1()">JS Strings</button>
 </body>
 </html>
