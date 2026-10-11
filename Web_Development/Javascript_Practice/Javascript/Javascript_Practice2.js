@@ -139,7 +139,7 @@ function function1()
         let substr1 = sample_string1.substr(3,6);//substr() is similar to slice().The difference is that the second parameter specifies the length of the extracted part.
 
 
-        document.getElementById('javascript10').innerHTML = "I am using substr(): " + substr1 + "substr() with omitted 2nd parameter: " + sample_string1.substr(10) + 
+        document.getElementById('javascript10').innerHTML = "I am using substr(): " + substr1 + " substr() with omitted 2nd parameter: " + sample_string1.substr(10) + 
         `<br>Using toUpperCase(): ${sample_string1.toUpperCase()} <br> Using toLowerCase(): ${sample_string1.toLowerCase()}<br> Using isWellFormed(): ${sample_string1.isWellFormed()}`;
         //If you omit the second parameter, substr() will slice out the rest of the string.If the first parameter is negative, the position counts from the end of the string.
         //A string is converted to upper case with toUpperCase():

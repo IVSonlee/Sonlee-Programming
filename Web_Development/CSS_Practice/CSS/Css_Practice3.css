@@ -232,3 +232,127 @@ content-box - The background extends to the edge of the content box*/
     padding: 3em;
     width: 200px;
 }
+
+[alt~="currentcolor"]
+{
+    box-sizing: border-box;
+    border: 0.2em dashed currentColor;/*The currentcolor keyword is like a variable that holds the current value of the color property of an element.
+    This keyword can be useful if you want a specific color to be consistent in an element or a page.*/
+    background-color:inherit;/*The inherit keyword specifies that a property should inherit its value from its parent element.The inherit keyword can be used for any CSS property, and on any HTML element.*/
+    color: white;
+    display: grid;
+    font: italic normal 700 1.5em Cambria;
+    text-align-last: justify;
+    min-height: 50px;
+    max-width: 450px;
+    place-items: center;
+}
+
+#table1
+{
+    border: 0.5em double rgb(24, 19, 88);
+    box-sizing: border-box;
+    border-collapse:collapse;
+    min-height: 200px;
+    min-width: 110em;
+}
+#linear td
+{
+    color: rgb(125, 180, 224);
+    font: normal italic 700 2vh monospace;
+    letter-spacing: 0.2em;
+    text-decoration: underline 0.3rem rgb(248, 248, 255);
+    text-align: center;
+    word-spacing: 1em;
+}
+#linear1
+{
+    background-image: linear-gradient(to bottom, rgb(91, 139, 228), rgb(3, 0, 31));
+}
+#linear2
+{
+    background-image: linear-gradient(to right, rgb(132, 91, 228), rgb(52, 39, 168));
+}
+#linear3
+{
+    background-image: linear-gradient(to bottom left, rgb(0, 0, 0),rgb(41, 16, 110),rgb(130, 214, 130));
+}
+/*The CSS linear-gradient() function creates a linear gradient.
+
+A linear gradient defines a color transition that goes in a straight line, it can go down, up, to left, to right, or diagonally.A linear gradient requires at least two color stops. 
+Color stops are the colors you want to render smooth transitions among. You can also set a starting point and a direction (or an angle) along with the gradient effect.
+
+Syntax
+background-image: linear-gradient(direction, color-stop1, color-stop2, ...);*/
+#linear4
+{
+    background-image: linear-gradient(120deg,rgb(0, 0, 0),rgb(24, 64, 109),rgb(73, 3, 3));
+}
+/*If you want more control over the direction of the gradient, you can define an angle parameter, instead of the predefined directions (to bottom, to top, to right, to left, to bottom right, etc.).
+
+A value of 0deg is equivalent to "to top".
+A value of 90deg is equivalent to "to right".
+A value of 180deg is equivalent to "to bottom".
+A value of 270deg equivalent to "to left"
+
+Syntax
+background-image: linear-gradient(angle, color-stop1, color-stop2);*/
+#linear5
+{
+    background-image: linear-gradient(180deg, rgba(65, 12, 43,1),rgba(65, 12, 43,0));
+}
+/*CSS gradients also support transparency, which can be used to create fading effects.
+
+To add transparency, we use the rgba() function to define the color stops. The last parameter in the rgba() function can be a value from 0 to 1, and it defines the transparency of the color: 
+0 indicates full transparency, 1 indicates full color (no transparency).*/
+
+#linear6
+{
+    background-image: repeating-linear-gradient(220deg, rgb(107, 109, 212) ,rgb(29, 7, 65) 20%,rgb(110, 165, 148) 10%);/*The CSS repeating-linear-gradient() function is used to repeat linear gradients:*/
+}
+
+#radial_gradient td
+{
+    color: rgb(83, 65, 14);
+    font: normal small-caps 700 1.5em times new roman;
+    text-align: center;
+}
+#radial_gradient1
+{
+    background-image: radial-gradient(rgb(41, 23, 0),rgb(0, 0, 0));
+}
+/*The CSS radial-gradient() function creates a radial gradient.
+
+A radial gradient is either an ellipse or a circle, and has a color transition that is spread out from the center point.
+
+A radial gradient requires at least two color stops. Color stops are the colors you want to render smooth transitions among.
+
+Syntax
+background-image: radial-gradient(shape size at position, start-color, ..., last-color);
+
+By default, shape is ellipse, size is farthest-corner, and position is center.*/
+
+#radial_gradient2
+{
+    background-image: radial-gradient(rgb(255, 255, 255) 40%, rgb(255, 115, 0) 50%, black 70%);/*The following example shows a radial gradient with differently spaced color stops:*/
+}
+
+#radial_gradient3
+{
+    background-image: radial-gradient(circle, rgb(233, 232, 166) 30%, gray 70%);/*The shape parameter defines the shape of the gradient. It can take one of the following values:
+    ellipse (this is default)
+    circle*/
+}
+#radial_gradient4
+{
+    background-image: radial-gradient(closest-corner at 20% 30%, rgb(165, 99, 23),rgb(36, 13, 6));/*The size parameter defines the size of the gradient'ending shape. It can take one of the following values:
+
+    closest-side
+    farthest-side
+    closest-corner
+    farthest-corner (this is default)*/
+}
+#radial_gradient5
+{
+    background-image: repeating-radial-gradient(white 20%, rgb(173, 95, 95) 50%, rgb(153, 95, 57) 80%);/*The CSS repeating-radial-gradient() function is used to repeat radial gradients:*/
+}
