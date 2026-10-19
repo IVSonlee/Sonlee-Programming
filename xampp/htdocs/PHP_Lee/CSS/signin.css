@@ -1,0 +1,52 @@
+body
+{
+    align-items: center;
+    background: rgb(105, 96, 79);
+    display: flex;
+    min-height: 99vh;
+    max-width: 210vh;
+    justify-content: center;
+    margin: 0;
+}
+
+#signin_form
+{
+    background-color: rgb(185, 169, 150);
+    border-radius: 2em;
+    min-height: 70vh;
+    min-width: 40em;
+}
+
+#signin_form table
+{
+    height: 35em;
+    margin-top: 2em;
+    width: 100%;
+}
+#signin_form > table td
+{
+    border: 1px solid white;
+    text-align: center;
+}
+#signin_form label
+{
+    color: rgb(110, 99, 77);
+    font: normal 800 1em verdana;
+}
+#signin_form input
+{
+    border: none;
+    border-radius: 2em;
+    font-size: 14px;
+    font-family: Verdana;
+    height: 2.5em;
+    text-indent: 10px;
+    text-align: center;
+    width: 20em;
+}
+#submit
+{
+    cursor: pointer;
+    font: 800 15px Arial;
+    max-width: 200px;
+}

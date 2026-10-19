@@ -411,3 +411,60 @@ By default, shape is ellipse, size is farthest-corner, and position is center.*/
 {
     background-image: repeating-conic-gradient(rgb(183, 196, 255) 20%, rgb(187, 167, 243) 50%);/*The CSS repeating-conic-gradient() function is used to repeat conic gradients:*/
 }
+.text_overflow
+{
+    border: 0.3em solid transparent;
+    border-image: url(/CSS_Practice/Image/checklist.png) 20% round;
+    font-size: 2em;
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+    width: 40em;
+}
+.text_overflow2
+{
+    border: 0.3em solid transparent;
+    border-image: url(/CSS_Practice/Image/checklist.png) 20% round;
+    font-size: 2em;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    width: 40em;
+}
+/*The CSS text-overflow property specifies how overflowed content that is not displayed should be signaled to the user. It can be clipped or rendered with ellipsis (...).
+
+Both of the following properties are required for text-overflow to take effect:
+
+white-space: nowrap;
+overflow: hidden;*/
+
+.word_wrap
+{
+    background-color: rgb(148, 130, 170);
+    border-radius: 20px;
+    float: left;
+    font: normal small-caps 700 20px Arial;
+    letter-spacing: 2px;
+    outline: 0.3vh ridge rgb(86, 74, 128);
+    padding: 10px;
+    width: 200px;
+    word-wrap: break-word;//The CSS word-wrap property allows long words to be able to be broken and wrap onto the next line. If a word is too long to fit within an area, it expands outside:
+}
+
+.word_break
+{
+    border-radius: 10px;
+    border: 0.5em solid rgb(85, 107, 231);
+    color: white;
+    float: left;
+    font-size: 1.5em;
+    width: 200px;
+    word-break: break-all;
+}
+/*The CSS word-break property specifies how words should break when reaching the end of a line.
+
+This property can take one of the following values:
+
+normal - This is default. Uses the default line breaking rules of the language
+break-all - Allows words to be broken at any character to prevent overflow
+keep-all - Prevents words from breaking*/

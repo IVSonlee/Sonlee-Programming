@@ -1,0 +1,10 @@
+body
+{
+    align-items: center;
+    background: rgb(105, 96, 79);
+    display: flex;
+    min-height: 99vh;
+    max-width: 210vh;
+    justify-content: center;
+    margin: 0;
+}

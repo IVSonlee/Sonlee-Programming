@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <head>
-
+    <style>
+        body
+        {
+            background-color: rgb(150, 150, 180);
+        }
+    </style>
 </head>
 <body>
     <?php 
@@ -98,5 +103,79 @@
         /*Normally, when a function finishes executing, all of its variables are deleted. However, sometimes we want a local variable NOT to be deleted. We need it for a 
         further job. To achieve this, use the static keyword when you first declare the variable.Then, each time the function is called, that variable will have the value 
         from the last time the function was called.Note: The variable is still local to the function. */
+
+        function function2()
+        {
+            global $value1, $value2;#The global keyword is used to access a global variable from within a function.To do this, use the global keyword before the variables (inside the function):
+            $value2 = ($value1 - $value2) - 5;
+        }
+        function2();
+
+        echo "<br>Using a global keyword to access a global variable within a function: $value2 <br>";
+
+        $value3 = 30;
+        $value4 = 40;
+
+        function function3()
+        {
+            $GLOBALS['value2'] = ($GLOBALS['value4'] - $GLOBALS['value3']) - $GLOBALS['value2'];/*PHP also stores all global variables in an array called $GLOBALS[index]. The index holds the name of the variable. 
+            This array is also accessible from within functions and can be used to update global variables directly. */
+        }
+        function3();
+
+        echo "Using GLOBALS Superglobal (value4 - value3) - value2 = $value2 <br><br>";
+
+        /*With PHP, there are two basic ways to output data to the screen: echo and print.
+
+        The differences are small:
+
+        echo has no return value, while print has a return value of 1 so it can be used in expressions
+        echo can take multiple parameters, while print can take only one argument
+        echo is marginally faster than print */
+
+        $programming_language = ["HTML","CSS","Javascript","Python","PHP","MySQL"];
+
+        echo ("Echo can be used with or without parenthesis<br> <b>I am using a HTML markup language here using bold</b>"); #The echo function can be used with or without parentheses: echo or echo().
+        #The following example shows how to output text with the echo command (notice that the text can contain HTML markup)
+
+        echo "<br><br>Difference using double and single quotes \t\$\" $programming_language[0]";
+        echo '<br>\\If I use single quotes I cannot insert the variable inside this string and it only support few escape characters \'\\ '. $programming_language[0];
+
+        /*Strings are surrounded by quotes, but there is a difference between single and double quotes in PHP.When using double quotes, variables can be inserted to the string as in the example above.
+        When using single quotes, variables have to be inserted using the . operator, like this: 
+        
+        Differences between Single and Double Quotes
+        Feature	                    Single Quotes	                                            Double Quotes
+        Variable interpolation	    No - variables like $x are output literally	                Yes - variables are replaced with their values
+        Escape sequences	        Only \' and \\ are supported	                            Supports many, like: \n, \t, \r, \$, \"
+        Performance	                Slightly faster (PHP does not need to parse the content)	Slightly slower (PHP must scan for variables and escape sequences)
+        Readability	                Cleaner for simple, constant strings	                    More readable for strings with many variables (do not need to use the concatenation operator (.))*/
+
+        echo "<br><br>";
+
+        $changing_value = "Changing Value";
+        var_dump($changing_value);
+
+        echo "<br>";
+
+        $changing_value = true;
+        var_dump($changing_value);
+
+        echo "<br>";
+
+        $changing_value = (string) $changing_value;#If you want to change the data type of an existing variable, but not by changing the value, you can use casting.Casting allows you to change data type on variables
+        var_dump($changing_value);
+
+        echo "<br><br>I am using a strlen() function: ". strlen($programming_language[1]);
+        echo "<br>I am using a str_word_count() function: ". str_word_count("This is a word count");
+
+        $string1 = "Using str_contains()";
+        echo '<br>I am using a str_contains to check for a specific substring: ';
+
+        var_dump(str_contains($string1,"r"));/*The str_contains() function checks if a string contains a specific substring.Tip: The str_contains() function is only available in PHP 8.0 and later. For older 
+        versions, use the strpos() function.If a match is found, the function returns a boolean true. If no match is found, it will return a boolean false. */
+
+        echo '<br>I will be using strpos() function: '. strpos($string1,"contains");
+
     ?>
 </body>
