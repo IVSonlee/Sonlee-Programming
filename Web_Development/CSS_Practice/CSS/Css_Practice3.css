@@ -468,3 +468,36 @@ This property can take one of the following values:
 normal - This is default. Uses the default line breaking rules of the language
 break-all - Allows words to be broken at any character to prevent overflow
 keep-all - Prevents words from breaking*/
+
+.writing_mode1
+{
+    color: rgb(19, 54, 148);
+    font: normal normal 800 1.5em Lucida Sans;
+    writing-mode: vertical-lr;/*The CSS writing-mode property specifies whether lines of text are laid out horizontally or vertically.
+
+    This property can take one of the following values:
+
+    horizontal-tb - Default. The text flows horizontally from left to right, vertically from top to bottom
+    vertical-rl - The text flows vertically from top to bottom, horizontally from right to left
+    vertical-lr - The text flows vertically from top to bottom, horizontally from left to right*/
+}
+
+@font-face {
+    font-family: Font1;
+    src: url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap');
+    font-weight: lighter;
+}/*In the @font-face rule; first specify a name for the custom font (e.g. "myFont") in the font-family descriptor, then point to the font file in the src descriptor.
+Then, to use the custom font in an HTML element, refer to the name of the font ("myFont") through the font-family property:
+
+font-family	        Required. Defines a name for the font
+src	Required.       Defines the URL of the font file
+font-stretch	    Optional. Defines how the font should be stretched. Default is "normal"
+font-style	        Optional. Defines how the font should be styled. Default is "normal"
+font-weight	        Optional. Defines the weight of the font. Default is "normal"
+font-display	    Optional. Defines how the font loads and displays. Default is "auto"
+unicode-range	    Optional. Defines the range of UNICODE characters the font supports. Default is "U+0-10FFFF"*/
+
+.font-face
+{
+    font: normal 800 20px Font1;
+}

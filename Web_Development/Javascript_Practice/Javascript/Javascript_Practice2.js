@@ -120,9 +120,6 @@ function function1()
         It makes strings look like arrays (but they are not)
         If no character is found, [ ] returns undefined, while charAt() returns an empty string.
         Propert access is read only, but str[0] = "A" gives no error in "sloppy mode". */
-
-        
-        
     }
     {
         const sample_string4 = "JS String concat()";
@@ -167,6 +164,57 @@ function function1()
         let padend = "H";
         padend = padend.padEnd(4,"i");//The padEnd() method pads a string from the end.It pads a string with another string (multiple times) until it reaches a given length.
 
-        document.getElementById('javascript12').innerHTML = "I am using padstart(): " + padstart1 + `<br>I am using padEnd(): ${padend}`;
+        let repeat = "Javascript Repeat";
+
+        document.getElementById('javascript12').innerHTML = "I am using padstart(): " + padstart1 + `<br>I am using padEnd(): ${padend}` + `<br>I am using a repeat() method: ${repeat.repeat(2)}`;
+        /*The repeat() method returns a string with a number of copies of a string.The repeat() method returns a new string.The repeat() method does not change the original string. 
+        
+        Syntax
+        string.repeat(count)*/
+    }
+    {
+        let replacing = document.getElementById('javascript13').innerHTML = "This is a JS replacing() replacing()";
+        let replaceall = "HTML CSS Javascript React javascript Javascript";
+        
+        document.getElementById('javascript13').innerHTML = replacing.replace("replacing()", "replace") + "<br>" + replacing.replace(/REPLACING/i, "replace") + '<br>' 
+        + replacing.replace(/replacing()/g, "replace");
+        /*The replace() method replaces a specified value with another value in a string:
+        By default, the replace() method replaces only the first match:
+        By default, the replace() method is case sensitive. Writing MICROSOFT (with upper-case) will not work:
+        To replace case insensitive, use a regular expression with an /i flag (insensitive):
+        To replace all matches, use a regular expression with a /g flag (global match):*/
+
+        document.getElementById('javascript14').innerHTML = `I will be using replaceAll(): ${replaceall.replaceAll("Javascript", "replaceAll")}`;
+
+        replaceall = replaceall.replaceAll(/Javascript/g, "Global flag");
+        replaceall = replaceall.replaceAll(/javascript/g, "Global Flag");/*The replaceAll() method allows you to specify a regular expression instead of a string to be replaced.
+        If the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown. */
+
+        document.getElementById('javascript15').innerHTML = "replaceAll in global flag" + replaceall;
+    }
+    {
+        const split1 = "I don\'t know what to feel anymore";
+        const arr1 = split1.split("");//If the parameter is (""), the returned array will be an array of single characters:
+        const arr2 = split1.split(" ");//If the parameter is (" "), the returned array will be an array of words:
+        const arr3 = split1.split()//If the separator is omitted, the returned array will contain the whole string in index [0].
+
+        let emojis = "😀😃😄😁😆";
+
+        const segmenter = new Intl.Segmenter("en",{granularity : "grapheme"});//Intl.Segmenter keeps them together safely.
+        const arr4 = Array.from(segmenter.segment(emojis)).map(s => s.segment);
+
+        document.getElementById('javascript16').innerHTML = `Javascript String split(): ${JSON.stringify(arr1)} , ${JSON.stringify(arr2)} <br>
+        I will be using Intl.Segmenter ${JSON.stringify(arr4)}`;
+
+    }
+    {
+        let sample1 = "I will be using indexof()";
+
+        document.getElementById('javascript17').innerText = `Using indexOf(): ${sample1.indexOf("indexof")} \n Using lastIndexOf(): ${sample1.lastIndexOf("e",18)}
+        \n Using starting position for the search: ${sample1.indexOf("i",4)}`;
+        //The indexOf() method returns the index (position) of the first occurrence of a string in a string, or it returns -1 if the string is not found:
+        //The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+        //The lastIndexOf() methods searches backwards (from the end to the beginning), meaning: if the second parameter is 15, the search starts at position 15, and searches to the beginning of the string.
+        //Both indexOf(), and lastIndexOf() return -1 if the text is not found:
     }
 }

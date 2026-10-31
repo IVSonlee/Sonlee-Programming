@@ -377,7 +377,7 @@ function function8()
     switch(true)
     {
         case condition_values[2] ||= false == val1 > 31:
-        case val1 % 6 == 0:
+        case val1 % 6 == 0: 
             val1_output = "This will be executed because two cases are true";
             break;
         case false:
@@ -432,7 +432,8 @@ function function8()
 
     document.getElementById('javascript44').innerHTML = js_logical_or_not;
 
-    let nullish_coalescing = undefined ?? "I am using nullish coalescing operator";
+    let nullish_coalescing = undefined ?? "I am using nullish coalescing operator";/*The ?? operator returns the right operand when the left operand is nullish (null or undefined), otherwise it returns the 
+    left operand.*/
 
     document.getElementById('javascript45').innerHTML = nullish_coalescing;
 }
